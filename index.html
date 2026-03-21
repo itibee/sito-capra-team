@@ -19,13 +19,13 @@
 </head>
 <body class="bg-dark text-white font-sans">
 
-    <nav class="sticky top-0 w-full bg-black/95 backdrop-blur-sm z-50 border-b border-white/5 py-3 px-6">
+    <nav class="fixed top-0 w-full bg-black/95 backdrop-blur-md z-50 border-b border-white/5 py-4 px-6">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <div class="flex items-center gap-4">
                 <img src="./img/logocaprateam.jpg" class="w-12 h-12 rounded-full border border-gold/50 object-cover" alt="Logo">
-                <span class="font-heading text-xl tracking-tighter uppercase leading-none">Capra <span class="text-gold">Team</span></span>
+                <span class="font-heading text-xl tracking-tighter uppercase leading-none text-white">Capra <span class="text-gold">Team</span></span>
             </div>
-            <div class="hidden md:flex gap-8 font-semibold uppercase text-xs tracking-widest">
+            <div class="hidden md:flex gap-8 font-bold uppercase text-[10px] tracking-[0.2em]">
                 <a href="index.html" class="text-gold">Home</a>
                 <a href="roster.html" class="hover:text-gold transition">Serie B</a>
                 <a href="chi-siamo.html" class="hover:text-gold transition">La Storia</a>
@@ -34,40 +34,46 @@
         </div>
     </nav>
 
-    <main class="editable pb-24">
+    <main class="editable pt-20">
         
-        <header class="relative min-h-[85vh] flex flex-col items-center justify-center text-center px-4 overflow-hidden border-b border-white/5">
-            <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1546519638-68e109498ffc?q=80&w=2000')] bg-cover bg-center grayscale opacity-15"></div>
+        <header class="relative min-h-[80vh] flex flex-col items-center justify-center text-center px-4 overflow-hidden">
+            <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1546519638-68e109498ffc?q=80&w=2000')] bg-cover bg-center grayscale opacity-20"></div>
             <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent"></div>
             
-            <div class="relative z-10 max-w-5xl mx-auto py-32 flex flex-col items-center">
-                <span class="text-gold font-heading text-sm mb-6 tracking-[0.4em] block uppercase text-center">RAVENNA BASKET</span>
-                <h1 class="text-6xl md:text-8xl font-black mb-10 uppercase tracking-tighter text-center leading-[0.95] text-white">
-                    Testa.<br>Cuore.<br><span class="text-gold">Capra.</span>
+            <div class="relative z-10 max-w-4xl mx-auto">
+                <span class="text-gold font-heading text-[10px] mb-6 tracking-[0.5em] block uppercase">RAVENNA BASKET</span>
+                <h1 class="text-6xl md:text-8xl font-black mb-8 uppercase tracking-tighter leading-[0.9] text-white">
+                    Testa.<br>Cuore.<br><span class="text-gold italic">Capra.</span>
                 </h1>
-                <a href="roster.html" class="bg-gold text-black px-10 py-5 font-bold uppercase rounded inline-block hover:scale-105 transition shadow-lg text-sm">Scopri la Squadra</a>
+                <a href="roster.html" class="bg-gold text-black px-10 py-5 font-bold uppercase rounded inline-block hover:scale-105 transition shadow-2xl text-xs tracking-widest">Scopri la Squadra</a>
             </div>
         </header>
 
-        <section class="py-24 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-            <div class="space-y-6">
-                <span class="text-gold font-bold uppercase text-xs tracking-widest">In Evidenza</span>
-                <h2 class="font-heading text-4xl mt-2 mb-6 text-white leading-tight">Insieme a <span class="text-pink-500">Linea Rosa</span></h2>
-                <p class="text-gray-400 mb-6 leading-relaxed text-lg max-w-xl">
-                    Il Capra Team scende in campo contro la violenza sulle donne. Grande successo per l'iniziativa al Pala Mattioli.
-                </p>
-                <a href="chi-siamo.html" class="border-b-2 border-gold pb-1 font-semibold uppercase text-sm hover:text-gold transition inline-block">La nostra missione →</a>
-            </div>
-            <div class="relative group">
-                <div class="absolute -inset-1 bg-gold/20 rounded-2xl blur-lg opacity-25 group-hover:opacity-50 transition duration-500"></div>
-                <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=800" class="relative rounded-2xl shadow-2xl" alt="Iniziativa Sociale">
+        <section class="py-24 max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="space-y-6">
+                    <span class="text-gold font-bold uppercase text-[10px] tracking-[0.3em]">In Evidenza</span>
+                    <h2 class="font-heading text-4xl text-white uppercase italic">Insieme a <span class="text-pink-500">Linea Rosa</span></h2>
+                    <p class="text-gray-400 text-lg leading-relaxed">
+                        Il Capra Team scende in campo contro la violenza sulle donne. Grande successo per l'iniziativa al Pala Mattioli per sensibilizzare il pubblico e sostenere le donne del nostro territorio.
+                    </p>
+                    <a href="chi-siamo.html" class="border-b-2 border-gold pb-1 font-bold uppercase text-[10px] tracking-widest hover:text-gold transition inline-block">La nostra missione →</a>
+                </div>
+
+                <div class="flex flex-col items-center">
+                    <div class="relative group w-full">
+                        <div class="absolute -inset-1 bg-gold/20 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-500"></div>
+                        <img src="./img/team-linea-rosa.jpg" class="relative rounded-2xl shadow-2xl w-full h-auto object-cover" alt="Squadra Basket Iniziativa Linea Rosa">
+                    </div>
+                    <p class="mt-8 font-heading text-xl text-white font-bold uppercase tracking-[0.2em] italic">Iniziativa Sociale</p>
+                </div>
             </div>
         </section>
 
     </main>
 
-    <footer class="bg-black py-16 border-t border-white/5 text-center text-sm text-gray-600">
-        <p>© 2026 Capra Team Ravenna ASD</p>
+    <footer class="bg-black py-20 border-t border-white/5 text-center">
+        <p class="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-600">© 2026 Capra Team Ravenna ASD</p>
     </footer>
 
 </body>
