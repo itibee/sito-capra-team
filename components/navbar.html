@@ -1,17 +1,26 @@
-<nav class="sticky top-0 z-50 bg-black/95 border-b border-white/10 px-6 py-4 backdrop-blur-md">
-    <div class="max-w-7xl mx-auto flex justify-between items-center">
-        <a href="index.html" class="flex items-center gap-3">
-            <div class="bg-gold text-black font-black p-2 rounded">CT</div>
-            <span class="font-heading text-lg tracking-tighter text-white">CAPRA TEAM</span>
-        </a>
-        <div class="hidden lg:flex gap-8 text-xs font-bold uppercase tracking-[0.15em] text-white">
-            <a href="index.html" class="nav-link hover:text-gold transition">Home</a>
-            <a href="chi-siamo.html" class="nav-link hover:text-gold transition">La Società</a>
-            <a href="roster.html" class="nav-link hover:text-gold transition">Serie B</a>
-            <a href="giovanili.html" class="nav-link hover:text-gold transition">Giovanili</a>
-            <a href="news.html" class="nav-link hover:text-gold transition">News</a>
-            <a href="contatti.html" class="nav-link hover:text-gold transition">Contatti</a>
+document.addEventListener('DOMContentLoaded', () => {
+  const navbarContainer = document.getElementById('navbar-container');
+
+  if (navbarContainer) {
+    navbarContainer.innerHTML = `
+      <nav class="fixed top-0 w-full bg-black/90 backdrop-blur-md z-50 border-b border-white/5 py-4 px-6">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+          <a href="index.html" class="flex items-center gap-4">
+            <img src="/assets/images/logocaprateam.jpg" class="w-12 h-12 rounded-full border border-gold/50 object-cover" alt="Logo Capra Team">
+            <span class="font-heading text-xl tracking-tighter uppercase">Capra <span class="text-gold">Team</span></span>
+          </a>
+
+          <div class="hidden md:flex gap-8 font-bold uppercase text-xs tracking-widest">
+            <a href="index.html" class="hover:text-gold transition">Home</a>
+            <a href="roster.html" class="hover:text-gold transition">Serie B</a>
+            <a href="giovanili.html" class="hover:text-gold transition">Giovanili</a>
+            <a href="news.html" class="hover:text-gold transition">News</a>
+            <a href="contatti.html" class="hover:text-gold transition">Contatti</a>
+          </div>
+
+          <a href="contatti.html" class="bg-gold text-black px-6 py-2 rounded-md font-black text-xs uppercase hover:bg-yellow-500 transition">Contattaci</a>
         </div>
-        <a href="contatti.html" class="border border-gold text-gold px-4 py-2 text-xs font-bold uppercase rounded hover:bg-gold hover:text-black transition">Iscriviti</a>
-    </div>
-</nav>
+      </nav>
+    `;
+  }
+});
