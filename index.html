@@ -1,47 +1,38 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Capra Team Ravenna | Home</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script>tailwind.config={theme:{extend:{colors:{gold:'#FBBF24',dark:'#0A0A0A',box:'#1A1A1A'},fontFamily:{heading:['Syncopate'],sans:['Inter']}}}}</script>
-</head>
-<body class="bg-dark text-white font-sans">
-    
-    <div id="navbar-container"></div>
+---
+layout: default
+title: Home
+---
 
-    <header class="relative h-[80vh] flex flex-col justify-center items-center text-center">
-        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1546519638-68e109498ffc?q=80&w=2000')] bg-cover bg-center opacity-40"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent"></div>
-        <div class="relative z-10 px-4">
-            <span class="text-gold font-heading text-sm mb-4 tracking-[0.4em] block">RAVENNA BASKET</span>
-            <h1 class="text-6xl md:text-8xl font-black mb-6 uppercase tracking-tighter">Testa.<br>Cuore.<br><span class="text-gold">Capra.</span></h1>
-            <a href="roster.html" class="bg-gold text-black px-8 py-4 font-bold uppercase rounded mt-4 inline-block hover:scale-105 transition">Scopri la Prima Squadra</a>
-        </div>
-    </header>
-
-    <div class="bg-gold text-black py-4 border-y border-white/20">
-        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center font-bold uppercase text-sm">
-            <span>Ultima Partita: Vittoria al Pala Mattioli!</span>
-            <span>Serie B Femminile 2025/2026</span>
-            <a href="roster.html" class="underline">Vedi Roster</a>
-        </div>
+<header class="relative h-[80vh] flex flex-col justify-center items-center text-center">
+    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1546519638-68e109498ffc?q=80&w=2000')] bg-cover bg-center opacity-40"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent"></div>
+    <div class="relative z-10 px-4">
+        <span class="text-gold font-heading text-sm mb-4 tracking-[0.4em] block">RAVENNA BASKET</span>
+        
+        <h1 data-editable="source" class="text-6xl md:text-8xl font-black mb-6 uppercase tracking-tighter">
+            Testa.<br>Cuore.<br><span class="text-gold">Capra.</span>
+        </h1>
+        
+        <a href="roster.html" class="bg-gold text-black px-8 py-4 font-bold uppercase rounded mt-4 inline-block hover:scale-105 transition">Scopri la Prima Squadra</a>
     </div>
+</header>
 
-    <section class="py-24 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-        <div>
-            <span class="text-gold font-bold uppercase text-xs tracking-widest">In Evidenza</span>
-            <h2 class="font-heading text-4xl mt-2 mb-6">Insieme a <span class="text-pink-500">Linea Rosa</span></h2>
-            <p class="text-gray-400 mb-6 leading-relaxed">Il Capra Team scende in campo non solo per vincere, ma per dare un messaggio forte. Grande successo per l'iniziativa dell'8 Marzo al Pala Mattioli contro la violenza sulle donne.</p>
-            <a href="chi-siamo.html" class="border-b-2 border-gold pb-1 font-bold uppercase text-sm hover:text-gold transition">La nostra missione →</a>
-        </div>
-        <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=800" class="rounded-2xl shadow-2xl shadow-gold/10" alt="Iniziativa Sociale">
-    </section>
+<div class="bg-gold text-black py-4 border-y border-white/20">
+    <div class="max-w-7xl mx-auto px-6 flex justify-between items-center font-bold uppercase text-sm">
+        <span data-editable="source">Ultima Partita: Vittoria al Pala Mattioli!</span>
+        <span data-editable="source">Serie B Femminile 2025/2026</span>
+        <a href="roster.html" class="underline">Vedi Roster</a>
+    </div>
+</div>
 
-    <div id="footer-container"></div>
-    <script src="js/main.js"></script>
-</body>
-</html>
+<section class="py-24 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+    <div>
+        <span class="text-gold font-bold uppercase text-xs tracking-widest">In Evidenza</span>
+        <h2 data-editable="source" class="font-heading text-4xl mt-2 mb-6">Insieme a <span class="text-pink-500">Linea Rosa</span></h2>
+        
+        <p data-editable="source" class="text-gray-400 mb-6 leading-relaxed">Il Capra Team scende in campo non solo per vincere, ma per dare un messaggio forte. Grande successo per l'iniziativa dell'8 Marzo al Pala Mattioli contro la violenza sulle donne.</p>
+        
+        <a href="chi-siamo.html" class="border-b-2 border-gold pb-1 font-bold uppercase text-sm hover:text-gold transition">La nostra missione →</a>
+    </div>
+    <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=800" class="rounded-2xl shadow-2xl shadow-gold/10" alt="Iniziativa Sociale">
+</section>
