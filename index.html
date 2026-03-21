@@ -13,37 +13,44 @@
     
     <div id="navbar-container"></div>
 
-    <header class="relative h-[80vh] flex flex-col justify-center items-center text-center">
+    <header class="relative h-[80vh] flex flex-col justify-center items-center text-center overflow-hidden">
         <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1546519638-68e109498ffc?q=80&w=2000')] bg-cover bg-center opacity-40"></div>
         <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent"></div>
+        
         <div class="relative z-10 px-4">
-            <span class="editable text-gold font-heading text-sm mb-4 tracking-[0.4em] block">RAVENNA BASKET</span>
-            <h1 class="editable text-6xl md:text-8xl font-black mb-6 uppercase tracking-tighter">Testa.<br>Cuore.<br><span class="text-gold">Capra.</span></h1>
-            <a href="roster.html" class="editable bg-gold text-black px-8 py-4 font-bold uppercase rounded mt-4 inline-block hover:scale-105 transition">Scopri la Prima Squadra</a>
+            <span class="text-gold font-heading text-sm mb-4 tracking-[0.4em] block uppercase">RAVENNA BASKET</span>
+            <h1 class="text-6xl md:text-8xl font-black mb-6 uppercase tracking-tighter leading-tight">
+                Testa.<br>Cuore.<br><span class="text-gold">Capra.</span>
+            </h1>
+            <a href="roster.html" class="bg-gold text-black px-8 py-4 font-bold uppercase rounded mt-4 inline-block hover:scale-105 transition">Scopri la Prima Squadra</a>
         </div>
     </header>
 
     <div class="bg-gold text-black py-4 border-y border-white/20">
-        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center font-bold uppercase text-sm">
-            <span class="editable">Ultima Partita: Vittoria al Pala Mattioli!</span>
-            <span class="editable">Serie B Femminile 2025/2026</span>
-            <a href="roster.html" class="editable underline">Vedi Roster</a>
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center font-bold uppercase text-sm gap-4 text-center">
+            <span>Ultima Partita: Vittoria al Pala Mattioli!</span>
+            <span>Serie B Femminile 2025/2026</span>
+            <a href="roster.html" class="underline">Vedi Roster</a>
         </div>
     </div>
 
     <section class="py-24 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-        <div>
-            <span class="editable text-gold font-bold uppercase text-xs tracking-widest block mb-2">In Evidenza</span>
-            <h2 class="editable font-heading text-4xl mb-6 leading-tight">Insieme a <span class="text-pink-500">Linea Rosa</span></h2>
-            <p class="editable text-gray-400 mb-6 leading-relaxed">Il Capra Team scende in campo non solo per vincere, ma per dare un messaggio forte. Grande successo per l'iniziativa dell'8 Marzo al Pala Mattioli contro la violenza sulle donne.</p>
-            <a href="chi-siamo.html" class="editable border-b-2 border-gold pb-1 font-bold uppercase text-sm hover:text-gold transition inline-block">La nostra missione →</a>
+        <div class="flex flex-col items-start">
+            <span class="text-gold font-bold uppercase text-xs tracking-widest mb-2 italic">In Evidenza</span>
+            <h2 class="font-heading text-4xl mb-6 leading-tight">Insieme a <span class="text-pink-500">Linea Rosa</span></h2>
+            <p class="text-gray-400 mb-6 leading-relaxed">
+                Il Capra Team scende in campo non solo per vincere, ma per dare un messaggio forte. Grande successo per l'iniziativa dell'8 Marzo al Pala Mattioli contro la violenza sulle donne.
+            </p>
+            <a href="chi-siamo.html" class="border-b-2 border-gold pb-1 font-bold uppercase text-sm hover:text-gold transition inline-block">La nostra missione →</a>
         </div>
-        <div class="relative">
-            <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=800" class="editable rounded-2xl shadow-2xl shadow-gold/10 w-full" alt="Iniziativa Sociale">
+        
+        <div class="relative w-full">
+            <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=800" class="rounded-2xl shadow-2xl shadow-gold/10 w-full object-cover" alt="Iniziativa Sociale">
         </div>
     </section>
 
     <div id="footer-container"></div>
     <script src="js/main.js"></script>
+
 </body>
 </html>
