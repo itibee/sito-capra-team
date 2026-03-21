@@ -3,59 +3,372 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Storia | Capra Team Ravenna</title>
+    <title>Chi Siamo | Capra Team Ravenna</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script>tailwind.config={theme:{extend:{colors:{gold:'#FBBF24',dark:'#0A0A0A',box:'#1A1A1A'},fontFamily:{heading:['Syncopate'],sans:['Inter']}}}}</script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { gold:'#FBBF24', dark:'#0A0A0A', box:'#1A1A1A' },
+            fontFamily: { heading:['Syncopate'], sans:['Inter'] }
+          }
+        }
+      }
+    </script>
 </head>
 <body class="bg-dark text-white font-sans">
 
     <div id="navbar-container"></div>
 
-    <header class="relative h-[50vh] min-h-[360px] flex flex-col justify-center items-center text-center overflow-hidden mt-[72px]">
-        <img src="/assets/images/hero-home.jpg" alt="Hero Capra Team" class="absolute inset-0 w-full h-full object-cover object-center opacity-40">
+    <header class="relative min-h-[55vh] flex flex-col justify-center items-center text-center overflow-hidden pt-24">
+        <img src="/assets/images/hero-home.jpg" alt="Hero Capra Team Ravenna" class="absolute inset-0 w-full h-full object-cover object-center opacity-40">
         <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent"></div>
-        <div class="relative z-10 px-4 max-w-4xl mx-auto">
-            <span class="text-gold font-heading text-sm mb-4 tracking-[0.4em] block" data-editable="source" data-path="/chi-siamo.html" data-key="hero-kicker">CAPRA TEAM RAVENNA</span>
-            <h1 class="text-5xl md:text-7xl font-black mb-4 uppercase tracking-tighter">
-                <span data-editable="source" data-path="/chi-siamo.html" data-key="hero-line-1">La Nostra</span>
-                <span class="text-gold" data-editable="source" data-path="/chi-siamo.html" data-key="hero-line-2">Storia</span>
+
+        <div class="relative z-10 px-4 max-w-5xl mx-auto">
+            <span
+                class="text-gold font-heading text-xs sm:text-sm mb-4 tracking-[0.35em] sm:tracking-[0.4em] block"
+                data-editable="source"
+                data-path="/chi-siamo.html"
+                data-key="hero-kicker">
+                CAPRA TEAM RAVENNA
+            </span>
+
+            <h1
+                class="text-4xl sm:text-5xl md:text-7xl font-black mb-4 uppercase tracking-tighter"
+                data-editable="source"
+                data-path="/chi-siamo.html"
+                data-key="hero-title">
+                La Nostra Storia
             </h1>
-            <p class="text-gray-300 text-lg max-w-2xl mx-auto" data-editable="source" data-path="/chi-siamo.html" data-key="hero-subtitle">Dalle radici di Villa Capra alla conquista della Serie B: identità, sacrificio e appartenenza.</p>
+
+            <p
+                class="text-lg sm:text-2xl text-gold font-bold uppercase tracking-wide"
+                data-editable="source"
+                data-path="/chi-siamo.html"
+                data-key="hero-motto">
+                Once Capra, Forever Capra
+            </p>
+
+            <p
+                class="text-gray-300 text-sm sm:text-lg max-w-3xl mx-auto mt-4 leading-relaxed"
+                data-editable="source"
+                data-path="/chi-siamo.html"
+                data-key="hero-subtitle">
+                Dal giardino di casa alla Serie B: una storia di tenacia, identità e appartenenza.
+            </p>
         </div>
     </header>
 
-    <section class="py-24 px-6 max-w-4xl mx-auto">
-        <div class="space-y-16">
-            <div class="flex flex-col md:flex-row gap-8 items-start">
-                <div class="md:w-1/4 text-gold font-heading text-3xl" data-editable="source" data-path="/chi-siamo.html" data-key="year-1">2012</div>
-                <div class="md:w-3/4">
-                    <h3 class="font-black text-2xl mb-4" data-editable="source" data-path="/chi-siamo.html" data-key="heading-1">Le Radici: Villa Capra</h3>
-                    <p class="text-gray-400 leading-relaxed" data-editable="source" data-path="/chi-siamo.html" data-key="text-1">Tutto nasce dall'intuizione di Alberto Maioli a Villa Capra. L'obiettivo era colmare il vuoto del basket femminile a Ravenna, dando alle ragazze un punto di riferimento.</p>
+    <main class="py-16 sm:py-24 px-4 sm:px-6 max-w-6xl mx-auto">
+
+        <section class="mb-20">
+            <h2 class="font-heading text-2xl sm:text-4xl mb-6 uppercase">
+                <span data-editable="source" data-path="/chi-siamo.html" data-key="intro-title-1">Dal Giardino di Casa</span>
+                <span class="text-gold" data-editable="source" data-path="/chi-siamo.html" data-key="intro-title-2"> alla Serie B</span>
+            </h2>
+
+            <p
+                class="text-gray-300 leading-relaxed text-base sm:text-lg"
+                data-editable="source"
+                data-path="/chi-siamo.html"
+                data-key="intro-text">
+                Quella del Capra Team Ravenna non è solo una storia sportiva. È la storia di un’idea che prende forma, cresce con ostinazione e si trasforma in un punto di riferimento per il basket femminile ravennate.
+            </p>
+        </section>
+
+        <section class="space-y-10 sm:space-y-12 mb-24">
+
+            <div class="grid md:grid-cols-[140px_1fr] gap-6 sm:gap-8 items-start">
+                <div
+                    class="text-gold font-heading text-2xl sm:text-3xl"
+                    data-editable="source"
+                    data-path="/chi-siamo.html"
+                    data-key="year-1">
+                    2012
+                </div>
+                <div class="bg-box border border-white/5 rounded-2xl p-6 sm:p-8">
+                    <h3
+                        class="font-black text-2xl mb-4"
+                        data-editable="source"
+                        data-path="/chi-siamo.html"
+                        data-key="title-1">
+                        Il "Big Bang" a Villa Capra
+                    </h3>
+                    <p
+                        class="text-gray-400 leading-relaxed"
+                        data-editable="source"
+                        data-path="/chi-siamo.html"
+                        data-key="text-1">
+                        Tutto inizia in una serata estiva a Villa Capra, la residenza che darà non solo il nome, ma l'anima al progetto. Il Presidente Alberto Maioli fonda la società con un'idea chiara: creare uno spazio dove la pallacanestro femminile possa essere protagonista assoluta. La capra viene scelta come simbolo per tre motivi: è tenace, è testarda e, soprattutto, è umile.
+                    </p>
                 </div>
             </div>
 
-            <div class="flex flex-col md:flex-row gap-8 items-start bg-box p-8 rounded-2xl border border-white/5">
-                <div class="md:w-1/4 text-gold text-5xl"><i class="fas fa-mountain"></i></div>
-                <div class="md:w-3/4">
-                    <h3 class="font-black text-2xl mb-4" data-editable="source" data-path="/chi-siamo.html" data-key="heading-2">Perché la Capra?</h3>
-                    <p class="text-gray-400 leading-relaxed" data-editable="source" data-path="/chi-siamo.html" data-key="text-2">Rappresenta la testardaggine, la tenacia e l'umiltà. Un animale capace di arrampicarsi ovunque pur di raggiungere la vetta. Esattamente come noi.</p>
+            <div class="grid md:grid-cols-[140px_1fr] gap-6 sm:gap-8 items-start">
+                <div
+                    class="text-gold font-heading text-2xl sm:text-3xl"
+                    data-editable="source"
+                    data-path="/chi-siamo.html"
+                    data-key="year-2">
+                    2015/16
+                </div>
+                <div class="bg-box border border-white/5 rounded-2xl p-6 sm:p-8">
+                    <h3
+                        class="font-black text-2xl mb-4"
+                        data-editable="source"
+                        data-path="/chi-siamo.html"
+                        data-key="title-2">
+                        Il debutto sul parquet
+                    </h3>
+                    <p
+                        class="text-gray-400 leading-relaxed"
+                        data-editable="source"
+                        data-path="/chi-siamo.html"
+                        data-key="text-2">
+                        Dopo i primi anni dedicati a costruire le fondamenta, arriva la prima vera sfida agonistica. Il Capra Team iscrive la sua prima squadra senior al campionato di Serie C. È l'inizio di un percorso fatto di trasferte, sudore e un legame sempre più stretto tra le atlete.
+                    </p>
                 </div>
             </div>
 
-            <div class="flex flex-col md:flex-row gap-8 items-start">
-                <div class="md:w-1/4 text-gold font-heading text-3xl" data-editable="source" data-path="/chi-siamo.html" data-key="year-2">2025</div>
-                <div class="md:w-3/4">
-                    <h3 class="font-black text-2xl mb-4" data-editable="source" data-path="/chi-siamo.html" data-key="heading-3">Maggio 2025: La Serie B</h3>
-                    <img src="/assets/images/chi-siamo-serie-b.jpg" class="w-full h-64 object-cover rounded-xl mb-4" alt="Promozione in Serie B">
-                    <p class="text-gray-400 leading-relaxed" data-editable="source" data-path="/chi-siamo.html" data-key="text-3">Il coronamento di un sogno. In un Pala Mattioli incandescente, battiamo il Noceto nella finale playoff conquistando la storica promozione.</p>
+            <div class="grid md:grid-cols-[140px_1fr] gap-6 sm:gap-8 items-start">
+                <div
+                    class="text-gold font-heading text-2xl sm:text-3xl"
+                    data-editable="source"
+                    data-path="/chi-siamo.html"
+                    data-key="year-3">
+                    2018
+                </div>
+                <div class="bg-box border border-white/5 rounded-2xl p-6 sm:p-8">
+                    <h3
+                        class="font-black text-2xl mb-4"
+                        data-editable="source"
+                        data-path="/chi-siamo.html"
+                        data-key="title-3">
+                        Investire sul futuro (Il Minibasket)
+                    </h3>
+                    <p
+                        class="text-gray-400 leading-relaxed"
+                        data-editable="source"
+                        data-path="/chi-siamo.html"
+                        data-key="text-3">
+                        La società capisce che per crescere bisogna guardare in basso, alle più piccole. Nasce il settore Minibasket. Da qui in poi, il Capra Team smette di essere solo una "squadra senior" e diventa un polo educativo. Negli anni successivi arrivano le formazioni Under 14 e Under 17.
+                    </p>
                 </div>
             </div>
-        </div>
-    </section>
+
+            <div class="grid md:grid-cols-[140px_1fr] gap-6 sm:gap-8 items-start">
+                <div
+                    class="text-gold font-heading text-2xl sm:text-3xl"
+                    data-editable="source"
+                    data-path="/chi-siamo.html"
+                    data-key="year-4">
+                    2021
+                </div>
+                <div class="bg-box border border-white/5 rounded-2xl p-6 sm:p-8">
+                    <h3
+                        class="font-black text-2xl mb-4"
+                        data-editable="source"
+                        data-path="/chi-siamo.html"
+                        data-key="title-4">
+                        La Grande Ripartenza
+                    </h3>
+                    <p
+                        class="text-gray-400 leading-relaxed"
+                        data-editable="source"
+                        data-path="/chi-siamo.html"
+                        data-key="text-4">
+                        Dopo lo stop forzato della pandemia, il club riparte con un entusiasmo travolgente. Il numero delle tesserate esplode e il progetto tecnico si fa più ambizioso. La comunità ravennate risponde con forza: il Capra Team diventa un punto di riferimento sociale oltre che sportivo.
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-[140px_1fr] gap-6 sm:gap-8 items-start">
+                <div
+                    class="text-gold font-heading text-2xl sm:text-3xl"
+                    data-editable="source"
+                    data-path="/chi-siamo.html"
+                    data-key="year-5">
+                    2024/25
+                </div>
+                <div class="bg-box border border-white/5 rounded-2xl p-6 sm:p-8">
+                    <h3
+                        class="font-black text-2xl mb-4"
+                        data-editable="source"
+                        data-path="/chi-siamo.html"
+                        data-key="title-5">
+                        L'anno della Storia
+                    </h3>
+                    <p
+                        class="text-gray-400 leading-relaxed"
+                        data-editable="source"
+                        data-path="/chi-siamo.html"
+                        data-key="text-5">
+                        Un'annata perfetta. Sotto la guida di coach Fabio Lisoni, le ragazze dominano il girone C della Serie C.
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-[140px_1fr] gap-6 sm:gap-8 items-start">
+                <div
+                    class="text-gold font-heading text-2xl sm:text-3xl"
+                    data-editable="source"
+                    data-path="/chi-siamo.html"
+                    data-key="year-6">
+                    Maggio 2025
+                </div>
+                <div class="bg-box border border-gold/30 rounded-2xl p-6 sm:p-8">
+                    <h3
+                        class="font-black text-2xl mb-4"
+                        data-editable="source"
+                        data-path="/chi-siamo.html"
+                        data-key="title-6">
+                        La promozione in Serie B
+                    </h3>
+                    <p
+                        class="text-gray-300 leading-relaxed"
+                        data-editable="source"
+                        data-path="/chi-siamo.html"
+                        data-key="text-6">
+                        Con una serie finale impeccabile contro Noceto, il Capra Team conquista una storica promozione in Serie B. È la prima volta per la società e un ritorno d'eccellenza per il basket femminile ravennate sui palcoscenici nazionali.
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-[140px_1fr] gap-6 sm:gap-8 items-start">
+                <div
+                    class="text-gold font-heading text-2xl sm:text-3xl"
+                    data-editable="source"
+                    data-path="/chi-siamo.html"
+                    data-key="year-7">
+                    2025/26
+                </div>
+                <div class="bg-box border border-white/5 rounded-2xl p-6 sm:p-8">
+                    <h3
+                        class="font-black text-2xl mb-4"
+                        data-editable="source"
+                        data-path="/chi-siamo.html"
+                        data-key="title-7">
+                        Il Presente tra le Grandi
+                    </h3>
+                    <p
+                        class="text-gray-400 leading-relaxed mb-4"
+                        data-editable="source"
+                        data-path="/chi-siamo.html"
+                        data-key="text-7">
+                        L'attuale stagione segna il debutto nel campionato cadetto.
+                    </p>
+                    <p
+                        class="text-gray-400 leading-relaxed"
+                        data-editable="source"
+                        data-path="/chi-siamo.html"
+                        data-key="text-8">
+                        Ottobre 2025: esordio da brividi e vittoria casalinga contro il Magic Rosa Parma (60-52) davanti a un pubblico da record.
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-[140px_1fr] gap-6 sm:gap-8 items-start">
+                <div
+                    class="text-gold font-heading text-2xl sm:text-3xl"
+                    data-editable="source"
+                    data-path="/chi-siamo.html"
+                    data-key="year-8">
+                    Oggi
+                </div>
+                <div class="bg-box border border-white/5 rounded-2xl p-6 sm:p-8">
+                    <h3
+                        class="font-black text-2xl mb-4"
+                        data-editable="source"
+                        data-path="/chi-siamo.html"
+                        data-key="title-8">
+                        Marzo 2026
+                    </h3>
+                    <p
+                        class="text-gray-400 leading-relaxed"
+                        data-editable="source"
+                        data-path="/chi-siamo.html"
+                        data-key="text-9">
+                        Con oltre 150 atlete tesserate e squadre in tutte le categorie giovanili (dall'U13 all'U19), il Capra Team è una realtà consolidata in Serie B, guidata da coach Tommaso Luppi e dal capitano Manuela Calabrese.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-24">
+            <h2 class="font-heading text-2xl sm:text-4xl mb-10 uppercase">
+                <span data-editable="source" data-path="/chi-siamo.html" data-key="values-title-1">I Nostri Valori</span>
+                <span class="text-gold" data-editable="source" data-path="/chi-siamo.html" data-key="values-title-2"> in tre parole</span>
+            </h2>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-box border border-white/5 rounded-2xl p-8">
+                    <h3
+                        class="font-black text-2xl mb-4 text-gold"
+                        data-editable="source"
+                        data-path="/chi-siamo.html"
+                        data-key="value-1-title">
+                        Tenacia
+                    </h3>
+                    <p
+                        class="text-gray-400 leading-relaxed"
+                        data-editable="source"
+                        data-path="/chi-siamo.html"
+                        data-key="value-1-text">
+                        Non molliamo mai, proprio come il nostro simbolo.
+                    </p>
+                </div>
+
+                <div class="bg-box border border-white/5 rounded-2xl p-8">
+                    <h3
+                        class="font-black text-2xl mb-4 text-gold"
+                        data-editable="source"
+                        data-path="/chi-siamo.html"
+                        data-key="value-2-title">
+                        Identità
+                    </h3>
+                    <p
+                        class="text-gray-400 leading-relaxed"
+                        data-editable="source"
+                        data-path="/chi-siamo.html"
+                        data-key="value-2-text">
+                        "Once Capra, Forever Capra". Chi indossa questa maglia entra in una famiglia.
+                    </p>
+                </div>
+
+                <div class="bg-box border border-white/5 rounded-2xl p-8">
+                    <h3
+                        class="font-black text-2xl mb-4 text-gold"
+                        data-editable="source"
+                        data-path="/chi-siamo.html"
+                        data-key="value-3-title">
+                        Territorio
+                    </h3>
+                    <p
+                        class="text-gray-400 leading-relaxed"
+                        data-editable="source"
+                        data-path="/chi-siamo.html"
+                        data-key="value-3-text">
+                        Collaboriamo attivamente con realtà come Linea Rosa e Save the Planet, perché il basket deve lasciare un segno anche fuori dal campo.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-gold text-black rounded-2xl p-8 sm:p-12 text-center">
+            <p
+                class="font-heading text-2xl sm:text-4xl uppercase tracking-tight"
+                data-editable="source"
+                data-path="/chi-siamo.html"
+                data-key="closing-motto">
+                Once Capra, Forever Capra
+            </p>
+        </section>
+
+    </main>
 
     <div id="footer-container"></div>
-    <script src="js/main.js"></script>
+    <script src="/js/main.js"></script>
 </body>
 </html>
