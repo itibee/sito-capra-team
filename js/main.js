@@ -5,15 +5,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
 
   const navClass = (file) =>
-    currentPage === file
-      ? 'text-gold transition'
-      : 'hover:text-gold transition';
+    currentPage === file ? 'text-gold transition' : 'hover:text-gold transition';
 
   if (navbarContainer) {
     navbarContainer.innerHTML = `
       <nav class="fixed top-0 w-full bg-black/90 backdrop-blur-md z-50 border-b border-white/5">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-4">
-          
+
           <a href="index.html" class="flex items-center gap-3 min-w-0">
             <img
               src="/assets/images/logocaprateam.jpg"
