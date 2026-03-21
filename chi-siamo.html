@@ -3,56 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Storia | Capra Team Ravenna</title>
+    <title>Capra Team Ravenna | Home</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script>tailwind.config={theme:{extend:{colors:{gold:'#FBBF24',dark:'#0A0A0A',box:'#1A1A1A'},fontFamily:{heading:['Syncopate'],sans:['Inter']}}}}</script>
 </head>
 <body class="bg-dark text-white font-sans">
-
+    
     <div id="navbar-container"></div>
 
-    <section class="py-24 px-6 max-w-4xl mx-auto mt-20">
-        <h1 class="font-heading text-5xl mb-12 uppercase text-center border-b border-white/10 pb-8">
-            <span data-editable="source" data-path="/chi-siamo.html" data-key="chi-title-1">La Nostra </span>
-            <span class="text-gold" data-editable="source" data-path="/chi-siamo.html" data-key="chi-title-2">Storia</span>
-        </h1>
-        
-        <div class="space-y-16">
-            <div class="flex flex-col md:flex-row gap-8 items-start">
-                <div class="md:w-1/4 text-gold font-heading text-3xl"
-                     data-editable="source" data-path="/chi-siamo.html" data-key="chi-year-1">2012</div>
-                <div class="md:w-3/4">
-                    <h3 class="font-black text-2xl mb-4"
-                        data-editable="source" data-path="/chi-siamo.html" data-key="chi-heading-1">Le Radici: Villa Capra</h3>
-                    <p class="text-gray-400 leading-relaxed"
-                       data-editable="source" data-path="/chi-siamo.html" data-key="chi-text-1">Tutto nasce dall'intuizione di Alberto Maioli a Villa Capra. L'obiettivo era colmare il vuoto del basket femminile a Ravenna, dando alle ragazze un punto di riferimento.</p>
-                </div>
-            </div>
-
-            <div class="flex flex-col md:flex-row gap-8 items-start bg-box p-8 rounded-2xl border border-white/5">
-                <div class="md:w-1/4 text-gold text-5xl"><i class="fas fa-mountain"></i></div>
-                <div class="md:w-3/4">
-                    <h3 class="font-black text-2xl mb-4"
-                        data-editable="source" data-path="/chi-siamo.html" data-key="chi-heading-2">Perché la Capra?</h3>
-                    <p class="text-gray-400 leading-relaxed"
-                       data-editable="source" data-path="/chi-siamo.html" data-key="chi-text-2">Rappresenta la testardaggine, la tenacia e l'umiltà. Un animale capace di arrampicarsi ovunque pur di raggiungere la vetta. Esattamente come noi.</p>
-                </div>
-            </div>
-
-            <div class="flex flex-col md:flex-row gap-8 items-start">
-                <div class="md:w-1/4 text-gold font-heading text-3xl"
-                     data-editable="source" data-path="/chi-siamo.html" data-key="chi-year-2">2025</div>
-                <div class="md:w-3/4">
-                    <h3 class="font-black text-2xl mb-4"
-                        data-editable="source" data-path="/chi-siamo.html" data-key="chi-heading-3">Maggio 2025: La Serie B</h3>
-                    <img src="/assets/images/chi-siamo-serie-b.jpg" class="w-full h-64 object-cover rounded-xl mb-4" alt="Promozione in Serie B">
-                    <p class="text-gray-400 leading-relaxed"
-                       data-editable="source" data-path="/chi-siamo.html" data-key="chi-text-3">Il coronamento di un sogno. In un Pala Mattioli incandescente, battiamo il Noceto nella finale playoff conquistando la storica promozione.</p>
-                </div>
-            </div>
+    <header class="relative h-[80vh] flex flex-col justify-center items-center text-center overflow-hidden mt-[72px]">
+        <img src="/assets/images/hero-home.jpg" alt="Hero Capra Team Ravenna" class="absolute inset-0 w-full h-full object-cover object-center opacity-40">
+        <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent"></div>
+        <div class="relative z-10 px-4">
+            <span class="text-gold font-heading text-sm mb-4 tracking-[0.4em] block" data-editable="source" data-path="/index.html" data-key="hero-kicker">RAVENNA BASKET</span>
+            <h1 class="text-6xl md:text-8xl font-black mb-6 uppercase tracking-tighter">
+                <span class="block" data-editable="source" data-path="/index.html" data-key="hero-line-1">Testa.</span>
+                <span class="block" data-editable="source" data-path="/index.html" data-key="hero-line-2">Cuore.</span>
+                <span class="text-gold block" data-editable="source" data-path="/index.html" data-key="hero-line-3">Capra.</span>
+            </h1>
+            <a href="roster.html" class="bg-gold text-black px-8 py-4 font-bold uppercase rounded mt-4 inline-block hover:scale-105 transition" data-editable="source" data-path="/index.html" data-key="hero-cta">Scopri la Prima Squadra</a>
         </div>
+    </header>
+
+    <div class="bg-gold text-black py-4 border-y border-white/20">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center font-bold uppercase text-sm">
+            <span data-editable="source" data-path="/index.html" data-key="strip-left">Ultima Partita: Vittoria al Pala Mattioli!</span>
+            <span data-editable="source" data-path="/index.html" data-key="strip-center">Serie B Femminile 2025/2026</span>
+            <a href="roster.html" class="underline" data-editable="source" data-path="/index.html" data-key="strip-link">Vedi Roster</a>
+        </div>
+    </div>
+
+    <section class="py-24 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+        <div>
+            <span class="text-gold font-bold uppercase text-xs tracking-widest" data-editable="source" data-path="/index.html" data-key="featured-kicker">In Evidenza</span>
+            <h2 class="font-heading text-4xl mt-2 mb-6"><span data-editable="source" data-path="/index.html" data-key="featured-title-1">Insieme a </span><span class="text-pink-500" data-editable="source" data-path="/index.html" data-key="featured-title-2">Linea Rosa</span></h2>
+            <p class="text-gray-400 mb-6 leading-relaxed" data-editable="source" data-path="/index.html" data-key="featured-text">Il Capra Team scende in campo non solo per vincere, ma per dare un messaggio forte. Grande successo per l'iniziativa dell'8 Marzo al Pala Mattioli contro la violenza sulle donne.</p>
+            <a href="chi-siamo.html" class="border-b-2 border-gold pb-1 font-bold uppercase text-sm hover:text-gold transition" data-editable="source" data-path="/index.html" data-key="featured-link">La nostra missione →</a>
+        </div>
+        <img src="/assets/images/home-featured.jpg" class="rounded-2xl shadow-2xl shadow-gold/10" alt="Iniziativa Sociale">
     </section>
 
     <div id="footer-container"></div>
