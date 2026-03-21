@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roster & Staff | Capra Team Ravenna</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { gold: '#FBBF24', dark: '#0A0A0A', box: '#1A1A1A' },
+                    fontFamily: { heading: ['Syncopate'], sans: ['Inter'] }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-dark text-white font-sans">
+
+    <nav class="fixed top-0 w-full bg-black/90 backdrop-blur-md z-50 border-b border-white/5 py-4 px-6">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <img src="./img/logocaprateam.jpg" class="w-12 h-12 rounded-full border border-gold/50 object-cover" alt="Logo Capra Team">
+                <span class="font-heading text-xl tracking-tighter uppercase">Capra <span class="text-gold">Team</span></span>
+            </div>
+            <div class="hidden md:flex gap-8 font-bold uppercase text-xs tracking-widest">
+                <a href="#" class="hover:text-gold transition">Home</a>
+                <a href="#" class="hover:text-gold transition text-gold">Serie B</a>
+                <a href="#" class="hover:text-gold transition">Giovanili</a>
+                <a href="#" class="hover:text-gold transition">News</a>
+                <a href="#" class="hover:text-gold transition">Contatti</a>
+            </div>
+            <button class="bg-gold text-black px-6 py-2 rounded-md font-black text-xs uppercase hover:bg-yellow-500 transition">Iscriviti</button>
+        </div>
+    </nav>
+
+    <div class="relative w-full mt-20 h-[300px] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?q=80&w=2090&auto=format&fit=crop" 
+                 class="w-full h-full object-cover opacity-20 grayscale" alt="Background Basket">
+            <div class="absolute inset-0 bg-gradient-to-b from-dark via-transparent to-dark"></div>
+        </div>
+
+        <div class="relative z-10 w-full max-w-6xl px-4">
+            <img src="./img/rosterserieb.png" alt="Banner Roster Serie B" 
+                 class="w-full h-[300px] object-contain drop-shadow-[0_0_30px_rgba(251,191,36,0.2)]">
+        </div>
+    </div>
+
+    <section class="py-16 px-6 max-w-7xl mx-auto">
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-32">
+            
+            <div class="bg-box rounded-xl overflow-hidden border border-white/5 group">
+                <div class="aspect-[3/4] overflow-hidden">
+                    <img src="./img/manuelacalabrese.jpg" class="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition duration-500">
+                </div>
+                <div class="p-6">
+                    <h3 class="font-black text-xl uppercase mb-1">Manuela Calabrese</h3>
+                    <p class="text-gold text-sm font-bold uppercase">Capitano / Ala</p>
+                </div>
+            </div>
+
+            <div class="bg-box rounded-xl overflow-hidden border border-white/5 group">
+                <div class="aspect-[3/4] overflow-hidden">
+                    <img src="./img/federicamontanari.jpg" class="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition duration-500">
+                </div>
+                <div class="p-6">
+                    <h3 class="font-black text-xl uppercase mb-1">Federica Montanari</h3>
+                    <p class="text-gold text-sm font-bold uppercase">Playmaker</p>
+                </div>
+            </div>
+
+            <div class="bg-box rounded-xl overflow-hidden border border-white/5 group">
+                <div class="aspect-[3/4] overflow-hidden">
+                    <img src="./img/veronicaandrenacci.jpg" class="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition duration-500">
+                </div>
+                <div class="p-6">
+                    <h3 class="font-black text-xl uppercase mb-1">Veronica Andrenacci</h3>
+                    <p class="text-gold text-sm font-bold uppercase">Ala</p>
+                </div>
+            </div>
+
+            <div class="bg-box rounded-xl overflow-hidden border border-white/5 group">
+                <div class="aspect-[3/4] overflow-hidden">
+                    <img src="./img/alicepieraccini.jpg" class="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition duration-500">
+                </div>
+                <div class="p-6">
+                    <h3 class="font-black text-xl uppercase mb-1">Alice Pieraccini</h3>
+                    <p class="text-gold text-sm font-bold uppercase">Centro</p>
+                </div>
+            </div>
+
+            <div class="bg-box rounded-xl overflow-hidden border border-white/5 group">
+                <div class="aspect-[3/4] overflow-hidden">
+                    <img src="./img/carlottamaioli.jpg" class="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition duration-500">
+                </div>
+                <div class="p-6">
+                    <h3 class="font-black text-xl uppercase mb-1">Carlotta Maioli</h3>
+                    <p class="text-gray-400 text-sm uppercase">Playmaker</p>
+                </div>
+            </div>
+
+            <div class="bg-box rounded-xl overflow-hidden border border-white/5 group">
+                <div class="aspect-[3/4] overflow-hidden">
+                    <img src="./img/silviabernabe.jpg" class="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition duration-500">
+                </div>
+                <div class="p-6">
+                    <h3 class="font-black text-xl uppercase mb-1">Silvia Bernabè</h3>
+                    <p class="text-gray-400 text-sm uppercase">Guardia</p>
+                </div>
+            </div>
+
+            <div class="bg-box rounded-xl overflow-hidden border border-white/5 group">
+                <div class="aspect-[3/4] overflow-hidden">
+                    <img src="./img/cristinacurra.jpg" class="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition duration-500">
+                </div>
+                <div class="p-6">
+                    <h3 class="font-black text-xl uppercase mb-1">Cristina Currà</h3>
+                    <p class="text-gold text-sm font-bold uppercase">Centro</p>
+                </div>
+            </div>
+
+            <div class="bg-box rounded-xl overflow-hidden border border-white/5 group">
+                <div class="aspect-[3/4] overflow-hidden">
+                    <img src="./img/sofiapirazzini.jpg" class="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition duration-500">
+                </div>
+                <div class="p-6">
+                    <h3 class="font-black text-xl uppercase mb-1">Sofia Pirazzini</h3>
+                    <p class="text-gold text-sm font-bold uppercase">Guardia</p>
+                </div>
+            </div>
+
+            <div class="bg-box rounded-xl overflow-hidden border border-white/5 group">
+                <div class="aspect-[3/4] overflow-hidden">
+                    <img src="./img/jomandarosier.jpg" class="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition duration-500">
+                </div>
+                <div class="p-6">
+                    <h3 class="font-black text-xl uppercase mb-1">Jomanda Rosier</h3>
+                    <p class="text-gray-400 text-sm uppercase">Centro</p>
+                </div>
+            </div>
+
+            <div class="bg-box rounded-xl overflow-hidden border border-white/5 group">
+                <div class="aspect-[3/4] overflow-hidden">
+                    <img src="./img/luciascopa.jpg" class="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition duration-500">
+                </div>
+                <div class="p-6">
+                    <h3 class="font-black text-xl uppercase mb-1">Lucia Scopa</h3>
+                    <p class="text-gray-400 text-sm uppercase">Under</p>
+                </div>
+            </div>
+
+            <div class="bg-box rounded-xl overflow-hidden border border-white/5 group">
+                <div class="aspect-[3/4] overflow-hidden">
+                    <img src="./img/nornaim.jpg" class="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition duration-500">
+                </div>
+                <div class="p-6">
+                    <h3 class="font-black text-xl uppercase mb-1">Nor Naim</h3>
+                    <p class="text-gray-400 text-sm uppercase">Under</p>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="font-heading text-3xl uppercase mb-10 border-l-4 border-gold pl-4">Staff <span class="text-gold">Tecnico</span></h2>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="bg-box rounded-xl overflow-hidden border border-gold/30 group">
+                <div class="aspect-[3/4] overflow-hidden">
+                    <img src="./img/fabiolisoni.png" class="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition duration-500">
+                </div>
+                <div class="p-6">
+                    <span class="text-gold text-xs font-bold uppercase tracking-widest block">Head Coach</span>
+                    <h3 class="font-black text-xl uppercase mt-1">Fabio Lisoni</h3>
+                </div>
+            </div>
+
+            <div class="bg-box rounded-xl overflow-hidden border border-white/5 group">
+                <div class="aspect-[3/4] overflow-hidden">
+                    <img src="./img/stafftecnico.png" class="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition duration-500">
+                </div>
+                <div class="p-6">
+                    <span class="text-gold text-xs font-bold uppercase tracking-widest block">Team</span>
+                    <h3 class="font-black text-xl uppercase mt-1 leading-tight">Staff Tecnico</h3>
+                </div>
+            </div>
+
+            <div class="bg-box rounded-xl overflow-hidden border border-white/5 group">
+                <div class="aspect-[3/4] overflow-hidden">
+                    <img src="./img/matteomontigiani.jpg" class="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition duration-500">
+                </div>
+                <div class="p-6">
+                    <span class="text-gold text-xs font-bold uppercase tracking-widest block">Athletic Trainer</span>
+                    <h3 class="font-black text-xl uppercase mt-1 leading-tight">Matteo Montigiani</h3>
+                </div>
+            </div>
+
+            <div class="bg-box rounded-xl overflow-hidden border border-white/5 group">
+                <div class="aspect-[3/4] overflow-hidden">
+                    <img src="./img/sarasemprini.jpg" class="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition duration-500">
+                </div>
+                <div class="p-6">
+                    <span class="text-gold text-xs font-bold uppercase tracking-widest block">Assistant Coach</span>
+                    <h3 class="font-black text-xl uppercase mt-1 leading-tight">Sara Semprini</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-container"></div>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settore Giovanile | Capra Team Ravenna</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>tailwind.config={theme:{extend:{colors:{gold:'#FBBF24',dark:'#0A0A0A',box:'#1A1A1A'},fontFamily:{heading:['Syncopate'],sans:['Inter']}}}}</script>
+</head>
+<body class="bg-dark text-white font-sans">
+
+    <div id="navbar-container"></div>
+
+    <header class="relative py-32 px-6 flex flex-col justify-center items-center text-center mt-20 border-b border-white/10">
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1515523110800-9415d13b84a8?q=80&w=2000')] bg-cover bg-center opacity-20"></div>
+        <div class="relative z-10">
+            <h1 class="font-heading text-5xl md:text-7xl mb-4 uppercase">Il Nostro <span class="text-gold">Futuro</span></h1>
+            <p class="text-xl text-gray-300 max-w-2xl mx-auto">Oltre 150 atlete tesserate. Cresciamo ragazze prima ancora che giocatrici.</p>
+        </div>
+    </header>
+
+    <main class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-3 gap-8 mb-24">
+            <div class="bg-box p-8 rounded-2xl border-t-4 border-gold">
+                <i class="fas fa-child text-5xl text-gold mb-6"></i>
+                <h3 class="font-black text-2xl uppercase mb-2">Minibasket</h3>
+                <span class="inline-block bg-white/10 text-xs px-2 py-1 rounded mb-4 font-bold text-gray-400">Annate 2014 - 2018</span>
+                <p class="text-gray-400 text-sm">Il primo approccio alla palla a spicchi. Gioco e motricità.</p>
+            </div>
+            <div class="bg-box p-8 rounded-2xl border-t-4 border-white/20">
+                <i class="fas fa-basketball-ball text-5xl text-gold mb-6"></i>
+                <h3 class="font-black text-2xl uppercase mb-2">Under 13 & 15</h3>
+                <span class="inline-block bg-white/10 text-xs px-2 py-1 rounded mb-4 font-bold text-gray-400">Annate 2010 - 2013</span>
+                <p class="text-gray-400 text-sm">Sviluppo tecnico individuale e primi concetti di gioco di squadra.</p>
+            </div>
+            <div class="bg-box p-8 rounded-2xl border-t-4 border-white/20">
+                <i class="fas fa-trophy text-5xl text-gold mb-6"></i>
+                <h3 class="font-black text-2xl uppercase mb-2">Under 17 & 19</h3>
+                <span class="inline-block bg-white/10 text-xs px-2 py-1 rounded mb-4 font-bold text-gray-400">Annate 2006 - 2009</span>
+                <p class="text-gray-400 text-sm">L'anticamera della Serie B. Alta intensità e agonismo.</p>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-container"></div>
+    <script src="js/main.js"></script>
+</body>
+</html>
