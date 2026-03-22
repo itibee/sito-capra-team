@@ -52,107 +52,13 @@
 
   <main class="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
 
-    <!-- BLOCCO HIGHLIGHTS -->
+    <!-- HIGHLIGHTS -->
     <section class="grid lg:grid-cols-2 gap-8 mb-12">
-
-      <!-- ULTIMA GIORNATA -->
-      <div class="bg-box border border-gold/30 rounded-2xl p-6 sm:p-8 shadow-[0_0_30px_rgba(251,191,36,0.06)]">
-        <div class="flex items-center justify-between gap-4 mb-6 flex-wrap">
-          <div>
-            <span
-              class="text-gold font-bold uppercase text-xs tracking-widest block"
-              data-editable="source"
-              data-path="/calendario.html"
-              data-key="last-round-label">
-              Ultima giornata giocata
-            </span>
-            <span
-              class="text-sm text-gray-400 block mt-2"
-              data-editable="source"
-              data-path="/calendario.html"
-              data-key="last-round-name">
-              25ª giornata · 22/03/2026
-            </span>
-          </div>
-
-          <span class="bg-gold text-black text-xs font-black uppercase px-3 py-2 rounded-full">
-            Risultati finali
-          </span>
-        </div>
-
-        <div class="space-y-4 text-sm sm:text-base">
-          <div class="flex flex-col md:flex-row md:justify-between gap-2 border-b border-white/10 pb-4">
-            <span class="font-bold text-white">Capra Team Ravenna BK vs Puianello BK Team</span>
-            <span class="text-gold font-bold">52 - 68</span>
-          </div>
-
-          <div class="flex flex-col md:flex-row md:justify-between gap-2 border-b border-white/10 pb-4">
-            <span>Rimini Happy Basket vs Walnut Basket Noceto</span>
-            <span>66 - 77</span>
-          </div>
-
-          <div class="flex flex-col md:flex-row md:justify-between gap-2 border-b border-white/10 pb-4">
-            <span>Vis Rosa vs Basket Cavezzo</span>
-            <span>46 - 94</span>
-          </div>
-
-          <div class="flex flex-col md:flex-row md:justify-between gap-2">
-            <span>Magik Rosa Parma vs B.S.L. San Lazzaro</span>
-            <span>70 - 61</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- PROSSIMA GIORNATA -->
-      <div class="bg-box border border-white/5 rounded-2xl p-6 sm:p-8">
-        <div class="flex items-center justify-between gap-4 mb-6 flex-wrap">
-          <div>
-            <span
-              class="text-gold font-bold uppercase text-xs tracking-widest block"
-              data-editable="source"
-              data-path="/calendario.html"
-              data-key="next-round-label">
-              Prossima giornata
-            </span>
-            <span
-              class="text-sm text-gray-400 block mt-2"
-              data-editable="source"
-              data-path="/calendario.html"
-              data-key="next-round-name">
-              26ª giornata · 27/03/2026
-            </span>
-          </div>
-
-          <span class="bg-white/10 text-white text-xs font-black uppercase px-3 py-2 rounded-full">
-            In programma
-          </span>
-        </div>
-
-        <div class="space-y-4 text-sm sm:text-base">
-          <div class="flex flex-col md:flex-row md:justify-between gap-2 border-b border-white/10 pb-4">
-            <span class="font-bold text-white">Capra Team Ravenna BK vs Peperoncino Libertas</span>
-            <span class="text-gold font-bold">27/03/2026</span>
-          </div>
-
-          <div class="flex flex-col md:flex-row md:justify-between gap-2 border-b border-white/10 pb-4">
-            <span>FBK Fiore Valdarda vs Basketball Sisters</span>
-            <span>27/03/2026</span>
-          </div>
-
-          <div class="flex flex-col md:flex-row md:justify-between gap-2 border-b border-white/10 pb-4">
-            <span>Puianello BK Team vs Scandiano 2012</span>
-            <span>27/03/2026</span>
-          </div>
-
-          <div class="flex flex-col md:flex-row md:justify-between gap-2">
-            <span>Magik Rosa Parma vs Rimini Happy Basket</span>
-            <span>27/03/2026</span>
-          </div>
-        </div>
-      </div>
+      <div id="last-round-card" class="bg-box border border-gold/30 rounded-2xl p-6 sm:p-8 shadow-[0_0_30px_rgba(251,191,36,0.06)]"></div>
+      <div id="next-round-card" class="bg-box border border-white/5 rounded-2xl p-6 sm:p-8"></div>
     </section>
 
-    <!-- SELETTORE GIORNATE -->
+    <!-- SELETTORE -->
     <section class="bg-box border border-white/5 rounded-2xl p-6 sm:p-8 mb-8">
       <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
         <div>
@@ -174,123 +80,503 @@
         </div>
 
         <div class="w-full lg:w-72">
-          <select id="giornata-select" class="w-full bg-dark border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-gold">
-            <option value="giornata-25">25ª giornata</option>
-            <option value="giornata-26">26ª giornata</option>
-          </select>
+          <select id="giornata-select" class="w-full bg-dark border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-gold"></select>
         </div>
       </div>
     </section>
 
-    <!-- GIORNATE -->
-    <section id="giornate-wrapper" class="space-y-8">
-
-      <div id="giornata-25" class="giornata-panel bg-box border border-white/5 rounded-2xl p-6 sm:p-8">
-        <h3 class="font-heading text-2xl uppercase mb-6 text-gold">25ª giornata · 22/03/2026</h3>
-
-        <div class="space-y-4 text-sm sm:text-base">
-          <div class="flex flex-col md:flex-row md:justify-between gap-2 border-b border-white/10 pb-4">
-            <span class="font-bold text-white">Capra Team Ravenna BK vs Puianello BK Team</span>
-            <span class="text-gold font-bold">52 - 68</span>
-          </div>
-
-          <div class="flex flex-col md:flex-row md:justify-between gap-2 border-b border-white/10 pb-4">
-            <span>Rimini Happy Basket vs Walnut Basket Noceto</span>
-            <span>66 - 77</span>
-          </div>
-
-          <div class="flex flex-col md:flex-row md:justify-between gap-2 border-b border-white/10 pb-4">
-            <span>Vis Rosa vs Basket Cavezzo</span>
-            <span>46 - 94</span>
-          </div>
-
-          <div class="flex flex-col md:flex-row md:justify-between gap-2 border-b border-white/10 pb-4">
-            <span>Magik Rosa Parma vs B.S.L. San Lazzaro</span>
-            <span>70 - 61</span>
-          </div>
-
-          <div class="flex flex-col md:flex-row md:justify-between gap-2 border-b border-white/10 pb-4">
-            <span>BK Club Valtarese vs Scandiano 2012</span>
-            <span>22/03/2026 · 17:30</span>
-          </div>
-
-          <div class="flex flex-col md:flex-row md:justify-between gap-2 border-b border-white/10 pb-4">
-            <span>Basketball Sisters vs Royal BK Vigarano</span>
-            <span>22/03/2026 · 18:00</span>
-          </div>
-
-          <div class="flex flex-col md:flex-row md:justify-between gap-2 border-b border-white/10 pb-4">
-            <span>Peperoncino Libertas vs Nuova Virtus Cesena</span>
-            <span>15/04/2026 · 21:00</span>
-          </div>
-
-          <div class="flex flex-col md:flex-row md:justify-between gap-2">
-            <span class="font-bold text-white">A riposo: FBK Fiore Valdarda</span>
-            <span>-</span>
-          </div>
-        </div>
-      </div>
-
-      <div id="giornata-26" class="giornata-panel hidden bg-box border border-white/5 rounded-2xl p-6 sm:p-8">
-        <h3 class="font-heading text-2xl uppercase mb-6 text-gold">26ª giornata · 27/03/2026</h3>
-
-        <div class="space-y-4 text-sm sm:text-base">
-          <div class="flex flex-col md:flex-row md:justify-between gap-2 border-b border-white/10 pb-4">
-            <span class="font-bold text-white">Capra Team Ravenna BK vs Peperoncino Libertas</span>
-            <span class="text-gold font-bold">N.G.</span>
-          </div>
-
-          <div class="flex flex-col md:flex-row md:justify-between gap-2 border-b border-white/10 pb-4">
-            <span>FBK Fiore Valdarda vs Basketball Sisters</span>
-            <span>N.G.</span>
-          </div>
-
-          <div class="flex flex-col md:flex-row md:justify-between gap-2 border-b border-white/10 pb-4">
-            <span>Puianello BK Team vs Scandiano 2012</span>
-            <span>N.G.</span>
-          </div>
-
-          <div class="flex flex-col md:flex-row md:justify-between gap-2 border-b border-white/10 pb-4">
-            <span>Magik Rosa Parma vs Rimini Happy Basket</span>
-            <span>N.G.</span>
-          </div>
-
-          <div class="flex flex-col md:flex-row md:justify-between gap-2 border-b border-white/10 pb-4">
-            <span>Walnut Basket Noceto vs Basket Cavezzo</span>
-            <span>N.G.</span>
-          </div>
-
-          <div class="flex flex-col md:flex-row md:justify-between gap-2 border-b border-white/10 pb-4">
-            <span>Vis Rosa vs Royal BK Vigarano</span>
-            <span>N.G.</span>
-          </div>
-
-          <div class="flex flex-col md:flex-row md:justify-between gap-2 border-b border-white/10 pb-4">
-            <span>B.S.L. San Lazzaro vs BK Club Valtarese</span>
-            <span>N.G.</span>
-          </div>
-
-          <div class="flex flex-col md:flex-row md:justify-between gap-2">
-            <span class="font-bold text-white">A riposo: Nuova Virtus Cesena</span>
-            <span>-</span>
-          </div>
-        </div>
-      </div>
-
-    </section>
+    <!-- CONTENUTO GIORNATA -->
+    <section id="giornata-render" class="bg-box border border-white/5 rounded-2xl p-6 sm:p-8"></section>
   </main>
 
   <div id="footer-container"></div>
 
   <script>
-    const select = document.getElementById('giornata-select');
-    const panels = document.querySelectorAll('.giornata-panel');
+    const giornate = {
+      1: {
+        date: "03/10/2025",
+        rest: "BK Club Valtarese",
+        matches: [
+          { home: "Scandiano 2012", away: "Walnut Basket Noceto", info: "61 - 51" },
+          { home: "Capra Team Ravenna BK", away: "Magik Rosa Parma", info: "60 - 52", highlight: true },
+          { home: "FBK Fiore Valdarda", away: "Rimini Happy Basket", info: "65 - 62" },
+          { home: "Vis Rosa", away: "Puianello BK Team", info: "56 - 87" },
+          { home: "Basket Cavezzo", away: "Royal BK Vigarano", info: "89 - 38" },
+          { home: "B.S.L. San Lazzaro", away: "Nuova Virtus Cesena", info: "62 - 51" },
+          { home: "Basketball Sisters", away: "Peperoncino Libertas", info: "63 - 35" }
+        ]
+      },
+      2: {
+        date: "10/10/2025",
+        rest: "Basketball Sisters",
+        matches: [
+          { home: "Capra Team Ravenna BK", away: "B.S.L. San Lazzaro", info: "54 - 64", highlight: true },
+          { home: "Puianello BK Team", away: "Walnut Basket Noceto", info: "88 - 48" },
+          { home: "Peperoncino Libertas", away: "Vis Rosa", info: "87 - 43" },
+          { home: "Basket Cavezzo", away: "FBK Fiore Valdarda", info: "71 - 52" },
+          { home: "Magik Rosa Parma", away: "Scandiano 2012", info: "41 - 42" },
+          { home: "Rimini Happy Basket", away: "Nuova Virtus Cesena", info: "66 - 58" },
+          { home: "BK Club Valtarese", away: "Royal BK Vigarano", info: "74 - 68" }
+        ]
+      },
+      3: {
+        date: "18/10/2025",
+        rest: "Vis Rosa",
+        matches: [
+          { home: "Puianello BK Team", away: "Magik Rosa Parma", info: "66 - 47" },
+          { home: "Walnut Basket Noceto", away: "Peperoncino Libertas", info: "68 - 47" },
+          { home: "Rimini Happy Basket", away: "Capra Team Ravenna BK", info: "61 - 55", highlight: true },
+          { home: "B.S.L. San Lazzaro", away: "Scandiano 2012", info: "73 - 68" },
+          { home: "BK Club Valtarese", away: "Basketball Sisters", info: "81 - 59" },
+          { home: "Nuova Virtus Cesena", away: "Basket Cavezzo", info: "44 - 83" },
+          { home: "Royal BK Vigarano", away: "FBK Fiore Valdarda", info: "61 - 51" }
+        ]
+      },
+      4: {
+        date: "24/10/2025",
+        rest: "Walnut Basket Noceto",
+        matches: [
+          { home: "Scandiano 2012", away: "Rimini Happy Basket", info: "62 - 53" },
+          { home: "Royal BK Vigarano", away: "Nuova Virtus Cesena", info: "49 - 45" },
+          { home: "FBK Fiore Valdarda", away: "BK Club Valtarese", info: "73 - 66" },
+          { home: "Magik Rosa Parma", away: "Peperoncino Libertas", info: "65 - 44" },
+          { home: "B.S.L. San Lazzaro", away: "Puianello BK Team", info: "35 - 72" },
+          { home: "Basket Cavezzo", away: "Capra Team Ravenna BK", info: "81 - 48", highlight: true },
+          { home: "Vis Rosa", away: "Basketball Sisters", info: "34 - 70" }
+        ]
+      },
+      5: {
+        date: "28/10/2025",
+        rest: "Magik Rosa Parma",
+        matches: [
+          { home: "Basket Cavezzo", away: "Scandiano 2012", info: "59 - 43" },
+          { home: "Rimini Happy Basket", away: "Puianello BK Team", info: "50 - 61" },
+          { home: "Capra Team Ravenna BK", away: "Royal BK Vigarano", info: "61 - 45", highlight: true },
+          { home: "Nuova Virtus Cesena", away: "FBK Fiore Valdarda", info: "56 - 62" },
+          { home: "Basketball Sisters", away: "Walnut Basket Noceto", info: "56 - 45" },
+          { home: "BK Club Valtarese", away: "Vis Rosa", info: "81 - 47" },
+          { home: "Peperoncino Libertas", away: "B.S.L. San Lazzaro", info: "81 - 51" }
+        ]
+      },
+      6: {
+        date: "31/10/2025",
+        rest: "B.S.L. San Lazzaro",
+        matches: [
+          { home: "Scandiano 2012", away: "Royal BK Vigarano", info: "72 - 57" },
+          { home: "FBK Fiore Valdarda", away: "Capra Team Ravenna BK", info: "44 - 58", highlight: true },
+          { home: "Magik Rosa Parma", away: "Basketball Sisters", info: "56 - 62" },
+          { home: "Peperoncino Libertas", away: "Rimini Happy Basket", info: "48 - 72" },
+          { home: "Vis Rosa", away: "Walnut Basket Noceto", info: "41 - 74" },
+          { home: "Nuova Virtus Cesena", away: "BK Club Valtarese", info: "53 - 62" },
+          { home: "Puianello BK Team", away: "Basket Cavezzo", info: "72 - 78" }
+        ]
+      },
+      7: {
+        date: "07/11/2025",
+        rest: "Rimini Happy Basket",
+        matches: [
+          { home: "Scandiano 2012", away: "FBK Fiore Valdarda", info: "66 - 57" },
+          { home: "Capra Team Ravenna BK", away: "Nuova Virtus Cesena", info: "56 - 61", highlight: true },
+          { home: "Royal BK Vigarano", away: "Puianello BK Team", info: "45 - 64" },
+          { home: "Walnut Basket Noceto", away: "BK Club Valtarese", info: "69 - 54" },
+          { home: "Basket Cavezzo", away: "Peperoncino Libertas", info: "68 - 45" },
+          { home: "Vis Rosa", away: "Magik Rosa Parma", info: "34 - 77" },
+          { home: "Basketball Sisters", away: "B.S.L. San Lazzaro", info: "53 - 46" }
+        ]
+      },
+      8: {
+        date: "15/11/2025",
+        rest: "Basket Cavezzo",
+        matches: [
+          { home: "Magik Rosa Parma", away: "Walnut Basket Noceto", info: "56 - 64" },
+          { home: "FBK Fiore Valdarda", away: "Puianello BK Team", info: "76 - 69" },
+          { home: "Rimini Happy Basket", away: "Basketball Sisters", info: "70 - 60" },
+          { home: "Peperoncino Libertas", away: "Royal BK Vigarano", info: "54 - 63" },
+          { home: "BK Club Valtarese", away: "Capra Team Ravenna BK", info: "55 - 72", highlight: true },
+          { home: "Nuova Virtus Cesena", away: "Scandiano 2012", info: "38 - 55" },
+          { home: "B.S.L. San Lazzaro", away: "Vis Rosa", info: "66 - 47" }
+        ]
+      },
+      9: {
+        date: "21/11/2025",
+        rest: "Royal BK Vigarano",
+        matches: [
+          { home: "Capra Team Ravenna BK", away: "Scandiano 2012", info: "39 - 41", highlight: true },
+          { home: "Magik Rosa Parma", away: "BK Club Valtarese", info: "62 - 67" },
+          { home: "FBK Fiore Valdarda", away: "Peperoncino Libertas", info: "74 - 69" },
+          { home: "Puianello BK Team", away: "Nuova Virtus Cesena", info: "86 - 64" },
+          { home: "Walnut Basket Noceto", away: "B.S.L. San Lazzaro", info: "69 - 59" },
+          { home: "Vis Rosa", away: "Rimini Happy Basket", info: "44 - 95" },
+          { home: "Basketball Sisters", away: "Basket Cavezzo", info: "63 - 66" }
+        ]
+      },
+      10: {
+        date: "28/11/2025",
+        rest: "FBK Fiore Valdarda",
+        matches: [
+          { home: "Scandiano 2012", away: "BK Club Valtarese", info: "68 - 56" },
+          { home: "Royal BK Vigarano", away: "Basketball Sisters", info: "50 - 61" },
+          { home: "Puianello BK Team", away: "Capra Team Ravenna BK", info: "52 - 54", highlight: true },
+          { home: "Walnut Basket Noceto", away: "Rimini Happy Basket", info: "65 - 62" },
+          { home: "Basket Cavezzo", away: "Vis Rosa", info: "92 - 32" },
+          { home: "B.S.L. San Lazzaro", away: "Magik Rosa Parma", info: "45 - 57" },
+          { home: "Nuova Virtus Cesena", away: "Peperoncino Libertas", info: "66 - 63" }
+        ]
+      },
+      11: {
+        date: "05/12/2025",
+        rest: "Nuova Virtus Cesena",
+        matches: [
+          { home: "Scandiano 2012", away: "Puianello BK Team", info: "54 - 60" },
+          { home: "Royal BK Vigarano", away: "Vis Rosa", info: "74 - 48" },
+          { home: "Rimini Happy Basket", away: "Magik Rosa Parma", info: "71 - 41" },
+          { home: "Peperoncino Libertas", away: "Capra Team Ravenna BK", info: "55 - 61", highlight: true },
+          { home: "Basket Cavezzo", away: "Walnut Basket Noceto", info: "74 - 53" },
+          { home: "BK Club Valtarese", away: "B.S.L. San Lazzaro", info: "67 - 61" },
+          { home: "Basketball Sisters", away: "FBK Fiore Valdarda", info: "67 - 76" }
+        ]
+      },
+      12: {
+        date: "13/12/2025",
+        rest: "Capra Team Ravenna BK",
+        matches: [
+          { home: "Puianello BK Team", away: "BK Club Valtarese", info: "74 - 53" },
+          { home: "Magik Rosa Parma", away: "Basket Cavezzo", info: "44 - 85" },
+          { home: "Walnut Basket Noceto", away: "Royal BK Vigarano", info: "76 - 49" },
+          { home: "Peperoncino Libertas", away: "Scandiano 2012", info: "91 - 70" },
+          { home: "Vis Rosa", away: "FBK Fiore Valdarda", info: "33 - 83" },
+          { home: "B.S.L. San Lazzaro", away: "Rimini Happy Basket", info: "49 - 59" },
+          { home: "Nuova Virtus Cesena", away: "Basketball Sisters", info: "59 - 61" }
+        ]
+      },
+      13: {
+        date: "19/12/2025",
+        rest: "Scandiano 2012",
+        matches: [
+          { home: "Capra Team Ravenna BK", away: "Basketball Sisters", info: "66 - 52", highlight: true },
+          { home: "Royal BK Vigarano", away: "Magik Rosa Parma", info: "57 - 58" },
+          { home: "Puianello BK Team", away: "Peperoncino Libertas", info: "61 - 48" },
+          { home: "FBK Fiore Valdarda", away: "Walnut Basket Noceto", info: "54 - 63" },
+          { home: "Vis Rosa", away: "Nuova Virtus Cesena", info: "50 - 62" },
+          { home: "Basket Cavezzo", away: "B.S.L. San Lazzaro", info: "73 - 53" },
+          { home: "BK Club Valtarese", away: "Rimini Happy Basket", info: "52 - 74" }
+        ]
+      },
+      14: {
+        date: "10/01/2026",
+        rest: "Puianello BK Team",
+        matches: [
+          { home: "Magik Rosa Parma", away: "FBK Fiore Valdarda", info: "37 - 71" },
+          { home: "Walnut Basket Noceto", away: "Nuova Virtus Cesena", info: "65 - 46" },
+          { home: "Rimini Happy Basket", away: "Basket Cavezzo", info: "74 - 72" },
+          { home: "Peperoncino Libertas", away: "BK Club Valtarese", info: "39 - 86" },
+          { home: "Vis Rosa", away: "Capra Team Ravenna BK", info: "43 - 70", highlight: true },
+          { home: "Basketball Sisters", away: "Scandiano 2012", info: "64 - 54" },
+          { home: "B.S.L. San Lazzaro", away: "Royal BK Vigarano", info: "76 - 69" }
+        ]
+      },
+      15: {
+        date: "16/01/2026",
+        rest: "Peperoncino Libertas",
+        matches: [
+          { home: "Scandiano 2012", away: "Vis Rosa", info: "105 - 59" },
+          { home: "FBK Fiore Valdarda", away: "B.S.L. San Lazzaro", info: "93 - 57" },
+          { home: "Walnut Basket Noceto", away: "Capra Team Ravenna BK", info: "68 - 54", highlight: true },
+          { home: "Rimini Happy Basket", away: "Royal BK Vigarano", info: "79 - 60" },
+          { home: "BK Club Valtarese", away: "Basket Cavezzo", info: "56 - 65" },
+          { home: "Basketball Sisters", away: "Puianello BK Team", info: "58 - 59" },
+          { home: "Nuova Virtus Cesena", away: "Magik Rosa Parma", info: "49 - 62" }
+        ]
+      },
+      16: {
+        date: "23/01/2026",
+        rest: "BK Club Valtarese",
+        matches: [
+          { home: "Royal BK Vigarano", away: "Basket Cavezzo", info: "55 - 74" },
+          { home: "Puianello BK Team", away: "Vis Rosa", info: "107 - 39" },
+          { home: "Magik Rosa Parma", away: "Capra Team Ravenna BK", info: "48 - 66", highlight: true },
+          { home: "Walnut Basket Noceto", away: "Scandiano 2012", info: "61 - 56" },
+          { home: "Rimini Happy Basket", away: "FBK Fiore Valdarda", info: "76 - 55" },
+          { home: "Peperoncino Libertas", away: "Basketball Sisters", info: "50 - 49" },
+          { home: "Nuova Virtus Cesena", away: "B.S.L. San Lazzaro", info: "53 - 59" }
+        ]
+      },
+      17: {
+        date: "30/01/2026",
+        rest: "Basketball Sisters",
+        matches: [
+          { home: "Scandiano 2012", away: "Magik Rosa Parma", info: "59 - 36" },
+          { home: "Royal BK Vigarano", away: "BK Club Valtarese", info: "66 - 56" },
+          { home: "FBK Fiore Valdarda", away: "Basket Cavezzo", info: "69 - 79" },
+          { home: "Walnut Basket Noceto", away: "Puianello BK Team", info: "72 - 57" },
+          { home: "Vis Rosa", away: "Peperoncino Libertas", info: "39 - 57" },
+          { home: "B.S.L. San Lazzaro", away: "Capra Team Ravenna BK", info: "49 - 61", highlight: true },
+          { home: "Nuova Virtus Cesena", away: "Rimini Happy Basket", info: "52 - 84" }
+        ]
+      },
+      18: {
+        date: "06/02/2026",
+        rest: "Vis Rosa",
+        matches: [
+          { home: "Scandiano 2012", away: "B.S.L. San Lazzaro", info: "78 - 61" },
+          { home: "Capra Team Ravenna BK", away: "Rimini Happy Basket", info: "57 - 53", highlight: true },
+          { home: "FBK Fiore Valdarda", away: "Royal BK Vigarano", info: "80 - 50" },
+          { home: "Magik Rosa Parma", away: "Puianello BK Team", info: "46 - 66" },
+          { home: "Peperoncino Libertas", away: "Walnut Basket Noceto", info: "53 - 79" },
+          { home: "Basket Cavezzo", away: "Nuova Virtus Cesena", info: "77 - 48" },
+          { home: "Basketball Sisters", away: "BK Club Valtarese", info: "73 - 38" }
+        ]
+      },
+      19: {
+        date: "13/02/2026",
+        rest: "Walnut Basket Noceto",
+        matches: [
+          { home: "Capra Team Ravenna BK", away: "Basket Cavezzo", info: "57 - 89", highlight: true },
+          { home: "Puianello BK Team", away: "B.S.L. San Lazzaro", info: "74 - 76" },
+          { home: "Rimini Happy Basket", away: "Scandiano 2012", info: "64 - 60" },
+          { home: "Peperoncino Libertas", away: "Magik Rosa Parma", info: "58 - 65" },
+          { home: "BK Club Valtarese", away: "FBK Fiore Valdarda", info: "56 - 71" },
+          { home: "Basketball Sisters", away: "Vis Rosa", info: "79 - 42" },
+          { home: "Nuova Virtus Cesena", away: "Royal BK Vigarano", info: "57 - 51" }
+        ]
+      },
+      20: {
+        date: "17/02/2026",
+        rest: "Magik Rosa Parma",
+        matches: [
+          { home: "B.S.L. San Lazzaro", away: "Peperoncino Libertas", info: "59 - 48" },
+          { home: "Scandiano 2012", away: "Basket Cavezzo", info: "54 - 76" },
+          { home: "Puianello BK Team", away: "Rimini Happy Basket", info: "94 - 75" },
+          { home: "Royal BK Vigarano", away: "Capra Team Ravenna BK", info: "48 - 53", highlight: true },
+          { home: "FBK Fiore Valdarda", away: "Nuova Virtus Cesena", info: "65 - 57" },
+          { home: "Vis Rosa", away: "BK Club Valtarese", info: "61 - 74" },
+          { home: "Walnut Basket Noceto", away: "Basketball Sisters", info: "74 - 64" }
+        ]
+      },
+      21: {
+        date: "20/02/2026",
+        rest: "B.S.L. San Lazzaro",
+        matches: [
+          { home: "Capra Team Ravenna BK", away: "FBK Fiore Valdarda", info: "53 - 62", highlight: true },
+          { home: "Royal BK Vigarano", away: "Scandiano 2012", info: "61 - 71" },
+          { home: "Walnut Basket Noceto", away: "Vis Rosa", info: "88 - 59" },
+          { home: "Rimini Happy Basket", away: "Peperoncino Libertas", info: "65 - 49" },
+          { home: "Basket Cavezzo", away: "Puianello BK Team", info: "71 - 64" },
+          { home: "BK Club Valtarese", away: "Nuova Virtus Cesena", info: "70 - 63" },
+          { home: "Basketball Sisters", away: "Magik Rosa Parma", info: "64 - 42" }
+        ]
+      },
+      22: {
+        date: "28/02/2026",
+        rest: "Rimini Happy Basket",
+        matches: [
+          { home: "Magik Rosa Parma", away: "Vis Rosa", info: "87 - 52" },
+          { home: "FBK Fiore Valdarda", away: "Scandiano 2012", info: "76 - 72" },
+          { home: "Puianello BK Team", away: "Royal BK Vigarano", info: "71 - 60" },
+          { home: "Peperoncino Libertas", away: "Basket Cavezzo", info: "51 - 79" },
+          { home: "BK Club Valtarese", away: "Walnut Basket Noceto", info: "57 - 71" },
+          { home: "Nuova Virtus Cesena", away: "Capra Team Ravenna BK", info: "56 - 65", highlight: true },
+          { home: "B.S.L. San Lazzaro", away: "Basketball Sisters", info: "72 - 75" }
+        ]
+      },
+      23: {
+        date: "06/03/2026",
+        rest: "Basket Cavezzo",
+        matches: [
+          { home: "Scandiano 2012", away: "Nuova Virtus Cesena", info: "72 - 48" },
+          { home: "Royal BK Vigarano", away: "Peperoncino Libertas", info: "73 - 48" },
+          { home: "Capra Team Ravenna BK", away: "BK Club Valtarese", info: "64 - 58", highlight: true },
+          { home: "Puianello BK Team", away: "FBK Fiore Valdarda", info: "65 - 53" },
+          { home: "Walnut Basket Noceto", away: "Magik Rosa Parma", info: "71 - 51" },
+          { home: "Vis Rosa", away: "B.S.L. San Lazzaro", info: "N.G." },
+          { home: "Basketball Sisters", away: "Rimini Happy Basket", info: "63 - 55" }
+        ]
+      },
+      24: {
+        date: "13/03/2026",
+        rest: "Royal BK Vigarano",
+        matches: [
+          { home: "Scandiano 2012", away: "Capra Team Ravenna BK", info: "59 - 55", highlight: true },
+          { home: "Rimini Happy Basket", away: "Vis Rosa", info: "85 - 30" },
+          { home: "Peperoncino Libertas", away: "FBK Fiore Valdarda", info: "50 - 67" },
+          { home: "Basket Cavezzo", away: "Basketball Sisters", info: "61 - 41" },
+          { home: "BK Club Valtarese", away: "Magik Rosa Parma", info: "65 - 68" },
+          { home: "B.S.L. San Lazzaro", away: "Walnut Basket Noceto", info: "59 - 65" },
+          { home: "Nuova Virtus Cesena", away: "Puianello BK Team", info: "N.G." }
+        ]
+      },
+      25: {
+        date: "20/03/2026",
+        rest: "FBK Fiore Valdarda",
+        matches: [
+          { home: "Capra Team Ravenna BK", away: "Puianello BK Team", info: "52 - 68", highlight: true },
+          { home: "Magik Rosa Parma", away: "B.S.L. San Lazzaro", info: "70 - 61" },
+          { home: "Rimini Happy Basket", away: "Walnut Basket Noceto", info: "66 - 77" },
+          { home: "Peperoncino Libertas", away: "Nuova Virtus Cesena", info: "N.G." },
+          { home: "Vis Rosa", away: "Basket Cavezzo", info: "46 - 94" },
+          { home: "BK Club Valtarese", away: "Scandiano 2012", info: "N.G." },
+          { home: "Basketball Sisters", away: "Royal BK Vigarano", info: "N.G." }
+        ]
+      },
+      26: {
+        date: "27/03/2026",
+        rest: "Nuova Virtus Cesena",
+        matches: [
+          { home: "Capra Team Ravenna BK", away: "Peperoncino Libertas", info: "N.G.", highlight: true },
+          { home: "FBK Fiore Valdarda", away: "Basketball Sisters", info: "N.G." },
+          { home: "Puianello BK Team", away: "Scandiano 2012", info: "N.G." },
+          { home: "Magik Rosa Parma", away: "Rimini Happy Basket", info: "N.G." },
+          { home: "Walnut Basket Noceto", away: "Basket Cavezzo", info: "N.G." },
+          { home: "Vis Rosa", away: "Royal BK Vigarano", info: "N.G." },
+          { home: "B.S.L. San Lazzaro", away: "BK Club Valtarese", info: "N.G." }
+        ]
+      },
+      27: {
+        date: "10/04/2026",
+        rest: "Capra Team Ravenna BK",
+        matches: [
+          { home: "Scandiano 2012", away: "Peperoncino Libertas", info: "N.G." },
+          { home: "Royal BK Vigarano", away: "Walnut Basket Noceto", info: "N.G." },
+          { home: "FBK Fiore Valdarda", away: "Vis Rosa", info: "N.G." },
+          { home: "Rimini Happy Basket", away: "B.S.L. San Lazzaro", info: "N.G." },
+          { home: "Basket Cavezzo", away: "Magik Rosa Parma", info: "N.G." },
+          { home: "BK Club Valtarese", away: "Puianello BK Team", info: "N.G." },
+          { home: "Basketball Sisters", away: "Nuova Virtus Cesena", info: "N.G." }
+        ]
+      },
+      28: {
+        date: "18/04/2026",
+        rest: "Scandiano 2012",
+        matches: [
+          { home: "Magik Rosa Parma", away: "Royal BK Vigarano", info: "N.G." },
+          { home: "Walnut Basket Noceto", away: "FBK Fiore Valdarda", info: "N.G." },
+          { home: "Rimini Happy Basket", away: "BK Club Valtarese", info: "N.G." },
+          { home: "Peperoncino Libertas", away: "Puianello BK Team", info: "N.G." },
+          { home: "Basketball Sisters", away: "Capra Team Ravenna BK", info: "N.G.", highlight: true },
+          { home: "B.S.L. San Lazzaro", away: "Basket Cavezzo", info: "N.G." },
+          { home: "Nuova Virtus Cesena", away: "Vis Rosa", info: "N.G." }
+        ]
+      },
+      29: {
+        date: "24/04/2026",
+        rest: "Puianello BK Team",
+        matches: [
+          { home: "Scandiano 2012", away: "Basketball Sisters", info: "N.G." },
+          { home: "Capra Team Ravenna BK", away: "Vis Rosa", info: "N.G.", highlight: true },
+          { home: "Royal BK Vigarano", away: "B.S.L. San Lazzaro", info: "N.G." },
+          { home: "FBK Fiore Valdarda", away: "Magik Rosa Parma", info: "N.G." },
+          { home: "Basket Cavezzo", away: "Rimini Happy Basket", info: "N.G." },
+          { home: "BK Club Valtarese", away: "Peperoncino Libertas", info: "N.G." },
+          { home: "Nuova Virtus Cesena", away: "Walnut Basket Noceto", info: "N.G." }
+        ]
+      },
+      30: {
+        date: "02/05/2026",
+        rest: "Peperoncino Libertas",
+        matches: [
+          { home: "Royal BK Vigarano", away: "Rimini Happy Basket", info: "N.G." },
+          { home: "Puianello BK Team", away: "Basketball Sisters", info: "N.G." },
+          { home: "Basket Cavezzo", away: "BK Club Valtarese", info: "N.G." },
+          { home: "Magik Rosa Parma", away: "Nuova Virtus Cesena", info: "N.G." },
+          { home: "Vis Rosa", away: "Scandiano 2012", info: "N.G." },
+          { home: "Capra Team Ravenna BK", away: "Walnut Basket Noceto", info: "N.G.", highlight: true },
+          { home: "B.S.L. San Lazzaro", away: "FBK Fiore Valdarda", info: "N.G." }
+        ]
+      }
+    };
 
-    if (select && panels.length) {
-      select.addEventListener('change', function () {
-        panels.forEach(panel => panel.classList.add('hidden'));
-        const selected = document.getElementById(this.value);
-        if (selected) selected.classList.remove('hidden');
+    const lastRoundNumber = 25;
+    const nextRoundNumber = 26;
+
+    const select = document.getElementById("giornata-select");
+    const renderBox = document.getElementById("giornata-render");
+    const lastRoundCard = document.getElementById("last-round-card");
+    const nextRoundCard = document.getElementById("next-round-card");
+
+    function buildMatchRows(matches, compact = false) {
+      return matches.map(match => {
+        const highlightClass = match.highlight ? "font-bold text-white" : "";
+        const infoClass = match.highlight ? "text-gold font-bold" : "";
+        const padding = compact ? "pb-3" : "pb-4";
+        return `
+          <div class="flex flex-col md:flex-row md:justify-between gap-2 border-b border-white/10 ${padding}">
+            <span class="${highlightClass}">${match.home} vs ${match.away}</span>
+            <span class="${infoClass}">${match.info}</span>
+          </div>
+        `;
+      }).join("");
+    }
+
+    function renderHighlightCard(target, label, badge, roundNumber, badgeClass) {
+      const round = giornate[roundNumber];
+      target.innerHTML = `
+        <div class="flex items-center justify-between gap-4 mb-6 flex-wrap">
+          <div>
+            <span class="text-gold font-bold uppercase text-xs tracking-widest block">${label}</span>
+            <span class="text-sm text-gray-400 block mt-2">${roundNumber}ª giornata · ${round.date}</span>
+          </div>
+          <span class="${badgeClass} text-xs font-black uppercase px-3 py-2 rounded-full">${badge}</span>
+        </div>
+
+        <div class="space-y-3 text-sm sm:text-base">
+          ${buildMatchRows(round.matches, true)}
+          <div class="flex flex-col md:flex-row md:justify-between gap-2 pt-1">
+            <span class="font-bold text-white">A riposo: ${round.rest}</span>
+            <span>-</span>
+          </div>
+        </div>
+      `;
+    }
+
+    function buildSelect() {
+      const numeri = Object.keys(giornate).map(Number).sort((a, b) => a - b);
+      numeri.forEach((num) => {
+        const option = document.createElement("option");
+        option.value = num;
+        option.textContent = `${num}ª giornata`;
+        select.appendChild(option);
+      });
+      select.value = String(lastRoundNumber);
+    }
+
+    function renderGiornata(numero) {
+      const round = giornate[numero];
+      renderBox.innerHTML = `
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
+          <h3 class="font-heading text-2xl uppercase text-gold">${numero}ª giornata</h3>
+          <span class="text-sm text-gray-400">${round.date}</span>
+        </div>
+
+        <div class="space-y-4 text-sm sm:text-base">
+          ${buildMatchRows(round.matches)}
+          <div class="flex flex-col md:flex-row md:justify-between gap-2">
+            <span class="font-bold text-white">A riposo: ${round.rest}</span>
+            <span>-</span>
+          </div>
+        </div>
+      `;
+    }
+
+    if (select && renderBox && lastRoundCard && nextRoundCard) {
+      buildSelect();
+      renderHighlightCard(
+        lastRoundCard,
+        "Ultima giornata giocata",
+        "Risultati finali",
+        lastRoundNumber,
+        "bg-gold text-black"
+      );
+      renderHighlightCard(
+        nextRoundCard,
+        "Prossima giornata",
+        "In programma",
+        nextRoundNumber,
+        "bg-white/10 text-white"
+      );
+      renderGiornata(lastRoundNumber);
+
+      select.addEventListener("change", function () {
+        renderGiornata(Number(this.value));
       });
     }
   </script>
