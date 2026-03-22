@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Serie B | Capra Team Ravenna</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { gold:'#FBBF24', dark:'#0A0A0A', box:'#1A1A1A' },
+          fontFamily: { heading:['Syncopate'], sans:['Inter'] }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-dark text-white font-sans">
+  <div id="navbar-container"></div>
+
+  <header class="relative min-h-[50vh] flex items-center justify-center text-center overflow-hidden pt-24">
+    <img src="/assets/images/hero-home.jpg" alt="Hero Serie B" class="absolute inset-0 w-full h-full object-cover opacity-40">
+    <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent"></div>
+    <div class="relative z-10 px-4">
+      <span class="text-gold font-heading text-xs sm:text-sm mb-4 tracking-[0.35em] block"
+            data-editable="source" data-path="/serie-b.html" data-key="hero-kicker">CAPRA TEAM RAVENNA</span>
+      <h1 class="text-4xl sm:text-6xl font-black uppercase tracking-tighter"
+          data-editable="source" data-path="/serie-b.html" data-key="hero-title">Serie B</h1>
+      <p class="text-gray-300 mt-4 max-w-2xl mx-auto"
+         data-editable="source" data-path="/serie-b.html" data-key="hero-subtitle">Tutto quello che riguarda la prima squadra: roster, calendario e classifica.</p>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
+    <div class="grid md:grid-cols-3 gap-8">
+      <a href="roster.html" class="bg-box border border-white/5 rounded-2xl p-8 hover:border-gold/40 transition">
+        <span class="text-gold text-sm font-bold uppercase">Team</span>
+        <h2 class="font-heading text-2xl mt-3 mb-3 uppercase">Roster</h2>
+        <p class="text-gray-400">Scopri giocatrici e staff tecnico della stagione in corso.</p>
+      </a>
+
+      <a href="calendario.html" class="bg-box border border-white/5 rounded-2xl p-8 hover:border-gold/40 transition">
+        <span class="text-gold text-sm font-bold uppercase">Stagione</span>
+        <h2 class="font-heading text-2xl mt-3 mb-3 uppercase">Calendario</h2>
+        <p class="text-gray-400">Tutte le partite già giocate e da giocare, divise per giornata.</p>
+      </a>
+
+      <a href="classifica.html" class="bg-box border border-white/5 rounded-2xl p-8 hover:border-gold/40 transition">
+        <span class="text-gold text-sm font-bold uppercase">Campionato</span>
+        <h2 class="font-heading text-2xl mt-3 mb-3 uppercase">Classifica</h2>
+        <p class="text-gray-400">Segui l’andamento del campionato e la posizione del Capra Team.</p>
+      </a>
+    </div>
+  </main>
+
+  <div id="footer-container"></div>
+  <script src="/js/main.js"></script>
+</body>
+</html>
