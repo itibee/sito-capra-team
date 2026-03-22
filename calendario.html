@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendario | Capra Team Ravenna</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { gold:'#FBBF24', dark:'#0A0A0A', box:'#1A1A1A' },
+          fontFamily: { heading:['Syncopate'], sans:['Inter'] }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-dark text-white font-sans">
+  <div id="navbar-container"></div>
+
+  <header class="relative min-h-[45vh] flex items-center justify-center text-center overflow-hidden pt-24">
+    <img src="/assets/images/hero-home.jpg" alt="Hero Calendario" class="absolute inset-0 w-full h-full object-cover opacity-40">
+    <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent"></div>
+    <div class="relative z-10 px-4">
+      <span class="text-gold font-heading text-xs sm:text-sm tracking-[0.35em] block"
+            data-editable="source" data-path="/calendario.html" data-key="hero-kicker">SERIE B</span>
+      <h1 class="text-4xl sm:text-6xl font-black uppercase tracking-tighter mt-4"
+          data-editable="source" data-path="/calendario.html" data-key="hero-title">Calendario</h1>
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-4 sm:px-6 py-16 sm:py-24 space-y-10">
+
+    <section class="bg-box border border-white/5 rounded-2xl p-6 sm:p-8">
+      <h2 class="font-heading text-2xl uppercase mb-6">Giornata 1</h2>
+      <div class="space-y-4 text-gray-300">
+        <div class="flex flex-col md:flex-row md:justify-between gap-2 border-b border-white/10 pb-4">
+          <span>Capra Team Ravenna vs Magic Rosa Parma</span>
+          <span class="text-gold font-bold">60 - 52</span>
+        </div>
+        <div class="flex flex-col md:flex-row md:justify-between gap-2 border-b border-white/10 pb-4">
+          <span>Faenza Basket Project vs Team X</span>
+          <span>58 - 61</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-box border border-white/5 rounded-2xl p-6 sm:p-8">
+      <h2 class="font-heading text-2xl uppercase mb-6">Giornata 2</h2>
+      <div class="space-y-4 text-gray-300">
+        <div class="flex flex-col md:flex-row md:justify-between gap-2 border-b border-white/10 pb-4">
+          <span>Noceto Basket Femminile vs Capra Team Ravenna</span>
+          <span class="text-gold font-bold">55 - 63</span>
+        </div>
+        <div class="flex flex-col md:flex-row md:justify-between gap-2 border-b border-white/10 pb-4">
+          <span>Team Y vs Team Z</span>
+          <span>49 - 47</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-box border border-white/5 rounded-2xl p-6 sm:p-8">
+      <h2 class="font-heading text-2xl uppercase mb-6">Giornata 3</h2>
+      <div class="space-y-4 text-gray-300">
+        <div class="flex flex-col md:flex-row md:justify-between gap-2 border-b border-white/10 pb-4">
+          <span>Capra Team Ravenna vs Team W</span>
+          <span>Sabato 29/03 - ore 18:00</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="footer-container"></div>
+  <script src="/js/main.js"></script>
+</body>
+</html>
