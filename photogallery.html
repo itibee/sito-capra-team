@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photogallery | Capra Team Ravenna</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { gold:'#FBBF24', dark:'#0A0A0A', box:'#1A1A1A' },
+          fontFamily: { heading:['Syncopate'], sans:['Inter'] }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-dark text-white font-sans">
+  <div id="navbar-container"></div>
+
+  <header class="relative min-h-[50vh] flex items-center justify-center text-center overflow-hidden pt-24">
+    <img src="/assets/images/hero-home.jpg" alt="Hero Photogallery" class="absolute inset-0 w-full h-full object-cover opacity-40">
+    <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent"></div>
+    <div class="relative z-10 px-4">
+      <span class="text-gold font-heading text-xs sm:text-sm tracking-[0.35em] block">CAPRA TEAM RAVENNA</span>
+      <h1 class="text-4xl sm:text-6xl font-black uppercase tracking-tighter mt-4">Photogallery</h1>
+      <p class="text-gray-300 mt-4 max-w-2xl mx-auto">Tutti gli scatti della stagione: Prima Squadra, Giovanili, eventi e momenti speciali.</p>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
+    <div class="grid md:grid-cols-2 gap-8">
+      <a href="photogallery-prima-squadra.html" class="group relative rounded-2xl overflow-hidden border border-white/5">
+        <img src="/assets/images/gallery-prima-squadra-cover.jpg" alt="Prima Squadra" class="w-full h-[360px] object-cover group-hover:scale-105 transition duration-500">
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 p-8">
+          <span class="text-gold text-xs uppercase font-bold">Photogallery</span>
+          <h2 class="font-heading text-3xl mt-2 uppercase">Prima Squadra</h2>
+        </div>
+      </a>
+
+      <a href="photogallery-giovanili.html" class="group relative rounded-2xl overflow-hidden border border-white/5">
+        <img src="/assets/images/gallery-giovanili-cover.jpg" alt="Giovanili" class="w-full h-[360px] object-cover group-hover:scale-105 transition duration-500">
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 p-8">
+          <span class="text-gold text-xs uppercase font-bold">Photogallery</span>
+          <h2 class="font-heading text-3xl mt-2 uppercase">Giovanili</h2>
+        </div>
+      </a>
+    </div>
+  </main>
+
+  <div id="footer-container"></div>
+  <script src="/js/main.js"></script>
+</body>
+</html>
