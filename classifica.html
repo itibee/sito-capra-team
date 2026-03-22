@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classifica | Capra Team Ravenna</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { gold:'#FBBF24', dark:'#0A0A0A', box:'#1A1A1A' },
+          fontFamily: { heading:['Syncopate'], sans:['Inter'] }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-dark text-white font-sans">
+  <div id="navbar-container"></div>
+
+  <header class="relative min-h-[45vh] flex items-center justify-center text-center overflow-hidden pt-24">
+    <img src="/assets/images/hero-home.jpg" alt="Hero Classifica" class="absolute inset-0 w-full h-full object-cover opacity-40">
+    <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent"></div>
+    <div class="relative z-10 px-4">
+      <span class="text-gold font-heading text-xs sm:text-sm tracking-[0.35em] block">SERIE B</span>
+      <h1 class="text-4xl sm:text-6xl font-black uppercase tracking-tighter mt-4">Classifica</h1>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
+    <div class="overflow-x-auto bg-box border border-white/5 rounded-2xl">
+      <table class="w-full text-sm sm:text-base">
+        <thead class="bg-black/30 uppercase text-xs tracking-widest text-gray-400">
+          <tr>
+            <th class="text-left px-4 py-4">Pos</th>
+            <th class="text-left px-4 py-4">Squadra</th>
+            <th class="text-left px-4 py-4">Pt</th>
+            <th class="text-left px-4 py-4">V</th>
+            <th class="text-left px-4 py-4">P</th>
+          </tr>
+        </thead>
+        <tbody class="text-gray-300">
+          <tr class="border-t border-white/10">
+            <td class="px-4 py-4 text-gold font-bold">1</td>
+            <td class="px-4 py-4 font-bold text-white">Capra Team Ravenna</td>
+            <td class="px-4 py-4">4</td>
+            <td class="px-4 py-4">2</td>
+            <td class="px-4 py-4">0</td>
+          </tr>
+          <tr class="border-t border-white/10">
+            <td class="px-4 py-4">2</td>
+            <td class="px-4 py-4">Magic Rosa Parma</td>
+            <td class="px-4 py-4">2</td>
+            <td class="px-4 py-4">1</td>
+            <td class="px-4 py-4">1</td>
+          </tr>
+          <tr class="border-t border-white/10">
+            <td class="px-4 py-4">3</td>
+            <td class="px-4 py-4">Noceto Basket Femminile</td>
+            <td class="px-4 py-4">0</td>
+            <td class="px-4 py-4">0</td>
+            <td class="px-4 py-4">2</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <div id="footer-container"></div>
+  <script src="/js/main.js"></script>
+</body>
+</html>
