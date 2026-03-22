@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photogallery Giovanili | Capra Team Ravenna</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { gold:'#FBBF24', dark:'#0A0A0A', box:'#1A1A1A' },
+          fontFamily: { heading:['Syncopate'], sans:['Inter'] }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-dark text-white font-sans">
+  <div id="navbar-container"></div>
+
+  <header class="relative min-h-[45vh] flex items-center justify-center text-center overflow-hidden pt-24">
+    <img src="/assets/images/hero-home.jpg" alt="Hero Giovanili" class="absolute inset-0 w-full h-full object-cover opacity-40">
+    <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent"></div>
+    <div class="relative z-10 px-4">
+      <span class="text-gold font-heading text-xs sm:text-sm tracking-[0.35em] block">PHOTOGALLERY</span>
+      <h1 class="text-4xl sm:text-6xl font-black uppercase tracking-tighter mt-4">Giovanili</h1>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
+    <div class="grid md:grid-cols-2 gap-8">
+      <a href="photogallery-u19.html" class="bg-box border border-white/5 rounded-2xl p-8 hover:border-gold/40 transition">
+        <span class="text-gold text-sm font-bold uppercase">Categoria</span>
+        <h2 class="font-heading text-3xl mt-3 uppercase">Under 19</h2>
+      </a>
+
+      <a href="photogallery-u17.html" class="bg-box border border-white/5 rounded-2xl p-8 hover:border-gold/40 transition">
+        <span class="text-gold text-sm font-bold uppercase">Categoria</span>
+        <h2 class="font-heading text-3xl mt-3 uppercase">Under 17</h2>
+      </a>
+    </div>
+  </main>
+
+  <div id="footer-container"></div>
+  <script src="/js/main.js"></script>
+</body>
+</html>
