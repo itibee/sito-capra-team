@@ -45,7 +45,7 @@
         data-editable="source"
         data-path="/calendario.html"
         data-key="hero-subtitle">
-        Ultima giornata giocata, prossima sfida e calendario completo della stagione.
+        Ultima giornata giocata, prossimo turno e calendario completo della stagione.
       </p>
     </div>
   </header>
@@ -54,7 +54,7 @@
 
     <!-- BLOCCO HIGHLIGHTS -->
     <section class="grid lg:grid-cols-2 gap-8 mb-12">
-      
+
       <!-- ULTIMA GIORNATA -->
       <div class="bg-box border border-gold/30 rounded-2xl p-6 sm:p-8 shadow-[0_0_30px_rgba(251,191,36,0.06)]">
         <div class="flex items-center justify-between gap-4 mb-6 flex-wrap">
@@ -71,7 +71,7 @@
               data-editable="source"
               data-path="/calendario.html"
               data-key="last-round-name">
-              24ª giornata
+              25ª giornata · 22/03/2026
             </span>
           </div>
 
@@ -82,28 +82,23 @@
 
         <div class="space-y-4 text-sm sm:text-base">
           <div class="flex flex-col md:flex-row md:justify-between gap-2 border-b border-white/10 pb-4">
-            <span class="font-bold text-white">Capra Team Ravenna BK vs Team X</span>
-            <span class="text-gold font-bold">72 - 64</span>
+            <span class="font-bold text-white">Capra Team Ravenna BK vs Puianello BK Team</span>
+            <span class="text-gold font-bold">52 - 68</span>
           </div>
 
           <div class="flex flex-col md:flex-row md:justify-between gap-2 border-b border-white/10 pb-4">
-            <span>Basket Cavezzo vs Walnut Basket Noceto</span>
-            <span>77 - 59</span>
+            <span>Rimini Happy Basket vs Walnut Basket Noceto</span>
+            <span>66 - 77</span>
           </div>
 
           <div class="flex flex-col md:flex-row md:justify-between gap-2 border-b border-white/10 pb-4">
-            <span>Puianello BK Team vs Rimini Happy Basket</span>
-            <span>68 - 61</span>
-          </div>
-
-          <div class="flex flex-col md:flex-row md:justify-between gap-2 border-b border-white/10 pb-4">
-            <span>FBK Fiore Valdarda vs Scandiano 2012</span>
-            <span>70 - 66</span>
+            <span>Vis Rosa vs Basket Cavezzo</span>
+            <span>46 - 94</span>
           </div>
 
           <div class="flex flex-col md:flex-row md:justify-between gap-2">
             <span>Magik Rosa Parma vs B.S.L. San Lazzaro</span>
-            <span>54 - 49</span>
+            <span>70 - 61</span>
           </div>
         </div>
       </div>
@@ -124,7 +119,7 @@
               data-editable="source"
               data-path="/calendario.html"
               data-key="next-round-name">
-              25ª giornata
+              26ª giornata · 27/03/2026
             </span>
           </div>
 
@@ -135,28 +130,23 @@
 
         <div class="space-y-4 text-sm sm:text-base">
           <div class="flex flex-col md:flex-row md:justify-between gap-2 border-b border-white/10 pb-4">
-            <span class="font-bold text-white">Capra Team Ravenna BK vs Basket Cavezzo</span>
-            <span class="text-gold font-bold">Sab 29/03 - 18:00</span>
+            <span class="font-bold text-white">Capra Team Ravenna BK vs Peperoncino Libertas</span>
+            <span class="text-gold font-bold">27/03/2026</span>
           </div>
 
           <div class="flex flex-col md:flex-row md:justify-between gap-2 border-b border-white/10 pb-4">
-            <span>Walnut Basket Noceto vs Scandiano 2012</span>
-            <span>Dom 30/03 - 18:00</span>
+            <span>FBK Fiore Valdarda vs Basketball Sisters</span>
+            <span>27/03/2026</span>
           </div>
 
           <div class="flex flex-col md:flex-row md:justify-between gap-2 border-b border-white/10 pb-4">
-            <span>Puianello BK Team vs Basketball Sisters</span>
-            <span>Dom 30/03 - 18:00</span>
-          </div>
-
-          <div class="flex flex-col md:flex-row md:justify-between gap-2 border-b border-white/10 pb-4">
-            <span>Rimini Happy Basket vs Magik Rosa Parma</span>
-            <span>Dom 30/03 - 18:00</span>
+            <span>Puianello BK Team vs Scandiano 2012</span>
+            <span>27/03/2026</span>
           </div>
 
           <div class="flex flex-col md:flex-row md:justify-between gap-2">
-            <span>Royal BK Vigarano vs Nuova Virtus Cesena</span>
-            <span>Dom 30/03 - 18:00</span>
+            <span>Magik Rosa Parma vs Rimini Happy Basket</span>
+            <span>27/03/2026</span>
           </div>
         </div>
       </div>
@@ -185,7 +175,6 @@
 
         <div class="w-full lg:w-72">
           <select id="giornata-select" class="w-full bg-dark border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-gold">
-            <option value="giornata-24">24ª giornata</option>
             <option value="giornata-25">25ª giornata</option>
             <option value="giornata-26">26ª giornata</option>
           </select>
@@ -196,90 +185,94 @@
     <!-- GIORNATE -->
     <section id="giornate-wrapper" class="space-y-8">
 
-      <div id="giornata-24" class="giornata-panel bg-box border border-white/5 rounded-2xl p-6 sm:p-8">
-        <h3 class="font-heading text-2xl uppercase mb-6 text-gold">24ª giornata</h3>
+      <div id="giornata-25" class="giornata-panel bg-box border border-white/5 rounded-2xl p-6 sm:p-8">
+        <h3 class="font-heading text-2xl uppercase mb-6 text-gold">25ª giornata · 22/03/2026</h3>
 
         <div class="space-y-4 text-sm sm:text-base">
           <div class="flex flex-col md:flex-row md:justify-between gap-2 border-b border-white/10 pb-4">
-            <span class="font-bold text-white">Capra Team Ravenna BK vs Team X</span>
-            <span class="text-gold font-bold">72 - 64</span>
+            <span class="font-bold text-white">Capra Team Ravenna BK vs Puianello BK Team</span>
+            <span class="text-gold font-bold">52 - 68</span>
           </div>
 
           <div class="flex flex-col md:flex-row md:justify-between gap-2 border-b border-white/10 pb-4">
-            <span>Basket Cavezzo vs Walnut Basket Noceto</span>
-            <span>77 - 59</span>
+            <span>Rimini Happy Basket vs Walnut Basket Noceto</span>
+            <span>66 - 77</span>
           </div>
 
           <div class="flex flex-col md:flex-row md:justify-between gap-2 border-b border-white/10 pb-4">
-            <span>Puianello BK Team vs Rimini Happy Basket</span>
-            <span>68 - 61</span>
+            <span>Vis Rosa vs Basket Cavezzo</span>
+            <span>46 - 94</span>
           </div>
 
           <div class="flex flex-col md:flex-row md:justify-between gap-2 border-b border-white/10 pb-4">
-            <span>FBK Fiore Valdarda vs Scandiano 2012</span>
-            <span>70 - 66</span>
-          </div>
-
-          <div class="flex flex-col md:flex-row md:justify-between gap-2">
             <span>Magik Rosa Parma vs B.S.L. San Lazzaro</span>
-            <span>54 - 49</span>
-          </div>
-        </div>
-      </div>
-
-      <div id="giornata-25" class="giornata-panel hidden bg-box border border-white/5 rounded-2xl p-6 sm:p-8">
-        <h3 class="font-heading text-2xl uppercase mb-6 text-gold">25ª giornata</h3>
-
-        <div class="space-y-4 text-sm sm:text-base">
-          <div class="flex flex-col md:flex-row md:justify-between gap-2 border-b border-white/10 pb-4">
-            <span class="font-bold text-white">Capra Team Ravenna BK vs Basket Cavezzo</span>
-            <span class="text-gold font-bold">Sab 29/03 - 18:00</span>
+            <span>70 - 61</span>
           </div>
 
           <div class="flex flex-col md:flex-row md:justify-between gap-2 border-b border-white/10 pb-4">
-            <span>Walnut Basket Noceto vs Scandiano 2012</span>
-            <span>Dom 30/03 - 18:00</span>
+            <span>BK Club Valtarese vs Scandiano 2012</span>
+            <span>22/03/2026 · 17:30</span>
           </div>
 
           <div class="flex flex-col md:flex-row md:justify-between gap-2 border-b border-white/10 pb-4">
-            <span>Puianello BK Team vs Basketball Sisters</span>
-            <span>Dom 30/03 - 18:00</span>
+            <span>Basketball Sisters vs Royal BK Vigarano</span>
+            <span>22/03/2026 · 18:00</span>
           </div>
 
           <div class="flex flex-col md:flex-row md:justify-between gap-2 border-b border-white/10 pb-4">
-            <span>Rimini Happy Basket vs Magik Rosa Parma</span>
-            <span>Dom 30/03 - 18:00</span>
+            <span>Peperoncino Libertas vs Nuova Virtus Cesena</span>
+            <span>15/04/2026 · 21:00</span>
           </div>
 
           <div class="flex flex-col md:flex-row md:justify-between gap-2">
-            <span>Royal BK Vigarano vs Nuova Virtus Cesena</span>
-            <span>Dom 30/03 - 18:00</span>
+            <span class="font-bold text-white">A riposo: FBK Fiore Valdarda</span>
+            <span>-</span>
           </div>
         </div>
       </div>
 
       <div id="giornata-26" class="giornata-panel hidden bg-box border border-white/5 rounded-2xl p-6 sm:p-8">
-        <h3 class="font-heading text-2xl uppercase mb-6 text-gold">26ª giornata</h3>
+        <h3 class="font-heading text-2xl uppercase mb-6 text-gold">26ª giornata · 27/03/2026</h3>
 
         <div class="space-y-4 text-sm sm:text-base">
           <div class="flex flex-col md:flex-row md:justify-between gap-2 border-b border-white/10 pb-4">
-            <span class="font-bold text-white">Team Y vs Capra Team Ravenna BK</span>
-            <span class="text-gold font-bold">Sab 05/04 - 18:00</span>
+            <span class="font-bold text-white">Capra Team Ravenna BK vs Peperoncino Libertas</span>
+            <span class="text-gold font-bold">N.G.</span>
           </div>
 
           <div class="flex flex-col md:flex-row md:justify-between gap-2 border-b border-white/10 pb-4">
-            <span>Basket Cavezzo vs Rimini Happy Basket</span>
-            <span>Dom 06/04 - 18:00</span>
+            <span>FBK Fiore Valdarda vs Basketball Sisters</span>
+            <span>N.G.</span>
           </div>
 
           <div class="flex flex-col md:flex-row md:justify-between gap-2 border-b border-white/10 pb-4">
-            <span>Magik Rosa Parma vs Walnut Basket Noceto</span>
-            <span>Dom 06/04 - 18:00</span>
+            <span>Puianello BK Team vs Scandiano 2012</span>
+            <span>N.G.</span>
+          </div>
+
+          <div class="flex flex-col md:flex-row md:justify-between gap-2 border-b border-white/10 pb-4">
+            <span>Magik Rosa Parma vs Rimini Happy Basket</span>
+            <span>N.G.</span>
+          </div>
+
+          <div class="flex flex-col md:flex-row md:justify-between gap-2 border-b border-white/10 pb-4">
+            <span>Walnut Basket Noceto vs Basket Cavezzo</span>
+            <span>N.G.</span>
+          </div>
+
+          <div class="flex flex-col md:flex-row md:justify-between gap-2 border-b border-white/10 pb-4">
+            <span>Vis Rosa vs Royal BK Vigarano</span>
+            <span>N.G.</span>
+          </div>
+
+          <div class="flex flex-col md:flex-row md:justify-between gap-2 border-b border-white/10 pb-4">
+            <span>B.S.L. San Lazzaro vs BK Club Valtarese</span>
+            <span>N.G.</span>
           </div>
 
           <div class="flex flex-col md:flex-row md:justify-between gap-2">
-            <span>Scandiano 2012 vs B.S.L. San Lazzaro</span>
-            <span>Dom 06/04 - 18:00</span>
+            <span class="font-bold text-white">A riposo: Nuova Virtus Cesena</span>
+            <span>-</span>
           </div>
         </div>
       </div>
