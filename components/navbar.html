@@ -1,20 +1,25 @@
 <nav class="fixed top-0 w-full bg-black/90 backdrop-blur-md z-50 border-b border-white/5">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-4">
 
-    <a href="index.html" class="flex items-center gap-3 min-w-0">
+    <a href="index.html" class="flex items-center gap-3 min-w-0 shrink-0">
       <img
         src="/assets/images/logocaprateam.jpg"
         alt="Logo Capra Team"
         class="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-gold/50 object-cover shrink-0"
       >
-      <span class="font-heading text-sm sm:text-xl tracking-tight uppercase leading-none text-white">
-        Capra <span class="text-gold">Team</span>
-      </span>
+      <div class="leading-none">
+        <span class="font-heading text-sm sm:text-xl tracking-tight uppercase text-white block">
+          Capra <span class="text-gold">Team</span>
+        </span>
+        <span class="hidden sm:block text-[10px] uppercase tracking-[0.28em] text-gray-400 mt-1">
+          Ravenna Basket
+        </span>
+      </div>
     </a>
 
-    <div class="hidden lg:flex items-center gap-8 font-bold uppercase text-xs tracking-widest">
+    <div class="hidden xl:flex items-center gap-7 font-bold uppercase text-[11px] tracking-[0.2em]">
       <a href="index.html" class="nav-link text-white hover:text-gold transition">Home</a>
-      <a href="chi-siamo.html" class="nav-link text-white hover:text-gold transition">Chi Siamo</a>
+      <a href="chi-siamo.html" class="nav-link text-white hover:text-gold transition">Chi siamo</a>
       <a href="serie-b.html" class="nav-link text-white hover:text-gold transition">Serie B</a>
       <a href="giovanili.html" class="nav-link text-white hover:text-gold transition">Giovanili</a>
       <a href="news.html" class="nav-link text-white hover:text-gold transition">News</a>
@@ -22,33 +27,53 @@
       <a href="contatti.html" class="nav-link text-white hover:text-gold transition">Contatti</a>
     </div>
 
-    <a
-      href="contatti.html"
-      class="hidden lg:inline-block bg-gold text-black px-6 py-2 rounded-md font-black text-xs uppercase hover:bg-yellow-500 transition"
-    >
-      Contattaci
-    </a>
+    <div class="hidden xl:flex items-center gap-3 shrink-0">
+      <a
+        href="calendario.html"
+        class="border border-white/15 text-white px-4 py-2 rounded-md font-black text-[11px] uppercase tracking-[0.15em] hover:border-gold hover:text-gold transition"
+      >
+        Calendario
+      </a>
+      <a
+        href="classifica.html"
+        class="bg-gold text-black px-4 py-2 rounded-md font-black text-[11px] uppercase tracking-[0.15em] hover:bg-yellow-500 transition"
+      >
+        Classifica
+      </a>
+    </div>
 
-    <details class="lg:hidden relative">
+    <details class="xl:hidden relative shrink-0">
       <summary class="list-none cursor-pointer text-white text-2xl leading-none select-none">
         <i class="fas fa-bars"></i>
       </summary>
 
-      <div class="absolute right-0 top-12 w-64 bg-black/95 border border-white/10 rounded-xl p-4 flex flex-col gap-4 font-bold uppercase text-xs tracking-widest shadow-2xl">
-        <a href="index.html" class="nav-link text-white hover:text-gold transition">Home</a>
-        <a href="chi-siamo.html" class="nav-link text-white hover:text-gold transition">Chi Siamo</a>
-        <a href="serie-b.html" class="nav-link text-white hover:text-gold transition">Serie B</a>
-        <a href="giovanili.html" class="nav-link text-white hover:text-gold transition">Giovanili</a>
-        <a href="news.html" class="nav-link text-white hover:text-gold transition">News</a>
-        <a href="photogallery.html" class="nav-link text-white hover:text-gold transition">Photogallery</a>
-        <a href="contatti.html" class="nav-link text-white hover:text-gold transition">Contatti</a>
-        <a
-          href="contatti.html"
-          class="bg-gold text-black px-4 py-3 rounded-md font-black text-xs uppercase text-center"
-        >
-          Contattaci
-        </a>
+      <div class="absolute right-0 top-12 w-72 bg-black/95 border border-white/10 rounded-2xl p-5 shadow-2xl">
+        <div class="flex flex-col gap-4 font-bold uppercase text-xs tracking-[0.18em]">
+          <a href="index.html" class="nav-link text-white hover:text-gold transition">Home</a>
+          <a href="chi-siamo.html" class="nav-link text-white hover:text-gold transition">Chi siamo</a>
+          <a href="serie-b.html" class="nav-link text-white hover:text-gold transition">Serie B</a>
+          <a href="giovanili.html" class="nav-link text-white hover:text-gold transition">Giovanili</a>
+          <a href="news.html" class="nav-link text-white hover:text-gold transition">News</a>
+          <a href="photogallery.html" class="nav-link text-white hover:text-gold transition">Photogallery</a>
+          <a href="contatti.html" class="nav-link text-white hover:text-gold transition">Contatti</a>
+        </div>
+
+        <div class="border-t border-white/10 mt-5 pt-5 grid grid-cols-2 gap-3">
+          <a
+            href="calendario.html"
+            class="border border-white/15 text-white px-4 py-3 rounded-xl font-black text-[11px] uppercase tracking-[0.15em] text-center hover:border-gold hover:text-gold transition"
+          >
+            Calendario
+          </a>
+          <a
+            href="classifica.html"
+            class="bg-gold text-black px-4 py-3 rounded-xl font-black text-[11px] uppercase tracking-[0.15em] text-center hover:bg-yellow-500 transition"
+          >
+            Classifica
+          </a>
+        </div>
       </div>
     </details>
+
   </div>
 </nav>
