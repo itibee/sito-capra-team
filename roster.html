@@ -1,113 +1,331 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roster & Staff | Capra Team Ravenna</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script>tailwind.config={theme:{extend:{colors:{gold:'#FBBF24',dark:'#0A0A0A',box:'#1A1A1A'},fontFamily:{heading:['Syncopate'],sans:['Inter']}}}}</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roster | Capra Team Ravenna</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold:'#FBBF24',
+            dark:'#0A0A0A',
+            box:'#1A1A1A'
+          },
+          fontFamily: {
+            heading:['Syncopate'],
+            sans:['Inter']
+          }
+        }
+      }
+    }
+  </script>
 </head>
 <body class="bg-dark text-white font-sans">
 
-    <div id="navbar-container"></div>
+  <div id="navbar-container"></div>
 
-    <div class="relative w-full mt-[72px] h-[300px] flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0 z-0">
-            <img src="/assets/images/hero-home.jpg" class="w-full h-full object-cover opacity-20 grayscale" alt="Background Basket">
-            <div class="absolute inset-0 bg-gradient-to-b from-dark via-transparent to-dark"></div>
-        </div>
+  <!-- HERO -->
+  <header class="relative min-h-[70vh] flex items-end overflow-hidden pt-24">
+    <img
+      src="/assets/images/seriebcover.jpg"
+      alt="Roster Serie B Capra Team Ravenna"
+      class="absolute inset-0 w-full h-full object-cover object-center opacity-30"
+    >
+    <div class="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-black/20"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-transparent"></div>
 
-        <div class="relative z-10 w-full max-w-6xl px-4">
-            <img src="/assets/images/rosterserieb.png" alt="Banner Roster Serie B" class="w-full h-[300px] object-contain drop-shadow-[0_0_30px_rgba(251,191,36,0.2)]">
-        </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 w-full pb-12 sm:pb-16">
+      <div class="max-w-4xl">
+        <span
+          class="text-gold font-heading text-xs sm:text-sm tracking-[0.35em] sm:tracking-[0.45em] block mb-5"
+          data-editable="source"
+          data-path="/roster.html"
+          data-key="hero-kicker">
+          SERIE B FEMMINILE
+        </span>
+
+        <h1
+          class="text-4xl sm:text-6xl lg:text-7xl font-black uppercase tracking-tighter leading-[0.95] mb-6"
+          data-editable="source"
+          data-path="/roster.html"
+          data-key="hero-title">
+          Roster & Staff
+        </h1>
+
+        <p
+          class="text-gray-300 text-base sm:text-lg lg:text-xl max-w-2xl leading-relaxed"
+          data-editable="source"
+          data-path="/roster.html"
+          data-key="hero-text">
+          Le protagoniste della stagione e lo staff che accompagna ogni giorno il percorso del Capra Team Ravenna.
+        </p>
+      </div>
     </div>
+  </header>
 
-    <section class="py-16 px-6 max-w-7xl mx-auto">
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-32">
-            <div class="bg-box rounded-xl overflow-hidden border border-white/5 group">
-                <div class="aspect-[3/4] overflow-hidden"><img src="/assets/images/manuelacalabrese.jpg" class="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition duration-500" alt="Manuela Calabrese"></div>
-                <div class="p-6"><h3 class="font-black text-xl uppercase mb-1" data-editable="source" data-path="/roster.html" data-key="player-1-name">Manuela Calabrese</h3><p class="text-gold text-sm font-bold uppercase" data-editable="source" data-path="/roster.html" data-key="player-1-role">Capitano / Ala</p></div>
-            </div>
+  <!-- INTRO -->
+  <section class="border-y border-white/10 bg-black/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-8 grid md:grid-cols-3 gap-6">
+      <div>
+        <p class="text-gold text-xs font-bold uppercase tracking-[0.2em]">Capitano</p>
+        <p class="text-white text-2xl font-black mt-2"
+           data-editable="source"
+           data-path="/roster.html"
+           data-key="intro-1">
+          Manuela Calabrese
+        </p>
+      </div>
+      <div>
+        <p class="text-gold text-xs font-bold uppercase tracking-[0.2em]">Head Coach</p>
+        <p class="text-white text-2xl font-black mt-2"
+           data-editable="source"
+           data-path="/roster.html"
+           data-key="intro-2">
+          Fabio Lisoni
+        </p>
+      </div>
+      <div>
+        <p class="text-gold text-xs font-bold uppercase tracking-[0.2em]">Stagione</p>
+        <p class="text-white text-2xl font-black mt-2"
+           data-editable="source"
+           data-path="/roster.html"
+           data-key="intro-3">
+          Serie B 2025/26
+        </p>
+      </div>
+    </div>
+  </section>
 
-            <div class="bg-box rounded-xl overflow-hidden border border-white/5 group">
-                <div class="aspect-[3/4] overflow-hidden"><img src="/assets/images/federicamontanari.jpg" class="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition duration-500" alt="Federica Montanari"></div>
-                <div class="p-6"><h3 class="font-black text-xl uppercase mb-1" data-editable="source" data-path="/roster.html" data-key="player-2-name">Federica Montanari</h3><p class="text-gold text-sm font-bold uppercase" data-editable="source" data-path="/roster.html" data-key="player-2-role">Playmaker</p></div>
-            </div>
+  <!-- GIOCATRICI -->
+  <section class="py-16 sm:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
+        <div>
+          <p class="text-gold text-xs font-bold uppercase tracking-[0.2em]">Prima Squadra</p>
+          <h2 class="font-heading text-3xl sm:text-4xl uppercase mt-2">Le Giocatrici</h2>
+        </div>
+        <p class="text-gray-400 text-sm sm:text-base max-w-xl">
+          Un gruppo costruito su identità, sacrificio e appartenenza.
+        </p>
+      </div>
 
-            <div class="bg-box rounded-xl overflow-hidden border border-white/5 group">
-                <div class="aspect-[3/4] overflow-hidden"><img src="/assets/images/veronicaandrenacci.jpg" class="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition duration-500" alt="Veronica Andrenacci"></div>
-                <div class="p-6"><h3 class="font-black text-xl uppercase mb-1" data-editable="source" data-path="/roster.html" data-key="player-3-name">Veronica Andrenacci</h3><p class="text-gold text-sm font-bold uppercase" data-editable="source" data-path="/roster.html" data-key="player-3-role">Ala</p></div>
-            </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8">
 
-            <div class="bg-box rounded-xl overflow-hidden border border-white/5 group">
-                <div class="aspect-[3/4] overflow-hidden"><img src="/assets/images/alicepieraccini.jpg" class="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition duration-500" alt="Alice Pieraccini"></div>
-                <div class="p-6"><h3 class="font-black text-xl uppercase mb-1" data-editable="source" data-path="/roster.html" data-key="player-4-name">Alice Pieraccini</h3><p class="text-gold text-sm font-bold uppercase" data-editable="source" data-path="/roster.html" data-key="player-4-role">Centro</p></div>
-            </div>
+        <article class="bg-box rounded-2xl overflow-hidden border border-gold/25 group">
+          <div class="aspect-[3/4] overflow-hidden bg-black">
+            <img src="/assets/images/manuelacalabrese.jpg" class="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition duration-500" alt="Manuela Calabrese">
+          </div>
+          <div class="p-6">
+            <p class="text-gold text-xs font-bold uppercase tracking-[0.18em]">Capitano</p>
+            <h3 class="font-black text-xl uppercase mt-2" data-editable="source" data-path="/roster.html" data-key="player-1-name">Manuela Calabrese</h3>
+            <p class="text-gray-400 text-sm uppercase mt-2" data-editable="source" data-path="/roster.html" data-key="player-1-role">Ala</p>
+          </div>
+        </article>
 
-            <div class="bg-box rounded-xl overflow-hidden border border-white/5 group">
-                <div class="aspect-[3/4] overflow-hidden"><img src="/assets/images/carlottamaioli.jpg" class="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition duration-500" alt="Carlotta Maioli"></div>
-                <div class="p-6"><h3 class="font-black text-xl uppercase mb-1" data-editable="source" data-path="/roster.html" data-key="player-5-name">Carlotta Maioli</h3><p class="text-gray-400 text-sm uppercase" data-editable="source" data-path="/roster.html" data-key="player-5-role">Playmaker</p></div>
-            </div>
+        <article class="bg-box rounded-2xl overflow-hidden border border-white/5 group">
+          <div class="aspect-[3/4] overflow-hidden bg-black">
+            <img src="/assets/images/federicamontanari.jpg" class="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition duration-500" alt="Federica Montanari">
+          </div>
+          <div class="p-6">
+            <p class="text-gold text-xs font-bold uppercase tracking-[0.18em]">Playmaker</p>
+            <h3 class="font-black text-xl uppercase mt-2" data-editable="source" data-path="/roster.html" data-key="player-2-name">Federica Montanari</h3>
+            <p class="text-gray-400 text-sm uppercase mt-2" data-editable="source" data-path="/roster.html" data-key="player-2-role">Regia e ritmo</p>
+          </div>
+        </article>
 
-            <div class="bg-box rounded-xl overflow-hidden border border-white/5 group">
-                <div class="aspect-[3/4] overflow-hidden"><img src="/assets/images/silviabernabe.jpg" class="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition duration-500" alt="Silvia Bernabè"></div>
-                <div class="p-6"><h3 class="font-black text-xl uppercase mb-1" data-editable="source" data-path="/roster.html" data-key="player-6-name">Silvia Bernabè</h3><p class="text-gray-400 text-sm uppercase" data-editable="source" data-path="/roster.html" data-key="player-6-role">Guardia</p></div>
-            </div>
+        <article class="bg-box rounded-2xl overflow-hidden border border-white/5 group">
+          <div class="aspect-[3/4] overflow-hidden bg-black">
+            <img src="/assets/images/veronicaandrenacci.jpg" class="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition duration-500" alt="Veronica Andrenacci">
+          </div>
+          <div class="p-6">
+            <p class="text-gold text-xs font-bold uppercase tracking-[0.18em]">Ala</p>
+            <h3 class="font-black text-xl uppercase mt-2" data-editable="source" data-path="/roster.html" data-key="player-3-name">Veronica Andrenacci</h3>
+            <p class="text-gray-400 text-sm uppercase mt-2" data-editable="source" data-path="/roster.html" data-key="player-3-role">Energia e presenza</p>
+          </div>
+        </article>
 
-            <div class="bg-box rounded-xl overflow-hidden border border-white/5 group">
-                <div class="aspect-[3/4] overflow-hidden"><img src="/assets/images/cristinacurra.jpg" class="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition duration-500" alt="Cristina Currà"></div>
-                <div class="p-6"><h3 class="font-black text-xl uppercase mb-1" data-editable="source" data-path="/roster.html" data-key="player-7-name">Cristina Currà</h3><p class="text-gold text-sm font-bold uppercase" data-editable="source" data-path="/roster.html" data-key="player-7-role">Centro</p></div>
-            </div>
+        <article class="bg-box rounded-2xl overflow-hidden border border-white/5 group">
+          <div class="aspect-[3/4] overflow-hidden bg-black">
+            <img src="/assets/images/alicepieraccini.jpg" class="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition duration-500" alt="Alice Pieraccini">
+          </div>
+          <div class="p-6">
+            <p class="text-gold text-xs font-bold uppercase tracking-[0.18em]">Centro</p>
+            <h3 class="font-black text-xl uppercase mt-2" data-editable="source" data-path="/roster.html" data-key="player-4-name">Alice Pieraccini</h3>
+            <p class="text-gray-400 text-sm uppercase mt-2" data-editable="source" data-path="/roster.html" data-key="player-4-role">Area e rimbalzi</p>
+          </div>
+        </article>
 
-            <div class="bg-box rounded-xl overflow-hidden border border-white/5 group">
-                <div class="aspect-[3/4] overflow-hidden"><img src="/assets/images/sofiapirazzini.jpg" class="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition duration-500" alt="Sofia Pirazzini"></div>
-                <div class="p-6"><h3 class="font-black text-xl uppercase mb-1" data-editable="source" data-path="/roster.html" data-key="player-8-name">Sofia Pirazzini</h3><p class="text-gold text-sm font-bold uppercase" data-editable="source" data-path="/roster.html" data-key="player-8-role">Guardia</p></div>
-            </div>
+        <article class="bg-box rounded-2xl overflow-hidden border border-white/5 group">
+          <div class="aspect-[3/4] overflow-hidden bg-black">
+            <img src="/assets/images/carlottamaioli.jpg" class="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition duration-500" alt="Carlotta Maioli">
+          </div>
+          <div class="p-6">
+            <p class="text-gold text-xs font-bold uppercase tracking-[0.18em]">Playmaker</p>
+            <h3 class="font-black text-xl uppercase mt-2" data-editable="source" data-path="/roster.html" data-key="player-5-name">Carlotta Maioli</h3>
+            <p class="text-gray-400 text-sm uppercase mt-2" data-editable="source" data-path="/roster.html" data-key="player-5-role">Visione di gioco</p>
+          </div>
+        </article>
 
-            <div class="bg-box rounded-xl overflow-hidden border border-white/5 group">
-                <div class="aspect-[3/4] overflow-hidden"><img src="/assets/images/jomandarosier.jpg" class="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition duration-500" alt="Jomanda Rosier"></div>
-                <div class="p-6"><h3 class="font-black text-xl uppercase mb-1" data-editable="source" data-path="/roster.html" data-key="player-9-name">Jomanda Rosier</h3><p class="text-gray-400 text-sm uppercase" data-editable="source" data-path="/roster.html" data-key="player-9-role">Centro</p></div>
-            </div>
+        <article class="bg-box rounded-2xl overflow-hidden border border-white/5 group">
+          <div class="aspect-[3/4] overflow-hidden bg-black">
+            <img src="/assets/images/silviabernabe.jpg" class="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition duration-500" alt="Silvia Bernabè">
+          </div>
+          <div class="p-6">
+            <p class="text-gold text-xs font-bold uppercase tracking-[0.18em]">Guardia</p>
+            <h3 class="font-black text-xl uppercase mt-2" data-editable="source" data-path="/roster.html" data-key="player-6-name">Silvia Bernabè</h3>
+            <p class="text-gray-400 text-sm uppercase mt-2" data-editable="source" data-path="/roster.html" data-key="player-6-role">Intensità e difesa</p>
+          </div>
+        </article>
 
-            <div class="bg-box rounded-xl overflow-hidden border border-white/5 group">
-                <div class="aspect-[3/4] overflow-hidden"><img src="/assets/images/luciascopa.jpg" class="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition duration-500" alt="Lucia Scopa"></div>
-                <div class="p-6"><h3 class="font-black text-xl uppercase mb-1" data-editable="source" data-path="/roster.html" data-key="player-10-name">Lucia Scopa</h3><p class="text-gray-400 text-sm uppercase" data-editable="source" data-path="/roster.html" data-key="player-10-role">Under</p></div>
-            </div>
+        <article class="bg-box rounded-2xl overflow-hidden border border-white/5 group">
+          <div class="aspect-[3/4] overflow-hidden bg-black">
+            <img src="/assets/images/cristinacurra.jpg" class="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition duration-500" alt="Cristina Currà">
+          </div>
+          <div class="p-6">
+            <p class="text-gold text-xs font-bold uppercase tracking-[0.18em]">Centro</p>
+            <h3 class="font-black text-xl uppercase mt-2" data-editable="source" data-path="/roster.html" data-key="player-7-name">Cristina Currà</h3>
+            <p class="text-gray-400 text-sm uppercase mt-2" data-editable="source" data-path="/roster.html" data-key="player-7-role">Fisicità e presenza</p>
+          </div>
+        </article>
 
-            <div class="bg-box rounded-xl overflow-hidden border border-white/5 group">
-                <div class="aspect-[3/4] overflow-hidden"><img src="/assets/images/nornaim.jpg" class="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition duration-500" alt="Nor Naim"></div>
-                <div class="p-6"><h3 class="font-black text-xl uppercase mb-1" data-editable="source" data-path="/roster.html" data-key="player-11-name">Nor Naim</h3><p class="text-gray-400 text-sm uppercase" data-editable="source" data-path="/roster.html" data-key="player-11-role">Under</p></div>
-            </div>
+        <article class="bg-box rounded-2xl overflow-hidden border border-white/5 group">
+          <div class="aspect-[3/4] overflow-hidden bg-black">
+            <img src="/assets/images/sofiapirazzini.jpg" class="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition duration-500" alt="Sofia Pirazzini">
+          </div>
+          <div class="p-6">
+            <p class="text-gold text-xs font-bold uppercase tracking-[0.18em]">Guardia</p>
+            <h3 class="font-black text-xl uppercase mt-2" data-editable="source" data-path="/roster.html" data-key="player-8-name">Sofia Pirazzini</h3>
+            <p class="text-gray-400 text-sm uppercase mt-2" data-editable="source" data-path="/roster.html" data-key="player-8-role">Velocità e letture</p>
+          </div>
+        </article>
+
+        <article class="bg-box rounded-2xl overflow-hidden border border-white/5 group">
+          <div class="aspect-[3/4] overflow-hidden bg-black">
+            <img src="/assets/images/jomandarosier.jpg" class="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition duration-500" alt="Jomanda Rosier">
+          </div>
+          <div class="p-6">
+            <p class="text-gold text-xs font-bold uppercase tracking-[0.18em]">Centro</p>
+            <h3 class="font-black text-xl uppercase mt-2" data-editable="source" data-path="/roster.html" data-key="player-9-name">Jomanda Rosier</h3>
+            <p class="text-gray-400 text-sm uppercase mt-2" data-editable="source" data-path="/roster.html" data-key="player-9-role">Impatto interno</p>
+          </div>
+        </article>
+
+        <article class="bg-box rounded-2xl overflow-hidden border border-white/5 group">
+          <div class="aspect-[3/4] overflow-hidden bg-black">
+            <img src="/assets/images/luciascopa.jpg" class="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition duration-500" alt="Lucia Scopa">
+          </div>
+          <div class="p-6">
+            <p class="text-gold text-xs font-bold uppercase tracking-[0.18em]">Under</p>
+            <h3 class="font-black text-xl uppercase mt-2" data-editable="source" data-path="/roster.html" data-key="player-10-name">Lucia Scopa</h3>
+            <p class="text-gray-400 text-sm uppercase mt-2" data-editable="source" data-path="/roster.html" data-key="player-10-role">Futuro e crescita</p>
+          </div>
+        </article>
+
+        <article class="bg-box rounded-2xl overflow-hidden border border-white/5 group">
+          <div class="aspect-[3/4] overflow-hidden bg-black">
+            <img src="/assets/images/nornaim.jpg" class="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition duration-500" alt="Nor Naim">
+          </div>
+          <div class="p-6">
+            <p class="text-gold text-xs font-bold uppercase tracking-[0.18em]">Under</p>
+            <h3 class="font-black text-xl uppercase mt-2" data-editable="source" data-path="/roster.html" data-key="player-11-name">Nor Naim</h3>
+            <p class="text-gray-400 text-sm uppercase mt-2" data-editable="source" data-path="/roster.html" data-key="player-11-role">Prospettiva e lavoro</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- STAFF -->
+  <section class="py-16 sm:py-20 border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
+        <div>
+          <p class="text-gold text-xs font-bold uppercase tracking-[0.2em]">Organizzazione</p>
+          <h2 class="font-heading text-3xl sm:text-4xl uppercase mt-2">Staff Tecnico</h2>
+        </div>
+        <p class="text-gray-400 text-sm sm:text-base max-w-xl">
+          Persone, visione e lavoro quotidiano dietro il percorso della squadra.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8">
+
+        <article class="bg-box rounded-2xl overflow-hidden border border-gold/25 group">
+          <div class="aspect-[3/4] overflow-hidden bg-black">
+            <img src="/assets/images/fabiolisoni.png" class="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition duration-500" alt="Fabio Lisoni">
+          </div>
+          <div class="p-6">
+            <p class="text-gold text-xs font-bold uppercase tracking-[0.18em]">Head Coach</p>
+            <h3 class="font-black text-xl uppercase mt-2" data-editable="source" data-path="/roster.html" data-key="staff-1-name">Fabio Lisoni</h3>
+          </div>
+        </article>
+
+        <article class="bg-box rounded-2xl overflow-hidden border border-white/5 group">
+          <div class="aspect-[3/4] overflow-hidden bg-black">
+            <img src="/assets/images/stafftecnico.png" class="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition duration-500" alt="Staff Tecnico">
+          </div>
+          <div class="p-6">
+            <p class="text-gold text-xs font-bold uppercase tracking-[0.18em]">Team</p>
+            <h3 class="font-black text-xl uppercase mt-2" data-editable="source" data-path="/roster.html" data-key="staff-2-name">Staff Tecnico</h3>
+          </div>
+        </article>
+
+        <article class="bg-box rounded-2xl overflow-hidden border border-white/5 group">
+          <div class="aspect-[3/4] overflow-hidden bg-black">
+            <img src="/assets/images/matteomontigiani.jpg" class="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition duration-500" alt="Matteo Montigiani">
+          </div>
+          <div class="p-6">
+            <p class="text-gold text-xs font-bold uppercase tracking-[0.18em]">Athletic Trainer</p>
+            <h3 class="font-black text-xl uppercase mt-2" data-editable="source" data-path="/roster.html" data-key="staff-3-name">Matteo Montigiani</h3>
+          </div>
+        </article>
+
+        <article class="bg-box rounded-2xl overflow-hidden border border-white/5 group">
+          <div class="aspect-[3/4] overflow-hidden bg-black">
+            <img src="/assets/images/sarasemprini.jpg" class="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition duration-500" alt="Sara Semprini">
+          </div>
+          <div class="p-6">
+            <p class="text-gold text-xs font-bold uppercase tracking-[0.18em]">Assistant Coach</p>
+            <h3 class="font-black text-xl uppercase mt-2" data-editable="source" data-path="/roster.html" data-key="staff-4-name">Sara Semprini</h3>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 sm:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="bg-gold text-black rounded-2xl p-8 sm:p-12 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
+        <div>
+          <p class="uppercase text-xs font-black tracking-[0.2em]">Prima Squadra</p>
+          <h2 class="font-heading text-2xl sm:text-4xl uppercase mt-3"
+              data-editable="source"
+              data-path="/roster.html"
+              data-key="cta-title">
+            Scopri il cammino della stagione
+          </h2>
         </div>
 
-        <h2 class="font-heading text-3xl uppercase mb-10 border-l-4 border-gold pl-4"><span data-editable="source" data-path="/roster.html" data-key="staff-title-1">Staff</span> <span class="text-gold" data-editable="source" data-path="/roster.html" data-key="staff-title-2">Tecnico</span></h2>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div class="bg-box rounded-xl overflow-hidden border border-gold/30 group">
-                <div class="aspect-[3/4] overflow-hidden"><img src="/assets/images/fabiolisoni.png" class="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition duration-500" alt="Fabio Lisoni"></div>
-                <div class="p-6"><span class="text-gold text-xs font-bold uppercase tracking-widest block" data-editable="source" data-path="/roster.html" data-key="staff-1-role">Head Coach</span><h3 class="font-black text-xl uppercase mt-1" data-editable="source" data-path="/roster.html" data-key="staff-1-name">Fabio Lisoni</h3></div>
-            </div>
-
-            <div class="bg-box rounded-xl overflow-hidden border border-white/5 group">
-                <div class="aspect-[3/4] overflow-hidden"><img src="/assets/images/stafftecnico.png" class="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition duration-500" alt="Staff Tecnico"></div>
-                <div class="p-6"><span class="text-gold text-xs font-bold uppercase tracking-widest block" data-editable="source" data-path="/roster.html" data-key="staff-2-role">Team</span><h3 class="font-black text-xl uppercase mt-1 leading-tight" data-editable="source" data-path="/roster.html" data-key="staff-2-name">Staff Tecnico</h3></div>
-            </div>
-
-            <div class="bg-box rounded-xl overflow-hidden border border-white/5 group">
-                <div class="aspect-[3/4] overflow-hidden"><img src="/assets/images/matteomontigiani.jpg" class="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition duration-500" alt="Matteo Montigiani"></div>
-                <div class="p-6"><span class="text-gold text-xs font-bold uppercase tracking-widest block" data-editable="source" data-path="/roster.html" data-key="staff-3-role">Athletic Trainer</span><h3 class="font-black text-xl uppercase mt-1 leading-tight" data-editable="source" data-path="/roster.html" data-key="staff-3-name">Matteo Montigiani</h3></div>
-            </div>
-
-            <div class="bg-box rounded-xl overflow-hidden border border-white/5 group">
-                <div class="aspect-[3/4] overflow-hidden"><img src="/assets/images/sarasemprini.jpg" class="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition duration-500" alt="Sara Semprini"></div>
-                <div class="p-6"><span class="text-gold text-xs font-bold uppercase tracking-widest block" data-editable="source" data-path="/roster.html" data-key="staff-4-role">Assistant Coach</span><h3 class="font-black text-xl uppercase mt-1 leading-tight" data-editable="source" data-path="/roster.html" data-key="staff-4-name">Sara Semprini</h3></div>
-            </div>
+        <div class="flex flex-col sm:flex-row gap-4 w-full lg:w-auto">
+          <a href="calendario.html" class="bg-black text-white px-8 py-4 rounded-xl font-black uppercase tracking-[0.12em] text-sm text-center">
+            Vai al calendario
+          </a>
+          <a href="classifica.html" class="border border-black text-black px-8 py-4 rounded-xl font-black uppercase tracking-[0.12em] text-sm text-center">
+            Guarda la classifica
+          </a>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <div id="footer-container"></div>
-    <script src="js/main.js"></script>
+  <div id="footer-container"></div>
+  <script src="/js/main.js"></script>
 </body>
 </html>
