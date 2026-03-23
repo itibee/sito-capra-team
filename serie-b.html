@@ -6,55 +6,303 @@
   <title>Serie B | Capra Team Ravenna</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <script>
     tailwind.config = {
       theme: {
         extend: {
-          colors: { gold:'#FBBF24', dark:'#0A0A0A', box:'#1A1A1A' },
-          fontFamily: { heading:['Syncopate'], sans:['Inter'] }
+          colors: {
+            gold:'#FBBF24',
+            dark:'#0A0A0A',
+            box:'#1A1A1A'
+          },
+          fontFamily: {
+            heading:['Syncopate'],
+            sans:['Inter']
+          }
         }
       }
     }
   </script>
 </head>
 <body class="bg-dark text-white font-sans">
+
   <div id="navbar-container"></div>
 
-  <header class="relative min-h-[50vh] flex items-center justify-center text-center overflow-hidden pt-24">
-    <img src="/assets/images/hero-home.jpg" alt="Hero Serie B" class="absolute inset-0 w-full h-full object-cover opacity-40">
-    <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent"></div>
-    <div class="relative z-10 px-4">
-      <span class="text-gold font-heading text-xs sm:text-sm mb-4 tracking-[0.35em] block"
-            data-editable="source" data-path="/serie-b.html" data-key="hero-kicker">CAPRA TEAM RAVENNA</span>
-      <h1 class="text-4xl sm:text-6xl font-black uppercase tracking-tighter"
-          data-editable="source" data-path="/serie-b.html" data-key="hero-title">Serie B</h1>
-      <p class="text-gray-300 mt-4 max-w-2xl mx-auto"
-         data-editable="source" data-path="/serie-b.html" data-key="hero-subtitle">Tutto quello che riguarda la prima squadra: roster, calendario e classifica.</p>
+  <!-- HERO -->
+  <header class="relative min-h-[75vh] flex items-end overflow-hidden pt-24">
+    <img
+      src="/assets/images/seriebcover.jpg"
+      alt="Serie B Capra Team Ravenna"
+      class="absolute inset-0 w-full h-full object-cover object-center opacity-35"
+    >
+    <div class="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-black/20"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-transparent"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 w-full pb-12 sm:pb-16">
+      <div class="max-w-3xl">
+        <span
+          class="text-gold font-heading text-xs sm:text-sm tracking-[0.35em] sm:tracking-[0.45em] block mb-5"
+          data-editable="source"
+          data-path="/serie-b.html"
+          data-key="hero-kicker">
+          CAPRA TEAM RAVENNA
+        </span>
+
+        <h1
+          class="text-4xl sm:text-6xl lg:text-7xl font-black uppercase tracking-tighter leading-[0.95] mb-6"
+          data-editable="source"
+          data-path="/serie-b.html"
+          data-key="hero-title">
+          Serie B
+        </h1>
+
+        <p
+          class="text-gray-300 text-base sm:text-lg lg:text-xl max-w-2xl leading-relaxed"
+          data-editable="source"
+          data-path="/serie-b.html"
+          data-key="hero-text">
+          La stagione che segna il presente del Capra Team Ravenna tra le grandi del basket femminile.
+        </p>
+      </div>
     </div>
   </header>
 
-  <main class="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
-    <div class="grid md:grid-cols-3 gap-8">
-      <a href="roster.html" class="bg-box border border-white/5 rounded-2xl p-8 hover:border-gold/40 transition">
-        <span class="text-gold text-sm font-bold uppercase">Team</span>
-        <h2 class="font-heading text-2xl mt-3 mb-3 uppercase">Roster</h2>
-        <p class="text-gray-400">Scopri giocatrici e staff tecnico della stagione in corso.</p>
+  <!-- QUICK NAV -->
+  <section class="border-y border-white/10 bg-black/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-6 grid grid-cols-1 sm:grid-cols-3 gap-4">
+      <a href="roster.html" class="bg-box border border-white/5 rounded-2xl p-5 hover:border-gold/30 transition">
+        <p class="text-gold text-xs font-bold uppercase tracking-[0.18em]">Team</p>
+        <h2 class="font-heading text-2xl uppercase mt-3">Roster</h2>
+        <p class="text-gray-400 mt-3 text-sm">Giocatrici e staff tecnico della stagione.</p>
       </a>
 
-      <a href="calendario.html" class="bg-box border border-white/5 rounded-2xl p-8 hover:border-gold/40 transition">
-        <span class="text-gold text-sm font-bold uppercase">Stagione</span>
-        <h2 class="font-heading text-2xl mt-3 mb-3 uppercase">Calendario</h2>
-        <p class="text-gray-400">Tutte le partite già giocate e da giocare, divise per giornata.</p>
+      <a href="calendario.html" class="bg-box border border-white/5 rounded-2xl p-5 hover:border-gold/30 transition">
+        <p class="text-gold text-xs font-bold uppercase tracking-[0.18em]">Stagione</p>
+        <h2 class="font-heading text-2xl uppercase mt-3">Calendario</h2>
+        <p class="text-gray-400 mt-3 text-sm">Tutte le partite, giornata per giornata.</p>
       </a>
 
-      <a href="classifica.html" class="bg-box border border-white/5 rounded-2xl p-8 hover:border-gold/40 transition">
-        <span class="text-gold text-sm font-bold uppercase">Campionato</span>
-        <h2 class="font-heading text-2xl mt-3 mb-3 uppercase">Classifica</h2>
-        <p class="text-gray-400">Segui l’andamento del campionato e la posizione del Capra Team.</p>
+      <a href="classifica.html" class="bg-box border border-white/5 rounded-2xl p-5 hover:border-gold/30 transition">
+        <p class="text-gold text-xs font-bold uppercase tracking-[0.18em]">Campionato</p>
+        <h2 class="font-heading text-2xl uppercase mt-3">Classifica</h2>
+        <p class="text-gray-400 mt-3 text-sm">Segui la posizione del Capra Team nel girone.</p>
       </a>
     </div>
-  </main>
+  </section>
+
+  <!-- MATCH CENTER -->
+  <section class="py-16 sm:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
+        <div>
+          <p class="text-gold text-xs font-bold uppercase tracking-[0.2em]">Match Center</p>
+          <h2 class="font-heading text-3xl sm:text-4xl uppercase mt-2">Ultima e prossima partita</h2>
+        </div>
+        <a href="calendario.html" class="font-bold uppercase text-sm border-b-2 border-gold pb-1 hover:text-gold transition">
+          Vai al calendario →
+        </a>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-8">
+        <div class="bg-box border border-gold/30 rounded-2xl p-6 sm:p-8">
+          <div class="flex items-center justify-between gap-4 mb-6 flex-wrap">
+            <div>
+              <p class="text-gold text-xs font-bold uppercase tracking-[0.2em]">Ultima partita</p>
+              <h3 class="font-heading text-2xl sm:text-3xl uppercase mt-2">Finale</h3>
+            </div>
+            <span class="bg-gold text-black text-xs font-black uppercase px-3 py-2 rounded-full">25ª giornata</span>
+          </div>
+
+          <p
+            class="text-white font-black text-lg sm:text-xl leading-snug mb-3"
+            data-editable="source"
+            data-path="/serie-b.html"
+            data-key="last-match-title">
+            Capra Team Ravenna BK vs Puianello BK Team
+          </p>
+
+          <p
+            class="text-gold text-3xl sm:text-4xl font-black mb-3"
+            data-editable="source"
+            data-path="/serie-b.html"
+            data-key="last-match-score">
+            52 - 68
+          </p>
+
+          <p
+            class="text-gray-400 text-sm sm:text-base"
+            data-editable="source"
+            data-path="/serie-b.html"
+            data-key="last-match-meta">
+            22/03/2026 · Serie B Femminile
+          </p>
+        </div>
+
+        <div class="bg-box border border-white/5 rounded-2xl p-6 sm:p-8">
+          <div class="flex items-center justify-between gap-4 mb-6 flex-wrap">
+            <div>
+              <p class="text-gold text-xs font-bold uppercase tracking-[0.2em]">Prossima partita</p>
+              <h3 class="font-heading text-2xl sm:text-3xl uppercase mt-2">Next Game</h3>
+            </div>
+            <span class="bg-white/10 text-white text-xs font-black uppercase px-3 py-2 rounded-full">26ª giornata</span>
+          </div>
+
+          <p
+            class="text-white font-black text-lg sm:text-xl leading-snug mb-3"
+            data-editable="source"
+            data-path="/serie-b.html"
+            data-key="next-match-title">
+            Capra Team Ravenna BK vs Peperoncino Libertas
+          </p>
+
+          <p
+            class="text-gold text-2xl sm:text-3xl font-black mb-3"
+            data-editable="source"
+            data-path="/serie-b.html"
+            data-key="next-match-date">
+            27/03/2026
+          </p>
+
+          <p
+            class="text-gray-400 text-sm sm:text-base"
+            data-editable="source"
+            data-path="/serie-b.html"
+            data-key="next-match-meta">
+            In attesa di aggiornamento orario definitivo
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOCUS -->
+  <section class="pb-16 sm:pb-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-[1.15fr_0.85fr] gap-10 items-start">
+      <div class="bg-box border border-white/5 rounded-2xl p-8 sm:p-10">
+        <p class="text-gold text-xs font-bold uppercase tracking-[0.2em]"
+           data-editable="source"
+           data-path="/serie-b.html"
+           data-key="focus-kicker">
+          Stagione 2025/26
+        </p>
+
+        <h2 class="font-heading text-3xl sm:text-4xl uppercase mt-3 mb-6"
+            data-editable="source"
+            data-path="/serie-b.html"
+            data-key="focus-title">
+          Il presente tra le grandi
+        </h2>
+
+        <p class="text-gray-300 leading-relaxed mb-5"
+           data-editable="source"
+           data-path="/serie-b.html"
+           data-key="focus-text-1">
+          La Serie B rappresenta un passaggio storico per il Capra Team Ravenna: il club affronta il campionato cadetto con identità forte, ambizione e spirito di appartenenza.
+        </p>
+
+        <p class="text-gray-400 leading-relaxed mb-5"
+           data-editable="source"
+           data-path="/serie-b.html"
+           data-key="focus-text-2">
+          Dopo la promozione conquistata nella stagione 2024/25, la squadra continua a costruire il proprio percorso con l’obiettivo di consolidarsi e crescere.
+        </p>
+
+        <p class="text-gray-400 leading-relaxed"
+           data-editable="source"
+           data-path="/serie-b.html"
+           data-key="focus-text-3">
+          Ogni giornata aggiunge esperienza, valore e consapevolezza a un gruppo che porta Ravenna sui palcoscenici nazionali.
+        </p>
+      </div>
+
+      <div class="bg-box border border-white/5 rounded-2xl p-8 sm:p-10">
+        <p class="text-gold text-xs font-bold uppercase tracking-[0.2em]">Numeri chiave</p>
+
+        <div class="space-y-6 mt-6">
+          <div>
+            <p class="text-gray-400 uppercase text-xs tracking-[0.18em]">Posizione attuale</p>
+            <p class="text-white text-3xl font-black mt-2" data-editable="source" data-path="/serie-b.html" data-key="stat-1">7° posto</p>
+          </div>
+
+          <div>
+            <p class="text-gray-400 uppercase text-xs tracking-[0.18em]">Punti</p>
+            <p class="text-white text-3xl font-black mt-2" data-editable="source" data-path="/serie-b.html" data-key="stat-2">28</p>
+          </div>
+
+          <div>
+            <p class="text-gray-400 uppercase text-xs tracking-[0.18em]">Bilancio</p>
+            <p class="text-white text-3xl font-black mt-2" data-editable="source" data-path="/serie-b.html" data-key="stat-3">14W / 10L</p>
+          </div>
+
+          <div>
+            <p class="text-gray-400 uppercase text-xs tracking-[0.18em]">Differenza punti</p>
+            <p class="text-white text-3xl font-black mt-2" data-editable="source" data-path="/serie-b.html" data-key="stat-4">+27</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWS + GALLERY -->
+  <section class="py-16 sm:py-20 border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-8">
+
+      <a href="news.html" class="group bg-box rounded-2xl border border-white/5 overflow-hidden hover:border-gold/30 transition">
+        <div class="relative h-[300px] sm:h-[360px]">
+          <img src="/assets/images/seriebcover.jpg" alt="News Serie B" class="absolute inset-0 w-full h-full object-cover opacity-25">
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 p-6 sm:p-8 z-10">
+            <p class="text-gold text-xs font-bold uppercase tracking-[0.2em] mb-3">News</p>
+            <h2 class="font-heading text-3xl sm:text-4xl uppercase">Ultimi aggiornamenti</h2>
+            <p class="text-gray-300 mt-4 max-w-xl">
+              Scopri notizie, comunicati e approfondimenti sulla stagione della prima squadra.
+            </p>
+          </div>
+        </div>
+      </a>
+
+      <a href="photogallery-prima-squadra.html" class="group bg-box rounded-2xl border border-white/5 overflow-hidden hover:border-gold/30 transition">
+        <div class="relative h-[300px] sm:h-[360px]">
+          <img src="/assets/images/gallery-prima-squadra-cover.png" alt="Photogallery Prima Squadra" class="absolute inset-0 w-full h-full object-cover opacity-25">
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 p-6 sm:p-8 z-10">
+            <p class="text-gold text-xs font-bold uppercase tracking-[0.2em] mb-3">Media</p>
+            <h2 class="font-heading text-3xl sm:text-4xl uppercase">Photogallery</h2>
+            <p class="text-gray-300 mt-4 max-w-xl">
+              Rivivi partite, emozioni e momenti chiave della Serie B attraverso le immagini.
+            </p>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 sm:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="bg-gold text-black rounded-2xl p-8 sm:p-12 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
+        <div>
+          <p class="uppercase text-xs font-black tracking-[0.2em]">Capra Team Ravenna</p>
+          <h2 class="font-heading text-2xl sm:text-4xl uppercase mt-3"
+              data-editable="source"
+              data-path="/serie-b.html"
+              data-key="cta-title">
+            Segui il cammino della prima squadra
+          </h2>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-4 w-full lg:w-auto">
+          <a href="roster.html" class="bg-black text-white px-8 py-4 rounded-xl font-black uppercase tracking-[0.12em] text-sm text-center">
+            Vai al roster
+          </a>
+          <a href="calendario.html" class="border border-black text-black px-8 py-4 rounded-xl font-black uppercase tracking-[0.12em] text-sm text-center">
+            Vai al calendario
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <div id="footer-container"></div>
   <script src="/js/main.js"></script>
