@@ -5,6 +5,18 @@ _inputs:
     options:
       structures: _structures.news_item
 
+  gallery_items:
+    label: Album Photogallery
+    type: array
+    options:
+      structures: _structures.gallery_item
+
+  gallery_images:
+    label: Foto dell'album
+    type: array
+    options:
+      structures: _structures.gallery_image
+
   title:
     label: Titolo
     type: text
@@ -23,6 +35,12 @@ _inputs:
         - Serie B
         - Giovanili
         - Eventi
+        - Prima Squadra
+
+  team:
+    label: Squadra / Sottocategoria
+    type: text
+    comment: "Esempio: Serie B, Under 19, Under 17, Settore Giovanile"
 
   date:
     label: Data
@@ -32,9 +50,17 @@ _inputs:
     label: Immagine copertina
     type: image
 
+  cover_image:
+    label: Immagine copertina album
+    type: image
+
   content_image:
     label: Immagine interna articolo
     type: image
+
+  cover_caption:
+    label: Caption copertina album
+    type: text
 
   content_image_caption:
     label: Didascalia immagine interna
@@ -45,7 +71,7 @@ _inputs:
     type: text
 
   featured:
-    label: In evidenza in home
+    label: In evidenza
     type: boolean
 
   body_html:
@@ -69,3 +95,29 @@ _structures:
           featured: false
           body_html: |
             <p>Scrivi qui il contenuto completo dell’articolo.</p>
+
+  gallery_item:
+    style: modal
+    values:
+      - label: Nuovo album
+        value:
+          title: "Nuovo album"
+          slug: "nuovo-album"
+          category: "Giovanili"
+          team: "Settore Giovanile"
+          date: 2026-03-24
+          cover_image: "/assets/images/gallery-giovanili-cover.png"
+          cover_caption: "Scrivi qui la caption della copertina."
+          excerpt: "Scrivi qui una breve descrizione dell’album."
+          featured: false
+          gallery_images:
+            - image: "/assets/images/gallery-giovanili-cover.png"
+              caption: "Scrivi qui la caption della foto."
+
+  gallery_image:
+    style: modal
+    values:
+      - label: Foto
+        value:
+          image: "/assets/images/gallery-giovanili-cover.png"
+          caption: "Scrivi qui la caption della foto."
