@@ -5,14 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Photogallery | Capra Team Ravenna</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
   <script>
     tailwind.config = {
       theme: {
         extend: {
-          colors: { gold:'#1E6B3F', dark:'#0A0A0A', box:'#1A1A1A' },
-          fontFamily: { heading:['Syncopate'], sans:['Inter'] }
+          colors: {
+            gold:'#1E6B3F',
+            dark:'#0A0A0A',
+            box:'#1A1A1A'
+          },
+          fontFamily: {
+            heading:['Syncopate'],
+            sans:['Inter']
+          }
         }
       }
     }
@@ -22,81 +28,185 @@
 
   <div id="navbar-container"></div>
 
+  <!-- HERO -->
   <header class="relative min-h-[60vh] flex items-end overflow-hidden pt-24">
-    <img src="/assets/images/hero-home.jpg" alt="Photogallery Capra Team Ravenna" class="absolute inset-0 w-full h-full object-cover opacity-30">
+    <img
+      src="/assets/images/hero-home.jpg"
+      alt="Photogallery Capra Team Ravenna"
+      class="absolute inset-0 w-full h-full object-cover object-center opacity-30"
+    >
     <div class="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-black/20"></div>
     <div class="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-transparent"></div>
 
-    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 w-full pb-12">
-      <span class="text-gold font-heading text-xs sm:text-sm tracking-[0.35em] block mb-5">CAPRA TEAM RAVENNA</span>
-      <h1 class="text-4xl sm:text-6xl font-black uppercase tracking-tighter">Photogallery</h1>
-      <p class="text-gray-300 mt-4 max-w-2xl">
-        Album fotografici di Prima Squadra, Giovanili e Minibasket, organizzati in modo semplice e aggiornabile.
-      </p>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 w-full pb-12 sm:pb-16">
+      <div class="max-w-4xl">
+        <span class="text-gold font-heading text-xs sm:text-sm tracking-[0.35em] sm:tracking-[0.45em] block mb-5">
+          CAPRA TEAM RAVENNA
+        </span>
+
+        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black uppercase tracking-tighter leading-[0.95] mb-6">
+          Photogallery
+        </h1>
+
+        <p class="text-gray-300 text-base sm:text-lg lg:text-xl max-w-3xl leading-relaxed">
+          Tutti gli album fotografici del Capra Team Ravenna, organizzati per Prima Squadra, Giovanili e Minibasket.
+        </p>
+      </div>
     </div>
   </header>
 
-  <main class="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
+  <!-- INTRO -->
+  <section class="border-y border-white/10 bg-black/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-8 grid md:grid-cols-3 gap-6">
+      <div>
+        <p class="text-gold text-xs font-bold uppercase tracking-[0.2em]">Media</p>
+        <p class="text-white text-2xl font-black mt-2">Album fotografici</p>
+      </div>
+      <div>
+        <p class="text-gold text-xs font-bold uppercase tracking-[0.2em]">Organizzazione</p>
+        <p class="text-white text-2xl font-black mt-2">Per categoria</p>
+      </div>
+      <div>
+        <p class="text-gold text-xs font-bold uppercase tracking-[0.2em]">Navigazione</p>
+        <p class="text-white text-2xl font-black mt-2">Rapida e chiara</p>
+      </div>
+    </div>
+  </section>
 
-    <section class="grid md:grid-cols-3 gap-8 mb-16">
-      <a href="/photogallery/prima-squadra.html" class="group bg-box rounded-2xl border border-white/5 overflow-hidden hover:border-gold/30 transition">
-        <div class="relative h-[320px] sm:h-[380px]">
-          <img src="/assets/images/gallery-prima-squadra-cover.png" alt="Prima Squadra" class="absolute inset-0 w-full h-full object-cover opacity-30">
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-20 space-y-12">
+
+    <!-- PRIMA SQUADRA -->
+    <section class="bg-box rounded-2xl border border-white/5 overflow-hidden">
+      <div class="grid lg:grid-cols-[1.1fr_0.9fr]">
+        <div class="relative min-h-[320px]">
+          <img
+            src="/assets/images/gallery-prima-squadra-cover.png"
+            alt="Photogallery Prima Squadra"
+            class="absolute inset-0 w-full h-full object-cover opacity-35"
+          >
           <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
           <div class="absolute bottom-0 left-0 p-6 sm:p-8 z-10">
             <p class="text-gold text-xs font-bold uppercase tracking-[0.2em] mb-3">Photogallery</p>
             <h2 class="font-heading text-3xl sm:text-4xl uppercase">Prima Squadra</h2>
-            <p class="text-gray-300 mt-4 max-w-xl">Album della Serie B e dei momenti della prima squadra.</p>
+            <p class="text-gray-300 mt-4 max-w-xl">
+              Tutti gli album della Serie B, con partite, eventi e momenti della prima squadra.
+            </p>
           </div>
         </div>
-      </a>
 
-      <a href="/photogallery/giovanili.html" class="group bg-box rounded-2xl border border-white/5 overflow-hidden hover:border-gold/30 transition">
-        <div class="relative h-[320px] sm:h-[380px]">
-          <img src="/assets/images/gallery-giovanili-cover.png" alt="Giovanili" class="absolute inset-0 w-full h-full object-cover opacity-30">
+        <div class="p-6 sm:p-8 flex flex-col justify-center">
+          <p class="text-gold text-xs font-bold uppercase tracking-[0.2em]">Sezione</p>
+          <h3 class="text-2xl sm:text-3xl font-black uppercase mt-3">Album disponibili</h3>
+          <p class="text-gray-400 mt-4 leading-relaxed">
+            Da qui entri direttamente nella photogallery della Prima Squadra e trovi tutti gli album creati per la Serie B.
+          </p>
+
+          <div class="mt-8">
+            <a
+              href="/photogallery/prima-squadra.html"
+              class="inline-flex items-center justify-center bg-gold text-white px-8 py-4 rounded-xl font-black uppercase tracking-[0.12em] text-sm hover:opacity-90 transition"
+            >
+              Vai agli album Prima Squadra
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GIOVANILI -->
+    <section class="bg-box rounded-2xl border border-white/5 overflow-hidden">
+      <div class="grid lg:grid-cols-[1.1fr_0.9fr]">
+        <div class="relative min-h-[320px]">
+          <img
+            src="/assets/images/gallery-giovanili-cover.png"
+            alt="Photogallery Giovanili"
+            class="absolute inset-0 w-full h-full object-cover opacity-35"
+          >
           <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
           <div class="absolute bottom-0 left-0 p-6 sm:p-8 z-10">
             <p class="text-gold text-xs font-bold uppercase tracking-[0.2em] mb-3">Photogallery</p>
             <h2 class="font-heading text-3xl sm:text-4xl uppercase">Giovanili</h2>
-            <p class="text-gray-300 mt-4 max-w-xl">Under 19, Under 17, Under 15 e Under 13.</p>
+            <p class="text-gray-300 mt-4 max-w-xl">
+              Gli album del settore giovanile, divisi per categoria.
+            </p>
           </div>
         </div>
-      </a>
 
-      <a href="/photogallery/minibasket.html" class="group bg-box rounded-2xl border border-white/5 overflow-hidden hover:border-gold/30 transition">
-        <div class="relative h-[320px] sm:h-[380px]">
-          <img src="/assets/images/gallery-giovanili-cover.png" alt="Minibasket" class="absolute inset-0 w-full h-full object-cover opacity-30">
+        <div class="p-6 sm:p-8 flex flex-col justify-center">
+          <p class="text-gold text-xs font-bold uppercase tracking-[0.2em]">Categorie</p>
+          <h3 class="text-2xl sm:text-3xl font-black uppercase mt-3">Scegli la sezione</h3>
+          <p class="text-gray-400 mt-4 leading-relaxed">
+            Ogni categoria ha la sua pagina dedicata, dentro la quale puoi creare tutti gli album che vuoi.
+          </p>
+
+          <div class="grid sm:grid-cols-2 gap-4 mt-8">
+            <a href="/photogallery/giovanili-under-19.html" class="border border-white/10 rounded-xl px-5 py-4 font-black uppercase text-sm hover:border-gold hover:text-gold transition text-center">
+              Under 19
+            </a>
+            <a href="/photogallery/giovanili-under-17.html" class="border border-white/10 rounded-xl px-5 py-4 font-black uppercase text-sm hover:border-gold hover:text-gold transition text-center">
+              Under 17
+            </a>
+            <a href="/photogallery/giovanili-under-15.html" class="border border-white/10 rounded-xl px-5 py-4 font-black uppercase text-sm hover:border-gold hover:text-gold transition text-center">
+              Under 15
+            </a>
+            <a href="/photogallery/giovanili-under-13.html" class="border border-white/10 rounded-xl px-5 py-4 font-black uppercase text-sm hover:border-gold hover:text-gold transition text-center">
+              Under 13
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MINIBASKET -->
+    <section class="bg-box rounded-2xl border border-white/5 overflow-hidden">
+      <div class="grid lg:grid-cols-[1.1fr_0.9fr]">
+        <div class="relative min-h-[320px]">
+          <img
+            src="/assets/images/gallery-giovanili-cover.png"
+            alt="Photogallery Minibasket"
+            class="absolute inset-0 w-full h-full object-cover opacity-35"
+          >
           <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
           <div class="absolute bottom-0 left-0 p-6 sm:p-8 z-10">
             <p class="text-gold text-xs font-bold uppercase tracking-[0.2em] mb-3">Photogallery</p>
             <h2 class="font-heading text-3xl sm:text-4xl uppercase">Minibasket</h2>
-            <p class="text-gray-300 mt-4 max-w-xl">Paperine, Libellule, Gazzelle Small, Gazzelle Big ed Esordienti.</p>
+            <p class="text-gray-300 mt-4 max-w-xl">
+              Gli album del minibasket, organizzati per fascia e gruppo.
+            </p>
           </div>
         </div>
-      </a>
-    </section>
 
-    <section>
-      <div class="mb-10">
-        <p class="text-gold text-xs font-bold uppercase tracking-[0.2em]">In evidenza</p>
-        <h2 class="font-heading text-3xl sm:text-4xl uppercase mt-2">Album selezionati</h2>
+        <div class="p-6 sm:p-8 flex flex-col justify-center">
+          <p class="text-gold text-xs font-bold uppercase tracking-[0.2em]">Categorie</p>
+          <h3 class="text-2xl sm:text-3xl font-black uppercase mt-3">Scegli il gruppo</h3>
+          <p class="text-gray-400 mt-4 leading-relaxed">
+            Ogni gruppo del minibasket ha la sua pagina dedicata, pronta a contenere tutti gli album futuri.
+          </p>
+
+          <div class="grid sm:grid-cols-2 gap-4 mt-8">
+            <a href="/photogallery/minibasket-paperine.html" class="border border-white/10 rounded-xl px-5 py-4 font-black uppercase text-sm hover:border-gold hover:text-gold transition text-center">
+              Paperine
+            </a>
+            <a href="/photogallery/minibasket-libellule.html" class="border border-white/10 rounded-xl px-5 py-4 font-black uppercase text-sm hover:border-gold hover:text-gold transition text-center">
+              Libellule
+            </a>
+            <a href="/photogallery/minibasket-gazzelle-small.html" class="border border-white/10 rounded-xl px-5 py-4 font-black uppercase text-sm hover:border-gold hover:text-gold transition text-center">
+              Gazzelle Small
+            </a>
+            <a href="/photogallery/minibasket-gazzelle-big.html" class="border border-white/10 rounded-xl px-5 py-4 font-black uppercase text-sm hover:border-gold hover:text-gold transition text-center">
+              Gazzelle Big
+            </a>
+            <a href="/photogallery/minibasket-esordienti.html" class="sm:col-span-2 border border-white/10 rounded-xl px-5 py-4 font-black uppercase text-sm hover:border-gold hover:text-gold transition text-center">
+              Esordienti
+            </a>
+          </div>
+        </div>
       </div>
-
-      <div id="featured-galleries-grid" class="grid md:grid-cols-2 xl:grid-cols-3 gap-8"></div>
     </section>
 
   </main>
 
   <div id="footer-container"></div>
   <script src="/js/main.js"></script>
-  <script src="/js/photogallery.js"></script>
-  <script>
-    Photogallery.renderAlbumCards({
-      containerId: 'featured-galleries-grid',
-      featuredOnly: true,
-      limit: 6,
-      emptyMessage: 'Nessun album in evidenza al momento.'
-    });
-  </script>
 </body>
 </html>
