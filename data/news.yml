@@ -44,7 +44,7 @@ news_items:
     date: 2026-03-18T00:00:00Z
     image: /uploads/goat-film.jpg
     excerpt: ''
-    featured: false
+    featured: true
     body_html: >-
       <p>𝐆𝐎𝐀𝐓 𝐱 𝐂𝐀𝐏𝐑𝐀 𝐓𝐄𝐀𝐌 𝐑𝐀𝐕𝐄𝐍𝐍𝐀<br /><br />Nel 2012
       nasce il 𝘊𝘈𝘗𝘙𝘈 𝘛𝘌𝘈𝘔, la squadra di basket femminile di
