@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photogallery | Capra Team Ravenna</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { gold:'#1E6B3F', dark:'#0A0A0A', box:'#1A1A1A' },
+          fontFamily: { heading:['Syncopate'], sans:['Inter'] }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-dark text-white font-sans">
+
+  <div id="navbar-container"></div>
+
+  <header class="relative min-h-[60vh] flex items-end overflow-hidden pt-24">
+    <img src="/assets/images/hero-home.jpg" alt="Photogallery Capra Team Ravenna" class="absolute inset-0 w-full h-full object-cover opacity-30">
+    <div class="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-black/20"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-transparent"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 w-full pb-12">
+      <span class="text-gold font-heading text-xs sm:text-sm tracking-[0.35em] block mb-5">CAPRA TEAM RAVENNA</span>
+      <h1 class="text-4xl sm:text-6xl font-black uppercase tracking-tighter">Photogallery</h1>
+      <p class="text-gray-300 mt-4 max-w-2xl">
+        Album fotografici di Prima Squadra, Giovanili e Minibasket, organizzati in modo semplice e aggiornabile.
+      </p>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
+
+    <section class="grid md:grid-cols-3 gap-8 mb-16">
+      <a href="/photogallery/prima-squadra.html" class="group bg-box rounded-2xl border border-white/5 overflow-hidden hover:border-gold/30 transition">
+        <div class="relative h-[320px] sm:h-[380px]">
+          <img src="/assets/images/gallery-prima-squadra-cover.png" alt="Prima Squadra" class="absolute inset-0 w-full h-full object-cover opacity-30">
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 p-6 sm:p-8 z-10">
+            <p class="text-gold text-xs font-bold uppercase tracking-[0.2em] mb-3">Photogallery</p>
+            <h2 class="font-heading text-3xl sm:text-4xl uppercase">Prima Squadra</h2>
+            <p class="text-gray-300 mt-4 max-w-xl">Album della Serie B e dei momenti della prima squadra.</p>
+          </div>
+        </div>
+      </a>
+
+      <a href="/photogallery/giovanili.html" class="group bg-box rounded-2xl border border-white/5 overflow-hidden hover:border-gold/30 transition">
+        <div class="relative h-[320px] sm:h-[380px]">
+          <img src="/assets/images/gallery-giovanili-cover.png" alt="Giovanili" class="absolute inset-0 w-full h-full object-cover opacity-30">
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 p-6 sm:p-8 z-10">
+            <p class="text-gold text-xs font-bold uppercase tracking-[0.2em] mb-3">Photogallery</p>
+            <h2 class="font-heading text-3xl sm:text-4xl uppercase">Giovanili</h2>
+            <p class="text-gray-300 mt-4 max-w-xl">Under 19, Under 17, Under 15 e Under 13.</p>
+          </div>
+        </div>
+      </a>
+
+      <a href="/photogallery/minibasket.html" class="group bg-box rounded-2xl border border-white/5 overflow-hidden hover:border-gold/30 transition">
+        <div class="relative h-[320px] sm:h-[380px]">
+          <img src="/assets/images/gallery-giovanili-cover.png" alt="Minibasket" class="absolute inset-0 w-full h-full object-cover opacity-30">
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 p-6 sm:p-8 z-10">
+            <p class="text-gold text-xs font-bold uppercase tracking-[0.2em] mb-3">Photogallery</p>
+            <h2 class="font-heading text-3xl sm:text-4xl uppercase">Minibasket</h2>
+            <p class="text-gray-300 mt-4 max-w-xl">Paperine, Libellule, Gazzelle Small, Gazzelle Big ed Esordienti.</p>
+          </div>
+        </div>
+      </a>
+    </section>
+
+    <section>
+      <div class="mb-10">
+        <p class="text-gold text-xs font-bold uppercase tracking-[0.2em]">In evidenza</p>
+        <h2 class="font-heading text-3xl sm:text-4xl uppercase mt-2">Album selezionati</h2>
+      </div>
+
+      <div id="featured-galleries-grid" class="grid md:grid-cols-2 xl:grid-cols-3 gap-8"></div>
+    </section>
+
+  </main>
+
+  <div id="footer-container"></div>
+  <script src="/js/main.js"></script>
+  <script src="/js/photogallery.js"></script>
+  <script>
+    Photogallery.renderAlbumCards({
+      containerId: 'featured-galleries-grid',
+      featuredOnly: true,
+      limit: 6,
+      emptyMessage: 'Nessun album in evidenza al momento.'
+    });
+  </script>
+</body>
+</html>
