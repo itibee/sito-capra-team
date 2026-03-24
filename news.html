@@ -5,20 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>News | Capra Team Ravenna</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
   <script>
     tailwind.config = {
       theme: {
         extend: {
-          colors: {
-            gold:'#FBBF24',
-            dark:'#0A0A0A',
-            box:'#1A1A1A'
-          },
-          fontFamily: {
-            heading:['Syncopate'],
-            sans:['Inter']
-          }
+          colors: { gold:'#FBBF24', dark:'#0A0A0A', box:'#1A1A1A' },
+          fontFamily: { heading:['Syncopate'], sans:['Inter'] }
         }
       }
     }
@@ -28,184 +22,55 @@
 
   <div id="navbar-container"></div>
 
-  <!-- HERO -->
-  <header class="relative min-h-[65vh] flex items-end overflow-hidden pt-24">
-    <img
-      src="/assets/images/hero-home.jpg"
-      alt="News Capra Team Ravenna"
-      class="absolute inset-0 w-full h-full object-cover object-center opacity-30"
-    >
+  <header class="relative min-h-[60vh] flex items-end overflow-hidden pt-24">
+    <img src="/assets/images/hero-home.jpg" alt="News Capra Team Ravenna" class="absolute inset-0 w-full h-full object-cover opacity-30">
     <div class="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-black/20"></div>
     <div class="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-transparent"></div>
 
-    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 w-full pb-12 sm:pb-16">
-      <div class="max-w-4xl">
-        <span
-          class="text-gold font-heading text-xs sm:text-sm tracking-[0.35em] sm:tracking-[0.45em] block mb-5"
-          data-editable="source"
-          data-path="/news.html"
-          data-key="hero-kicker">
-          CAPRA TEAM RAVENNA
-        </span>
-
-        <h1
-          class="text-4xl sm:text-6xl lg:text-7xl font-black uppercase tracking-tighter leading-[0.95] mb-6"
-          data-editable="source"
-          data-path="/news.html"
-          data-key="hero-title">
-          News
-        </h1>
-
-        <p
-          class="text-gray-300 text-base sm:text-lg lg:text-xl max-w-2xl leading-relaxed"
-          data-editable="source"
-          data-path="/news.html"
-          data-key="hero-text">
-          Notizie, eventi, aggiornamenti e storie dal mondo Capra Team Ravenna.
-        </p>
-      </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 w-full pb-12">
+      <span class="text-gold font-heading text-xs sm:text-sm tracking-[0.35em] block mb-5">CAPRA TEAM RAVENNA</span>
+      <h1 class="text-4xl sm:text-6xl font-black uppercase tracking-tighter">News</h1>
+      <p class="text-gray-300 mt-4 max-w-2xl">Notizie, eventi, aggiornamenti e storie dal mondo Capra Team Ravenna.</p>
     </div>
   </header>
 
-  <!-- FILTRI VISIVI -->
-  <section class="border-y border-white/10 bg-black/40">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-6 flex flex-wrap gap-3">
-      <span class="px-4 py-2 rounded-full bg-gold text-black text-xs font-black uppercase tracking-[0.15em]">Tutte</span>
-      <span class="px-4 py-2 rounded-full border border-white/10 text-white text-xs font-black uppercase tracking-[0.15em]">Società</span>
-      <span class="px-4 py-2 rounded-full border border-white/10 text-white text-xs font-black uppercase tracking-[0.15em]">Serie B</span>
-      <span class="px-4 py-2 rounded-full border border-white/10 text-white text-xs font-black uppercase tracking-[0.15em]">Giovanili</span>
-      <span class="px-4 py-2 rounded-full border border-white/10 text-white text-xs font-black uppercase tracking-[0.15em]">Eventi</span>
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
+    <div class="mb-10">
+      <p class="text-gold text-xs font-bold uppercase tracking-[0.2em]">Archivio</p>
+      <h2 class="font-heading text-3xl sm:text-4xl uppercase mt-2">Tutte le news</h2>
     </div>
-  </section>
 
-  <!-- NEWS IN EVIDENZA -->
-  <section class="py-16 sm:py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6">
-      <div class="mb-10">
-        <p class="text-gold text-xs font-bold uppercase tracking-[0.2em]">In evidenza</p>
-        <h2 class="font-heading text-3xl sm:text-4xl uppercase mt-2">Ultime notizie</h2>
-      </div>
-
-      <div class="grid lg:grid-cols-[1.2fr_0.8fr] gap-8">
-
-        <a href="news-capra-summer-camp.html" class="group bg-box rounded-2xl border border-white/5 overflow-hidden hover:border-gold/30 transition">
-          <div class="grid md:grid-cols-2 h-full">
-            <div class="h-full">
-              <img src="/assets/images/summercamp.jpg" alt="Capra Summer Camp" class="w-full h-full min-h-[280px] object-cover">
-            </div>
-            <div class="p-8 flex flex-col justify-center">
-              <p class="text-gold text-xs font-bold uppercase tracking-[0.18em]">Eventi</p>
-              <h3 class="text-2xl sm:text-3xl font-black mt-4 leading-tight group-hover:text-gold transition"
-                  data-editable="source"
-                  data-path="/news.html"
-                  data-key="featured-title">
-                Sta tornando il Capra Summer Camp… e quest’anno sarà ancora più grande!
-              </h3>
-              <p class="text-gray-400 mt-5 leading-relaxed"
-                 data-editable="source"
-                 data-path="/news.html"
-                 data-key="featured-text">
-                Allenamenti, giochi, laboratori, risate e tanto basket. Un’esperienza pensata per crescere, divertirsi e vivere lo spirito Capra Team anche d’estate.
-              </p>
-              <span class="inline-block mt-6 border-b-2 border-gold pb-1 font-bold uppercase text-sm w-fit">
-                Leggi l’articolo →
-              </span>
-            </div>
-          </div>
-        </a>
-
-        <div class="grid gap-8">
-          <a href="news-linea-rosa.html" class="group bg-box rounded-2xl border border-white/5 overflow-hidden hover:border-gold/30 transition">
-            <img src="/assets/images/linea-rosa.jpeg" alt="Linea Rosa" class="w-full h-52 object-cover">
-            <div class="p-6">
-              <p class="text-gold text-xs font-bold uppercase tracking-[0.18em]">Società</p>
-              <h3 class="text-xl font-black mt-3 leading-tight group-hover:text-gold transition">
-                Insieme a Linea Rosa: il basket che lascia il segno
-              </h3>
-              <p class="text-gray-400 mt-4 text-sm">
-                Un impegno concreto che unisce sport, territorio e responsabilità sociale.
-              </p>
-            </div>
-          </a>
-
-          <a href="news-giovanili-futuro.html" class="group bg-box rounded-2xl border border-white/5 overflow-hidden hover:border-gold/30 transition">
-            <img src="/assets/images/gallery-giovanili-cover.png" alt="Giovanili" class="w-full h-52 object-cover">
-            <div class="p-6">
-              <p class="text-gold text-xs font-bold uppercase tracking-[0.18em]">Giovanili</p>
-              <h3 class="text-xl font-black mt-3 leading-tight group-hover:text-gold transition">
-                Dalle categorie giovanili nasce il futuro del club
-              </h3>
-              <p class="text-gray-400 mt-4 text-sm">
-                Un percorso che parte dalla base e costruisce identità, crescita e appartenenza.
-              </p>
-            </div>
-          </a>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ARCHIVIO -->
-  <section class="pb-16 sm:pb-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6">
-      <div class="mb-10">
-        <p class="text-gold text-xs font-bold uppercase tracking-[0.2em]">Archivio</p>
-        <h2 class="font-heading text-3xl sm:text-4xl uppercase mt-2">Tutte le news</h2>
-      </div>
-
-      <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
-
-        <a href="news-capra-summer-camp.html" class="group block">
-          <article class="bg-box rounded-2xl border border-white/5 overflow-hidden h-full hover:border-gold/30 transition">
-            <img src="/assets/images/summercamp.jpg" alt="Capra Summer Camp" class="w-full h-56 object-cover">
-            <div class="p-6">
-              <p class="text-gold text-xs font-bold uppercase tracking-[0.18em]">Eventi</p>
-              <h3 class="text-xl font-black mt-3 leading-tight group-hover:text-gold transition">
-                Sta tornando il Capra Summer Camp… e quest’anno sarà ancora più grande!
-              </h3>
-              <p class="text-gray-400 mt-4 text-sm">
-                Allenamenti, giochi, laboratori, risate e tanto basket.
-              </p>
-            </div>
-          </article>
-        </a>
-
-        <a href="news-linea-rosa.html" class="group block">
-          <article class="bg-box rounded-2xl border border-white/5 overflow-hidden h-full hover:border-gold/30 transition">
-            <img src="/assets/images/linea-rosa.jpeg" alt="Linea Rosa" class="w-full h-56 object-cover">
-            <div class="p-6">
-              <p class="text-gold text-xs font-bold uppercase tracking-[0.18em]">Società</p>
-              <h3 class="text-xl font-black mt-3 leading-tight group-hover:text-gold transition">
-                Insieme a Linea Rosa: il basket che lascia il segno
-              </h3>
-              <p class="text-gray-400 mt-4 text-sm">
-                Il Capra Team scende in campo anche fuori dal parquet.
-              </p>
-            </div>
-          </article>
-        </a>
-
-        <a href="news-giovanili-futuro.html" class="group block">
-          <article class="bg-box rounded-2xl border border-white/5 overflow-hidden h-full hover:border-gold/30 transition">
-            <img src="/assets/images/gallery-giovanili-cover.png" alt="Giovanili" class="w-full h-56 object-cover">
-            <div class="p-6">
-              <p class="text-gold text-xs font-bold uppercase tracking-[0.18em]">Giovanili</p>
-              <h3 class="text-xl font-black mt-3 leading-tight group-hover:text-gold transition">
-                Dalle categorie giovanili nasce il futuro del club
-              </h3>
-              <p class="text-gray-400 mt-4 text-sm">
-                Under 19, Under 17, minibasket: il futuro si costruisce ogni giorno.
-              </p>
-            </div>
-          </article>
-        </a>
-
-      </div>
-    </div>
-  </section>
+    <div id="news-grid" class="grid md:grid-cols-2 xl:grid-cols-3 gap-8"></div>
+  </main>
 
   <div id="footer-container"></div>
   <script src="/js/main.js"></script>
+
+  <script>
+    async function loadNews() {
+      const res = await fetch('/data/news.yml');
+      const text = await res.text();
+      const data = jsyaml.load(text);
+      const items = (data.news_items || []).sort((a, b) => new Date(b.date) - new Date(a.date));
+
+      const grid = document.getElementById('news-grid');
+
+      grid.innerHTML = items.map(item => `
+        <a href="news-post.html?slug=${item.slug}" class="group block">
+          <article class="bg-box rounded-2xl border border-white/5 overflow-hidden h-full hover:border-gold/30 transition">
+            <img src="${item.image}" alt="${item.title}" class="w-full h-56 object-cover">
+            <div class="p-6">
+              <p class="text-gold text-xs font-bold uppercase tracking-[0.18em]">${item.category}</p>
+              <h3 class="text-xl font-black mt-3 leading-tight group-hover:text-gold transition">${item.title}</h3>
+              <p class="text-gray-400 mt-4 text-sm">${item.excerpt}</p>
+              <p class="text-gray-500 mt-4 text-xs uppercase tracking-[0.15em]">${item.date}</p>
+            </div>
+          </article>
+        </a>
+      `).join('');
+    }
+
+    loadNews();
+  </script>
 </body>
 </html>
