@@ -6,20 +6,15 @@ news_items:
     image: /assets/images/summercamp.jpg
     excerpt: Allenamenti, giochi, laboratori, risate e tanto basket.
     featured: true
-    body_html: >
+    body_html: >-
       <p>Sta tornando il Capra Summer Camp… e quest’anno sarà ancora più
-      grande.</p>
-
-      <p>Allenamenti, giochi, laboratori, risate e tanto basket: il camp estivo
-      del Capra Team Ravenna è pensato per far vivere alle ragazze un’esperienza
-      completa, fatta di sport, crescita e divertimento.</p>
-
-      <p>Non sarà soltanto un’occasione per migliorare sul campo, ma anche per
+      grande.</p><p>Allenamenti, giochi, laboratori, risate e tanto basket: il
+      camp estivo del Capra Team Ravenna è pensato per far vivere alle ragazze
+      un’esperienza completa, fatta di sport, crescita e divertimento.</p><p>Non
+      sarà soltanto un’occasione per migliorare sul campo, ma anche per
       costruire amicizie, condividere giornate speciali e portarsi a casa
-      ricordi che resteranno nel tempo.</p>
-
-      <p>Presto arriveranno tutti i dettagli ufficiali su date, iscrizioni e
-      programma completo.</p>
+      ricordi che resteranno nel tempo.</p><p>Presto arriveranno tutti i
+      dettagli ufficiali su date, iscrizioni e programma completo.</p>
   - title: 'Insieme a Linea Rosa: il basket che lascia il segno'
     slug: linea-rosa
     category: Società
