@@ -21,7 +21,7 @@ window.Photogallery = (() => {
   }
 
   async function loadGalleryItems() {
-    const res = await fetch('/data/galleries.yml', { cache: 'no-store' });
+    const res = await fetch("/data/galleries.yml", { cache: "no-store" });
     if (!res.ok) {
       throw new Error(`HTTP ${res.status}`);
     }
@@ -74,20 +74,20 @@ window.Photogallery = (() => {
       }
 
       grid.innerHTML = filtered.map(item => `
-        <a href="/photogallery/gallery-post.html?slug=${encodeURIComponent(item.slug || '')}" class="group block">
+        <a href="/photogallery/gallery-post.html?slug=${encodeURIComponent(item.slug || "")}" class="group block">
           <article class="bg-box rounded-2xl border border-white/5 overflow-hidden h-full hover:border-gold/30 transition">
-            <img src="${escapeHtml(item.cover_image || '/assets/images/hero-home.jpg')}" alt="${escapeHtml(item.title || '')}" class="w-full h-64 object-cover">
+            <img src="${escapeHtml(item.cover_image || "/assets/images/hero-home.jpg")}" alt="${escapeHtml(item.title || "")}" class="w-full h-64 object-cover">
             <div class="p-6">
-              <p class="text-gold text-xs font-bold uppercase tracking-[0.18em]">${escapeHtml(item.section || item.category || 'Photogallery')}</p>
-              <h3 class="text-xl font-black mt-3 leading-tight group-hover:text-gold transition">${escapeHtml(item.title || '')}</h3>
-              <p class="text-gray-400 mt-4 text-sm">${escapeHtml(item.cover_caption || item.excerpt || '')}</p>
+              <p class="text-gold text-xs font-bold uppercase tracking-[0.18em]">${escapeHtml(item.section || item.category || "Photogallery")}</p>
+              <h3 class="text-xl font-black mt-3 leading-tight group-hover:text-gold transition">${escapeHtml(item.title || "")}</h3>
+              <p class="text-gray-400 mt-4 text-sm">${escapeHtml(item.cover_caption || item.excerpt || "")}</p>
               <p class="text-gray-500 mt-4 text-xs uppercase tracking-[0.15em]">${escapeHtml(formatDateValue(item.date))}</p>
             </div>
           </article>
         </a>
-      `).join('');
+      `).join("");
     } catch (error) {
-      console.error('Errore caricamento album:', error);
+      console.error("Errore caricamento album:", error);
       const grid = document.getElementById(containerId);
       if (grid) {
         grid.innerHTML = `
@@ -99,9 +99,48 @@ window.Photogallery = (() => {
     }
   }
 
+  function getParentPage(item) {
+    if (!item) {
+      return { href: "/photogallery/index.html", label: "Photogallery" };
+    }
+
+    if (item.category === "Prima Squadra") {
+      return { href: "/photogallery/prima-squadra.html", label: "Prima Squadra" };
+    }
+
+    if (item.category === "Giovanili") {
+      const map = {
+        "Under 19": "/photogallery/giovanili-under-19.html",
+        "Under 17": "/photogallery/giovanili-under-17.html",
+        "Under 15": "/photogallery/giovanili-under-15.html",
+        "Under 13": "/photogallery/giovanili-under-13.html"
+      };
+      return {
+        href: map[item.section] || "/photogallery/giovanili.html",
+        label: item.section || "Giovanili"
+      };
+    }
+
+    if (item.category === "Minibasket") {
+      const map = {
+        "Paperine": "/photogallery/minibasket-paperine.html",
+        "Libellule": "/photogallery/minibasket-libellule.html",
+        "Gazzelle Small": "/photogallery/minibasket-gazzelle-small.html",
+        "Gazzelle Big": "/photogallery/minibasket-gazzelle-big.html",
+        "Esordienti": "/photogallery/minibasket-esordienti.html"
+      };
+      return {
+        href: map[item.section] || "/photogallery/minibasket.html",
+        label: item.section || "Minibasket"
+      };
+    }
+
+    return { href: "/photogallery/index.html", label: "Photogallery" };
+  }
+
   async function renderAlbumPost() {
     const params = new URLSearchParams(window.location.search);
-    const slug = params.get('slug');
+    const slug = params.get("slug");
 
     try {
       const items = await loadGalleryItems();
@@ -116,17 +155,25 @@ window.Photogallery = (() => {
         return;
       }
 
+      const parent = getParentPage(item);
+
       document.title = `${item.title} | Capra Team Ravenna`;
 
-      document.getElementById('album-cover').src = item.cover_image || '/assets/images/hero-home.jpg';
-      document.getElementById('album-cover').alt = item.title || '';
-      document.getElementById('album-category').textContent = item.category || 'Photogallery';
-      document.getElementById('album-title').textContent = item.title || '';
-      document.getElementById('album-meta').textContent = `${item.section || ''} · ${formatDateValue(item.date)}`;
-      document.getElementById('album-cover-caption').textContent = item.cover_caption || '';
-      document.getElementById('album-excerpt').textContent = item.excerpt || '';
+      document.getElementById("album-cover").src = item.cover_image || "/assets/images/hero-home.jpg";
+      document.getElementById("album-cover").alt = item.title || "";
+      document.getElementById("album-category").textContent = item.category || "Photogallery";
+      document.getElementById("album-title").textContent = item.title || "";
+      document.getElementById("album-meta").textContent = `${item.section || ""} · ${formatDateValue(item.date)}`;
+      document.getElementById("album-cover-caption").textContent = item.cover_caption || "";
+      document.getElementById("album-excerpt").textContent = item.excerpt || "";
 
-      const albumGrid = document.getElementById('album-grid');
+      const backLink = document.getElementById("album-back-link");
+      if (backLink) {
+        backLink.href = parent.href;
+        backLink.textContent = `← Torna a ${parent.label}`;
+      }
+
+      const albumGrid = document.getElementById("album-grid");
       const images = Array.isArray(item.gallery_images) ? item.gallery_images : [];
 
       if (images.length === 0) {
@@ -140,14 +187,14 @@ window.Photogallery = (() => {
 
       albumGrid.innerHTML = images.map(photo => `
         <figure class="bg-box border border-white/5 rounded-2xl overflow-hidden">
-          <img src="${escapeHtml(photo.image || '')}" alt="${escapeHtml(photo.caption || item.title || '')}" class="w-full h-80 object-cover">
+          <img src="${escapeHtml(photo.image || "")}" alt="${escapeHtml(photo.caption || item.title || "")}" class="w-full h-80 object-cover">
           <figcaption class="p-4 text-sm text-gray-400">
-            ${escapeHtml(photo.caption || '')}
+            ${escapeHtml(photo.caption || "")}
           </figcaption>
         </figure>
-      `).join('');
+      `).join("");
     } catch (error) {
-      console.error('Errore caricamento album:', error);
+      console.error("Errore caricamento album:", error);
       document.body.innerHTML = `
         <div style="padding:40px;color:white;background:#0A0A0A;font-family:sans-serif;min-height:100vh;">
           Errore nel caricamento dell’album.
