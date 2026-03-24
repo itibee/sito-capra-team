@@ -11,7 +11,7 @@
     tailwind.config = {
       theme: {
         extend: {
-          colors: { gold:'#FBBF24', dark:'#0A0A0A', box:'#1A1A1A' },
+          colors: { gold:'#1E6B3F', dark:'#0A0A0A', box:'#1A1A1A' },
           fontFamily: { heading:['Syncopate'], sans:['Inter'] }
         }
       }
@@ -34,12 +34,13 @@
   </header>
 
   <main class="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
-    <a href="photogallery.html" class="inline-block mb-8 border-b-2 border-gold pb-1 font-bold uppercase text-sm hover:text-gold transition">
+    <a href="/photogallery/index.html" class="inline-block mb-8 border-b-2 border-gold pb-1 font-bold uppercase text-sm hover:text-gold transition">
       ← Torna alla photogallery
     </a>
 
     <section class="bg-box border border-white/5 rounded-2xl p-6 sm:p-10 mb-10">
-      <p id="album-cover-caption" class="text-gray-300 text-lg leading-relaxed"></p>
+      <p id="album-cover-caption" class="text-gray-300 text-lg leading-relaxed mb-4"></p>
+      <p id="album-excerpt" class="text-gray-400 leading-relaxed"></p>
     </section>
 
     <section id="album-grid" class="grid md:grid-cols-2 xl:grid-cols-3 gap-8"></section>
@@ -47,91 +48,9 @@
 
   <div id="footer-container"></div>
   <script src="/js/main.js"></script>
-
+  <script src="/js/photogallery.js"></script>
   <script>
-    function escapeHtml(value) {
-      const str = String(value ?? "");
-      return str
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
-        .replace(/"/g, "&quot;")
-        .replace(/'/g, "&#039;");
-    }
-
-    function formatDateValue(value) {
-      if (!value) return "";
-      const date = value instanceof Date ? value : new Date(value);
-      if (isNaN(date.getTime())) return String(value);
-
-      const day = String(date.getDate()).padStart(2, "0");
-      const month = String(date.getMonth() + 1).padStart(2, "0");
-      const year = date.getFullYear();
-      return `${day}/${month}/${year}`;
-    }
-
-    async function loadGalleryPost() {
-      const params = new URLSearchParams(window.location.search);
-      const slug = params.get('slug');
-
-      try {
-        const res = await fetch('data/galleries.yml', { cache: 'no-store' });
-        if (!res.ok) throw new Error(`HTTP ${res.status}`);
-
-        const text = await res.text();
-        const data = jsyaml.load(text) || {};
-        const items = Array.isArray(data.gallery_items) ? data.gallery_items : [];
-        const item = items.find(g => g.slug === slug);
-
-        if (!item) {
-          document.body.innerHTML = `
-            <div style="padding:40px;color:white;background:#0A0A0A;font-family:sans-serif;min-height:100vh;">
-              Album non trovato.
-            </div>
-          `;
-          return;
-        }
-
-        document.title = `${item.title} | Capra Team Ravenna`;
-
-        document.getElementById('album-cover').src = item.cover_image || '/assets/images/hero-home.jpg';
-        document.getElementById('album-cover').alt = item.title || '';
-        document.getElementById('album-category').textContent = item.category || 'Photogallery';
-        document.getElementById('album-title').textContent = item.title || '';
-        document.getElementById('album-meta').textContent = `${item.team || ''} · ${formatDateValue(item.date)}`;
-        document.getElementById('album-cover-caption').textContent = item.cover_caption || '';
-
-        const albumGrid = document.getElementById('album-grid');
-        const images = Array.isArray(item.gallery_images) ? item.gallery_images : [];
-
-        if (images.length === 0) {
-          albumGrid.innerHTML = `
-            <div class="xl:col-span-3 bg-box rounded-2xl border border-white/5 p-8 text-center text-gray-400">
-              Nessuna immagine disponibile per questo album.
-            </div>
-          `;
-          return;
-        }
-
-        albumGrid.innerHTML = images.map(photo => `
-          <figure class="bg-box border border-white/5 rounded-2xl overflow-hidden">
-            <img src="${escapeHtml(photo.image || '')}" alt="${escapeHtml(photo.caption || item.title || '')}" class="w-full h-80 object-cover">
-            <figcaption class="p-4 text-sm text-gray-400">
-              ${escapeHtml(photo.caption || '')}
-            </figcaption>
-          </figure>
-        `).join('');
-      } catch (error) {
-        console.error('Errore caricamento album:', error);
-        document.body.innerHTML = `
-          <div style="padding:40px;color:white;background:#0A0A0A;font-family:sans-serif;min-height:100vh;">
-            Errore nel caricamento dell’album.
-          </div>
-        `;
-      }
-    }
-
-    loadGalleryPost();
+    Photogallery.renderAlbumPost();
   </script>
 </body>
 </html>

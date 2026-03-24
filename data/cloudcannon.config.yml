@@ -1,10 +1,4 @@
 _inputs:
-  news_items:
-    label: Articoli News
-    type: array
-    options:
-      structures: _structures.news_item
-
   gallery_items:
     label: Album Photogallery
     type: array
@@ -17,85 +11,44 @@ _inputs:
     options:
       structures: _structures.gallery_image
 
-  title:
-    label: Titolo
-    type: text
-
-  slug:
-    label: Slug URL
-    type: text
-    comment: "Usa solo minuscolo e trattini. Esempio: capra-summer-camp"
-
-  category:
-    label: Categoria
-    type: select
-    options:
-      values:
-        - Società
-        - Serie B
-        - Giovanili
-        - Eventi
-        - Prima Squadra
-
-  team:
-    label: Squadra / Sottocategoria
-    type: text
-    comment: "Esempio: Serie B, Under 19, Under 17, Settore Giovanile"
-
-  date:
-    label: Data
-    type: date
-
-  image:
-    label: Immagine copertina
-    type: image
-
   cover_image:
     label: Immagine copertina album
-    type: image
-
-  content_image:
-    label: Immagine interna articolo
     type: image
 
   cover_caption:
     label: Caption copertina album
     type: text
 
-  content_image_caption:
-    label: Didascalia immagine interna
-    type: text
-
   excerpt:
-    label: Estratto breve
+    label: Testo breve album
     type: text
 
-  featured:
-    label: In evidenza
-    type: boolean
+  category:
+    label: Macro categoria
+    type: select
+    options:
+      values:
+        - Prima Squadra
+        - Giovanili
+        - Minibasket
 
-  body_html:
-    label: Contenuto articolo
-    type: html
+  section:
+    label: Sezione
+    type: select
+    options:
+      values:
+        - Serie B
+        - Under 19
+        - Under 17
+        - Under 15
+        - Under 13
+        - Paperine
+        - Libellule
+        - Gazzelle Small
+        - Gazzelle Big
+        - Esordienti
 
 _structures:
-  news_item:
-    style: modal
-    values:
-      - label: Articolo News
-        value:
-          title: "Nuova news"
-          slug: "nuova-news"
-          category: "Società"
-          date: 2026-03-24
-          image: "/assets/images/placeholder-news.jpg"
-          content_image: ""
-          content_image_caption: ""
-          excerpt: "Scrivi qui il riassunto breve."
-          featured: false
-          body_html: |
-            <p>Scrivi qui il contenuto completo dell’articolo.</p>
-
   gallery_item:
     style: modal
     values:
@@ -104,7 +57,7 @@ _structures:
           title: "Nuovo album"
           slug: "nuovo-album"
           category: "Giovanili"
-          team: "Settore Giovanile"
+          section: "Under 19"
           date: 2026-03-24
           cover_image: "/assets/images/gallery-giovanili-cover.png"
           cover_caption: "Scrivi qui la caption della copertina."
