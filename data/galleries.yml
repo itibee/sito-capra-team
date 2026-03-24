@@ -1,0 +1,51 @@
+gallery_items:
+  - title: "Capra Team vs Magic Rosa Parma"
+    slug: "capra-team-magic-rosa-parma"
+    category: "Prima Squadra"
+    team: "Serie B"
+    date: 2026-03-10
+    cover_image: "/assets/images/gallery-prima-squadra-cover.png"
+    cover_caption: "Una serata intensa al Pala Mattioli tra energia, pubblico e identità."
+    excerpt: "Le immagini della sfida di Serie B contro Magic Rosa Parma."
+    featured: true
+    gallery_images:
+      - image: "/assets/images/gallery-prima-squadra-cover.png"
+        caption: "Ingresso in campo e atmosfera pre-partita."
+      - image: "/assets/images/summercamp.jpg"
+        caption: "Dettagli, ritmo e intensità nel corso della gara."
+      - image: "/assets/images/linea-rosa.jpeg"
+        caption: "Il club, il pubblico e il senso di appartenenza."
+      - image: "/assets/images/hero-home.jpg"
+        caption: "Una serata che racconta l’identità del Capra Team."
+
+  - title: "Under 19 - Giornata di campionato"
+    slug: "under-19-giornata-campionato"
+    category: "Giovanili"
+    team: "Under 19"
+    date: 2026-03-18
+    cover_image: "/assets/images/gallery-u19-cover.jpg"
+    cover_caption: "Un gruppo che cresce, si conosce e costruisce il proprio futuro."
+    excerpt: "Le immagini della Under 19 in una giornata di campionato."
+    featured: true
+    gallery_images:
+      - image: "/assets/images/gallery-u19-cover.jpg"
+        caption: "Focus, concentrazione e lavoro di squadra."
+      - image: "/assets/images/gallery-giovanili-cover.png"
+        caption: "Il vivaio come cuore del progetto."
+      - image: "/assets/images/hero-home.jpg"
+        caption: "Energia e identità dentro il percorso giovanile."
+
+  - title: "Settore Giovanile - Allenamento condiviso"
+    slug: "settore-giovanile-allenamento-condiviso"
+    category: "Giovanili"
+    team: "Settore Giovanile"
+    date: 2026-03-22
+    cover_image: "/assets/images/gallery-giovanili-cover.png"
+    cover_caption: "Allenarsi insieme significa crescere insieme."
+    excerpt: "Una photogallery dedicata al lavoro quotidiano del settore giovanile."
+    featured: false
+    gallery_images:
+      - image: "/assets/images/gallery-giovanili-cover.png"
+        caption: "Tecnica, entusiasmo e crescita quotidiana."
+      - image: "/assets/images/hero-home.jpg"
+        caption: "Il futuro del club nasce qui."
