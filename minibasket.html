@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minibasket | Capra Team Ravenna</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { gold:'#FBBF24', dark:'#0A0A0A', box:'#1A1A1A' },
+          fontFamily: { heading:['Syncopate'], sans:['Inter'] }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-dark text-white font-sans">
+
+  <div id="navbar-container"></div>
+
+  <header class="relative min-h-[75vh] flex items-end overflow-hidden pt-24">
+    <img src="/assets/images/gallery-giovanili-cover.png" alt="Minibasket Capra Team Ravenna" class="absolute inset-0 w-full h-full object-cover object-center opacity-30">
+    <div class="absolute inset-0 bg-gradient-to-r from-black via-black/75 to-black/20"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-transparent"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 w-full pb-12 sm:pb-16">
+      <div class="max-w-4xl">
+        <span class="text-gold font-heading text-xs sm:text-sm tracking-[0.35em] sm:tracking-[0.45em] block mb-5">MINIBASKET</span>
+        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black uppercase tracking-tighter leading-[0.95] mb-6">Minibasket</h1>
+        <p class="text-gray-300 text-base sm:text-lg lg:text-xl max-w-3xl leading-relaxed">
+          Dai 4 agli 11 anni, il basket diventa gioco, entusiasmo, crescita e scoperta.
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <section class="border-y border-white/10 bg-black/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-8 grid md:grid-cols-4 gap-6">
+      <div>
+        <p class="text-gold text-xs font-bold uppercase tracking-[0.2em]">Età</p>
+        <p class="text-white text-2xl font-black mt-2">4-11 anni</p>
+      </div>
+      <div>
+        <p class="text-gold text-xs font-bold uppercase tracking-[0.2em]">Percorso</p>
+        <p class="text-white text-2xl font-black mt-2">Gioco</p>
+      </div>
+      <div>
+        <p class="text-gold text-xs font-bold uppercase tracking-[0.2em]">Obiettivo</p>
+        <p class="text-white text-2xl font-black mt-2">Divertimento</p>
+      </div>
+      <div>
+        <p class="text-gold text-xs font-bold uppercase tracking-[0.2em]">Valore</p>
+        <p class="text-white text-2xl font-black mt-2">Educazione</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 sm:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="mb-10">
+        <p class="text-gold text-xs font-bold uppercase tracking-[0.2em]">Categorie</p>
+        <h2 class="font-heading text-3xl sm:text-4xl uppercase mt-2">Il percorso minibasket</h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8">
+        <a href="paperine.html" class="bg-box border border-white/5 rounded-2xl p-8 hover:border-gold/30 transition block">
+          <p class="text-gold text-xs font-bold uppercase tracking-[0.18em]">4-5 anni</p>
+          <h3 class="font-heading text-2xl uppercase mt-3">Paperine</h3>
+          <p class="text-gray-400 mt-4 text-sm leading-relaxed">Primi passi, movimento, coordinazione e tanto divertimento.</p>
+        </a>
+
+        <a href="libellule.html" class="bg-box border border-white/5 rounded-2xl p-8 hover:border-gold/30 transition block">
+          <p class="text-gold text-xs font-bold uppercase tracking-[0.18em]">6-7 anni</p>
+          <h3 class="font-heading text-2xl uppercase mt-3">Libellule</h3>
+          <p class="text-gray-400 mt-4 text-sm leading-relaxed">Gioco, entusiasmo e primi veri riferimenti con la palla a spicchi.</p>
+        </a>
+
+        <a href="gazzelle.html" class="bg-box border border-white/5 rounded-2xl p-8 hover:border-gold/30 transition block">
+          <p class="text-gold text-xs font-bold uppercase tracking-[0.18em]">8-9 anni</p>
+          <h3 class="font-heading text-2xl uppercase mt-3">Gazzelle</h3>
+          <p class="text-gray-400 mt-4 text-sm leading-relaxed">Più sicurezza, più squadra, più gioco condiviso.</p>
+        </a>
+
+        <a href="esordienti.html" class="bg-box border border-white/5 rounded-2xl p-8 hover:border-gold/30 transition block">
+          <p class="text-gold text-xs font-bold uppercase tracking-[0.18em]">10-11 anni</p>
+          <h3 class="font-heading text-2xl uppercase mt-3">Esordienti</h3>
+          <p class="text-gray-400 mt-4 text-sm leading-relaxed">Il passaggio verso una struttura più solida, senza perdere il piacere del gioco.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 sm:py-20 border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 grid md:grid-cols-3 gap-8">
+      <div class="bg-box border border-white/5 rounded-2xl p-8">
+        <p class="text-gold font-black uppercase text-sm tracking-[0.18em]">Gioco</p>
+        <p class="text-gray-400 mt-4 leading-relaxed">Il minibasket parte dal piacere di muoversi, esplorare e divertirsi insieme.</p>
+      </div>
+
+      <div class="bg-box border border-white/5 rounded-2xl p-8">
+        <p class="text-gold font-black uppercase text-sm tracking-[0.18em]">Crescita</p>
+        <p class="text-gray-400 mt-4 leading-relaxed">Ogni fascia d’età aggiunge sicurezza, fiducia e primi riferimenti tecnici.</p>
+      </div>
+
+      <div class="bg-box border border-white/5 rounded-2xl p-8">
+        <p class="text-gold font-black uppercase text-sm tracking-[0.18em]">Appartenenza</p>
+        <p class="text-gray-400 mt-4 leading-relaxed">È qui che si inizia a respirare davvero lo spirito Capra Team.</p>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-container"></div>
+  <script src="/js/main.js"></script>
+</body>
+</html>

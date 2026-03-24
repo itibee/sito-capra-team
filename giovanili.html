@@ -10,15 +10,8 @@
     tailwind.config = {
       theme: {
         extend: {
-          colors: {
-            gold:'#FBBF24',
-            dark:'#0A0A0A',
-            box:'#1A1A1A'
-          },
-          fontFamily: {
-            heading:['Syncopate'],
-            sans:['Inter']
-          }
+          colors: { gold:'#FBBF24', dark:'#0A0A0A', box:'#1A1A1A' },
+          fontFamily: { heading:['Syncopate'], sans:['Inter'] }
         }
       }
     }
@@ -28,314 +21,101 @@
 
   <div id="navbar-container"></div>
 
-  <!-- HERO -->
   <header class="relative min-h-[75vh] flex items-end overflow-hidden pt-24">
-    <img
-      src="/assets/images/gallery-giovanili-cover.png"
-      alt="Giovanili Capra Team Ravenna"
-      class="absolute inset-0 w-full h-full object-cover object-center opacity-30"
-    >
+    <img src="/assets/images/gallery-giovanili-cover.png" alt="Giovanili Capra Team Ravenna" class="absolute inset-0 w-full h-full object-cover object-center opacity-30">
     <div class="absolute inset-0 bg-gradient-to-r from-black via-black/75 to-black/20"></div>
     <div class="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-transparent"></div>
 
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 w-full pb-12 sm:pb-16">
       <div class="max-w-4xl">
-        <span
-          class="text-gold font-heading text-xs sm:text-sm tracking-[0.35em] sm:tracking-[0.45em] block mb-5"
-          data-editable="source"
-          data-path="/giovanili.html"
-          data-key="hero-kicker">
-          SETTORE GIOVANILE
-        </span>
-
-        <h1
-          class="text-4xl sm:text-6xl lg:text-7xl font-black uppercase tracking-tighter leading-[0.95] mb-6"
-          data-editable="source"
-          data-path="/giovanili.html"
-          data-key="hero-title">
-          Il futuro parte da qui
-        </h1>
-
-        <p
-          class="text-gray-300 text-base sm:text-lg lg:text-xl max-w-3xl leading-relaxed"
-          data-editable="source"
-          data-path="/giovanili.html"
-          data-key="hero-text">
-          Dal minibasket alle categorie agonistiche, il progetto giovanile del Capra Team Ravenna costruisce ogni giorno identità, crescita e appartenenza.
+        <span class="text-gold font-heading text-xs sm:text-sm tracking-[0.35em] sm:tracking-[0.45em] block mb-5">SETTORE GIOVANILE</span>
+        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black uppercase tracking-tighter leading-[0.95] mb-6">Giovanili</h1>
+        <p class="text-gray-300 text-base sm:text-lg lg:text-xl max-w-3xl leading-relaxed">
+          Dall’Under 13 all’Under 19: un percorso costruito per far crescere atlete, persone e futuro del club.
         </p>
       </div>
     </div>
   </header>
 
-  <!-- STRIP NUMERI -->
   <section class="border-y border-white/10 bg-black/40">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-8 grid grid-cols-2 lg:grid-cols-4 gap-6">
-      <div>
-        <p class="text-gold text-xs font-bold uppercase tracking-[0.2em]">Fondazione club</p>
-        <p class="text-white text-2xl sm:text-3xl font-black mt-2"
-           data-editable="source"
-           data-path="/giovanili.html"
-           data-key="stat-1">
-          2012
-        </p>
-      </div>
-
-      <div>
-        <p class="text-gold text-xs font-bold uppercase tracking-[0.2em]">Minibasket</p>
-        <p class="text-white text-2xl sm:text-3xl font-black mt-2"
-           data-editable="source"
-           data-path="/giovanili.html"
-           data-key="stat-2">
-          dal 2018
-        </p>
-      </div>
-
-      <div>
-        <p class="text-gold text-xs font-bold uppercase tracking-[0.2em]">Tesserate</p>
-        <p class="text-white text-2xl sm:text-3xl font-black mt-2"
-           data-editable="source"
-           data-path="/giovanili.html"
-           data-key="stat-3">
-          150+
-        </p>
-      </div>
-
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-8 grid md:grid-cols-4 gap-6">
       <div>
         <p class="text-gold text-xs font-bold uppercase tracking-[0.2em]">Percorso</p>
-        <p class="text-white text-2xl sm:text-3xl font-black mt-2"
-           data-editable="source"
-           data-path="/giovanili.html"
-           data-key="stat-4">
-          Minibasket → U19
-        </p>
+        <p class="text-white text-2xl font-black mt-2">U13 → U19</p>
+      </div>
+      <div>
+        <p class="text-gold text-xs font-bold uppercase tracking-[0.2em]">Identità</p>
+        <p class="text-white text-2xl font-black mt-2">Crescita</p>
+      </div>
+      <div>
+        <p class="text-gold text-xs font-bold uppercase tracking-[0.2em]">Obiettivo</p>
+        <p class="text-white text-2xl font-black mt-2">Continuità</p>
+      </div>
+      <div>
+        <p class="text-gold text-xs font-bold uppercase tracking-[0.2em]">Club</p>
+        <p class="text-white text-2xl font-black mt-2">Futuro</p>
       </div>
     </div>
   </section>
 
-  <!-- MANIFESTO -->
   <section class="py-16 sm:py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-[1.05fr_0.95fr] gap-10 items-start">
-
-      <div class="bg-box border border-white/5 rounded-2xl p-8 sm:p-10">
-        <p class="text-gold text-xs font-bold uppercase tracking-[0.2em]"
-           data-editable="source"
-           data-path="/giovanili.html"
-           data-key="manifesto-kicker">
-          Chi siamo
-        </p>
-
-        <h2 class="font-heading text-3xl sm:text-4xl uppercase mt-3 mb-6"
-            data-editable="source"
-            data-path="/giovanili.html"
-            data-key="manifesto-title">
-          Un settore giovanile tutto al femminile
-        </h2>
-
-        <p class="text-gray-300 leading-relaxed mb-5"
-           data-editable="source"
-           data-path="/giovanili.html"
-           data-key="manifesto-text-1">
-          Il Capra Team Ravenna è la prima e unica società di basket femminile della città e ha costruito un percorso giovanile che oggi rappresenta uno dei pilastri del club.
-        </p>
-
-        <p class="text-gray-400 leading-relaxed mb-5"
-           data-editable="source"
-           data-path="/giovanili.html"
-           data-key="manifesto-text-2">
-          Dal minibasket alle categorie agonistiche, ogni squadra nasce con la stessa idea: crescere come atlete, ma prima ancora come persone.
-        </p>
-
-        <p class="text-gray-400 leading-relaxed"
-           data-editable="source"
-           data-path="/giovanili.html"
-           data-key="manifesto-text-3">
-          Educazione, rispetto, responsabilità e divertimento sono le basi di un progetto che guarda avanti senza perdere identità.
-        </p>
-      </div>
-
-      <div class="bg-box border border-gold/25 rounded-2xl p-8 sm:p-10">
-        <p class="text-gold text-xs font-bold uppercase tracking-[0.2em]">Perché conta davvero</p>
-
-        <div class="space-y-6 mt-6">
-          <div>
-            <p class="text-white font-black uppercase text-sm tracking-[0.15em]">Dal minibasket alla Serie B</p>
-            <p class="text-gray-400 mt-2 text-sm leading-relaxed">
-              Il club ha già raccontato il proprio percorso come una filiera vera: dalla base fino alla prima squadra.
-            </p>
-          </div>
-
-          <div>
-            <p class="text-white font-black uppercase text-sm tracking-[0.15em]">Una prima volta che vale tanto</p>
-            <p class="text-gray-400 mt-2 text-sm leading-relaxed">
-              Una giocatrice cresciuta interamente nel vivaio ha già esordito in Serie B: un segnale concreto che il lavoro sulle giovani produce valore reale.
-            </p>
-          </div>
-
-          <div>
-            <p class="text-white font-black uppercase text-sm tracking-[0.15em]">Una comunità, non solo squadre</p>
-            <p class="text-gray-400 mt-2 text-sm leading-relaxed">
-              Il settore giovanile del Capra Team non è solo attività agonistica: è appartenenza, continuità e costruzione del futuro del club.
-            </p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- CATEGORIE -->
-  <section class="pb-16 sm:pb-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
       <div class="mb-10">
-        <p class="text-gold text-xs font-bold uppercase tracking-[0.2em]">Le nostre categorie</p>
-        <h2 class="font-heading text-3xl sm:text-4xl uppercase mt-2">Dal minibasket alle Under</h2>
+        <p class="text-gold text-xs font-bold uppercase tracking-[0.2em]">Categorie</p>
+        <h2 class="font-heading text-3xl sm:text-4xl uppercase mt-2">Le nostre squadre giovanili</h2>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8">
-
-        <article class="bg-box border border-white/5 rounded-2xl p-8 hover:border-gold/30 transition">
-          <p class="text-gold text-xs font-bold uppercase tracking-[0.18em]">Minibasket</p>
-          <h3 class="font-heading text-2xl uppercase mt-3">Libellule · Gazzelle · Esordienti</h3>
-          <p class="text-gray-400 mt-4 text-sm leading-relaxed">
-            Il fiore all’occhiello del progetto: gioco, movimento, entusiasmo e primi passi con la palla a spicchi.
-          </p>
-        </article>
-
-        <article class="bg-box border border-white/5 rounded-2xl p-8 hover:border-gold/30 transition">
-          <p class="text-gold text-xs font-bold uppercase tracking-[0.18em]">Settore giovanile</p>
-          <h3 class="font-heading text-2xl uppercase mt-3">Under 13</h3>
-          <p class="text-gray-400 mt-4 text-sm leading-relaxed">
-            Una categoria fondamentale per cominciare a strutturare tecnica, fiducia e identità di squadra.
-          </p>
-        </article>
-
-        <article class="bg-box border border-white/5 rounded-2xl p-8 hover:border-gold/30 transition">
-          <p class="text-gold text-xs font-bold uppercase tracking-[0.18em]">Settore giovanile</p>
-          <h3 class="font-heading text-2xl uppercase mt-3">Under 14</h3>
-          <p class="text-gray-400 mt-4 text-sm leading-relaxed">
-            Uno dei primi tasselli del percorso giovanile del club, nato per dare continuità alla crescita delle ragazze.
-          </p>
-        </article>
-
-        <article class="bg-box border border-white/5 rounded-2xl p-8 hover:border-gold/30 transition">
-          <p class="text-gold text-xs font-bold uppercase tracking-[0.18em]">Settore giovanile</p>
-          <h3 class="font-heading text-2xl uppercase mt-3">Under 15</h3>
-          <p class="text-gray-400 mt-4 text-sm leading-relaxed">
-            Una fascia centrale del percorso tecnico, dove si consolidano letture, ritmo e personalità.
-          </p>
-        </article>
-
-        <article class="bg-box border border-white/5 rounded-2xl p-8 hover:border-gold/30 transition">
-          <p class="text-gold text-xs font-bold uppercase tracking-[0.18em]">Settore giovanile</p>
-          <h3 class="font-heading text-2xl uppercase mt-3">Under 17</h3>
-          <p class="text-gray-400 mt-4 text-sm leading-relaxed">
-            Categoria chiave per alzare intensità, competitività e preparazione verso il basket delle più grandi.
-          </p>
-        </article>
-
-        <article class="bg-box border border-white/5 rounded-2xl p-8 hover:border-gold/30 transition">
-          <p class="text-gold text-xs font-bold uppercase tracking-[0.18em]">Settore giovanile</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8">
+        <a href="under-19.html" class="bg-box border border-white/5 rounded-2xl p-8 hover:border-gold/30 transition block">
+          <p class="text-gold text-xs font-bold uppercase tracking-[0.18em]">Giovanili</p>
           <h3 class="font-heading text-2xl uppercase mt-3">Under 19</h3>
-          <p class="text-gray-400 mt-4 text-sm leading-relaxed">
-            L’ultimo passaggio prima del salto definitivo verso la prima squadra: qui il futuro inizia a diventare presente.
-          </p>
-        </article>
+          <p class="text-gray-400 mt-4 text-sm leading-relaxed">L’ultimo passaggio prima del salto verso la prima squadra.</p>
+        </a>
 
+        <a href="under-17.html" class="bg-box border border-white/5 rounded-2xl p-8 hover:border-gold/30 transition block">
+          <p class="text-gold text-xs font-bold uppercase tracking-[0.18em]">Giovanili</p>
+          <h3 class="font-heading text-2xl uppercase mt-3">Under 17</h3>
+          <p class="text-gray-400 mt-4 text-sm leading-relaxed">Una categoria chiave per intensità, tecnica e identità di squadra.</p>
+        </a>
+
+        <a href="under-15.html" class="bg-box border border-white/5 rounded-2xl p-8 hover:border-gold/30 transition block">
+          <p class="text-gold text-xs font-bold uppercase tracking-[0.18em]">Giovanili</p>
+          <h3 class="font-heading text-2xl uppercase mt-3">Under 15</h3>
+          <p class="text-gray-400 mt-4 text-sm leading-relaxed">Una fase centrale per consolidare letture, ritmo e fiducia.</p>
+        </a>
+
+        <a href="under-13.html" class="bg-box border border-white/5 rounded-2xl p-8 hover:border-gold/30 transition block">
+          <p class="text-gold text-xs font-bold uppercase tracking-[0.18em]">Giovanili</p>
+          <h3 class="font-heading text-2xl uppercase mt-3">Under 13</h3>
+          <p class="text-gray-400 mt-4 text-sm leading-relaxed">Dove il percorso agonistico inizia a prendere davvero forma.</p>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- PERCORSO -->
   <section class="py-16 sm:py-20 border-t border-white/10">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6">
-      <div class="mb-10">
-        <p class="text-gold text-xs font-bold uppercase tracking-[0.2em]">Percorso</p>
-        <h2 class="font-heading text-3xl sm:text-4xl uppercase mt-2">Come è cresciuto il progetto</h2>
-      </div>
-
-      <div class="space-y-8">
-        <div class="grid md:grid-cols-[140px_1fr] gap-6 sm:gap-8 items-start">
-          <div class="text-gold font-heading text-2xl sm:text-3xl">2012</div>
-          <div class="bg-box border border-white/5 rounded-2xl p-6 sm:p-8">
-            <h3 class="font-black text-2xl mb-4">Nasce il club</h3>
-            <p class="text-gray-400 leading-relaxed">
-              Il Capra Team Ravenna viene fondato per colmare un vuoto nel basket femminile cittadino e costruire una realtà con identità forte e radicata.
-            </p>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-8">
+      <a href="photogallery-giovanili.html" class="group bg-box rounded-2xl border border-white/5 overflow-hidden hover:border-gold/30 transition">
+        <div class="relative h-[300px]">
+          <img src="/assets/images/gallery-giovanili-cover.png" alt="Photogallery Giovanili" class="absolute inset-0 w-full h-full object-cover opacity-30">
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 p-6 z-10">
+            <p class="text-gold text-xs font-bold uppercase tracking-[0.18em]">Media</p>
+            <h3 class="font-heading text-3xl uppercase mt-3">Photogallery Giovanili</h3>
           </div>
         </div>
+      </a>
 
-        <div class="grid md:grid-cols-[140px_1fr] gap-6 sm:gap-8 items-start">
-          <div class="text-gold font-heading text-2xl sm:text-3xl">2018</div>
-          <div class="bg-box border border-white/5 rounded-2xl p-6 sm:p-8">
-            <h3 class="font-black text-2xl mb-4">Parte il minibasket</h3>
-            <p class="text-gray-400 leading-relaxed">
-              È il passaggio che trasforma davvero il club: da squadra senior a progetto educativo e sportivo capace di partire dalle più piccole.
-            </p>
+      <a href="news-giovanili-futuro.html" class="group bg-box rounded-2xl border border-white/5 overflow-hidden hover:border-gold/30 transition">
+        <div class="relative h-[300px]">
+          <img src="/assets/images/gallery-giovanili-cover.png" alt="News Giovanili" class="absolute inset-0 w-full h-full object-cover opacity-30">
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 p-6 z-10">
+            <p class="text-gold text-xs font-bold uppercase tracking-[0.18em]">News</p>
+            <h3 class="font-heading text-3xl uppercase mt-3">Aggiornamenti Giovanili</h3>
           </div>
         </div>
-
-        <div class="grid md:grid-cols-[140px_1fr] gap-6 sm:gap-8 items-start">
-          <div class="text-gold font-heading text-2xl sm:text-3xl">Oggi</div>
-          <div class="bg-box border border-gold/25 rounded-2xl p-6 sm:p-8">
-            <h3 class="font-black text-2xl mb-4">Un percorso completo</h3>
-            <p class="text-gray-300 leading-relaxed">
-              Il club copre il minibasket e le categorie U13, U14, U15, U17 e U19, con circa 150 tesserate e una filiera che collega davvero la base alla Serie B.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- VALORI -->
-  <section class="py-16 sm:py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-3 gap-8">
-      <div class="bg-box border border-white/5 rounded-2xl p-8">
-        <p class="text-gold font-black uppercase text-sm tracking-[0.18em]">Gioco e divertimento</p>
-        <p class="text-gray-400 mt-4 leading-relaxed">
-          L’ingresso nel mondo Capra parte da qui: entusiasmo, energia e piacere di stare in campo insieme.
-        </p>
-      </div>
-
-      <div class="bg-box border border-white/5 rounded-2xl p-8">
-        <p class="text-gold font-black uppercase text-sm tracking-[0.18em]">Educazione e rispetto</p>
-        <p class="text-gray-400 mt-4 leading-relaxed">
-          Il basket viene vissuto come uno strumento formativo: crescere come atleta significa crescere anche come persona.
-        </p>
-      </div>
-
-      <div class="bg-box border border-white/5 rounded-2xl p-8">
-        <p class="text-gold font-black uppercase text-sm tracking-[0.18em]">Futuro del club</p>
-        <p class="text-gray-400 mt-4 leading-relaxed">
-          Ogni giovane che entra nel progetto è parte del domani del Capra Team: non solo una squadra, ma una continuità vera.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="py-16 sm:py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6">
-      <div class="bg-gold text-black rounded-2xl p-8 sm:p-12 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
-        <div>
-          <p class="uppercase text-xs font-black tracking-[0.2em]">Settore giovanile</p>
-          <h2 class="font-heading text-2xl sm:text-4xl uppercase mt-3"
-              data-editable="source"
-              data-path="/giovanili.html"
-              data-key="cta-title">
-            Scopri il percorso Capra Team
-          </h2>
-        </div>
-
-        <div class="flex flex-col sm:flex-row gap-4 w-full lg:w-auto">
-          <a href="photogallery-giovanili.html" class="bg-black text-white px-8 py-4 rounded-xl font-black uppercase tracking-[0.12em] text-sm text-center">
-            Guarda le gallery
-          </a>
-          <a href="contatti.html" class="border border-black text-black px-8 py-4 rounded-xl font-black uppercase tracking-[0.12em] text-sm text-center">
-            Contattaci
-          </a>
-        </div>
-      </div>
+      </a>
     </div>
   </section>
 
