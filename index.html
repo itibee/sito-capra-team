@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Capra Team Ravenna | Home</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script>
@@ -242,92 +243,30 @@
 
     <!-- NEWS -->
     <section class="py-16 sm:py-20 border-t border-white/10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6">
-            <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
-                <div>
-                    <p class="text-gold text-xs font-bold uppercase tracking-[0.2em]"
-                       data-editable="source"
-                       data-path="/index.html"
-                       data-key="news-kicker">
-                        Aggiornamenti
-                    </p>
-                    <h2 class="font-heading text-3xl sm:text-4xl uppercase mt-2"
-                        data-editable="source"
-                        data-path="/index.html"
-                        data-key="news-title">
-                        Ultime News
-                    </h2>
-                </div>
-                <a href="news.html" class="font-bold uppercase text-sm border-b-2 border-gold pb-1 hover:text-gold transition">
-                    Tutte le notizie →
-                </a>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
+            <div>
+                <p class="text-gold text-xs font-bold uppercase tracking-[0.2em]"
+                   data-editable="source"
+                   data-path="/index.html"
+                   data-key="news-kicker">
+                    Aggiornamenti
+                </p>
+                <h2 class="font-heading text-3xl sm:text-4xl uppercase mt-2"
+                    data-editable="source"
+                    data-path="/index.html"
+                    data-key="news-title">
+                    Ultime News
+                </h2>
             </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-              
-                 <a href="news-post.html?slug=linea-rosa" class="group block"> 
-                  <article class="bg-box rounded-2xl border border-white/5 overflow-hidden">
-                      <img src="/assets/images/linea-rosa.jpeg" alt="News 1" class="w-full h-56 object-cover">
-                      <div class="p-6">
-                          <p class="text-gold text-xs font-bold uppercase tracking-[0.18em]">Società</p>
-                          <h3 class="text-xl font-black mt-3 leading-tight"
-                              data-editable="source"
-                              data-path="/index.html"
-                              data-key="news-card-1-title">
-                              Insieme a Linea Rosa: il basket che lascia il segno
-                          </h3>
-                          <p class="text-gray-400 mt-4 text-sm"
-                             data-editable="source"
-                             data-path="/index.html"
-                             data-key="news-card-1-text">
-                              Il Capra Team scende in campo anche fuori dal parquet, con iniziative che parlano al territorio.
-                          </p>
-                      </div>
-                  </article>
-              
-                 <a href="news-post.html?slug=capra-summer-camp" class="group block"> 
-                  <article class="bg-box rounded-2xl border border-white/5 overflow-hidden">
-                      <img src="/assets/images/summercamp.jpg" alt="News 2" class="w-full h-56 object-cover">
-                      <div class="p-6">
-                          <p class="text-gold text-xs font-bold uppercase tracking-[0.18em]">Serie B</p>
-                          <h3 class="text-xl font-black mt-3 leading-tight"
-                              data-editable="source"
-                              data-path="/index.html"
-                              data-key="news-card-2-title">
-                              Sta tornando il 𝐶𝑎𝑝𝑟𝑎 𝑆𝑢𝑚𝑚𝑒𝑟 𝐶𝑎𝑚𝑝… e quest’anno sarà ancora più grande!
-                          </h3>
-                          <p class="text-gray-400 mt-4 text-sm"
-                             data-editable="source"
-                             data-path="/index.html"
-                             data-key="news-card-2-text">
-                              Allenamenti, giochi, laboratori, risate e tanto basket! Ma soprattutto amicizie, esperienze e momenti che resteranno 𝑝𝑒𝑟 𝑠𝑒𝑚𝑝𝑟𝑒.
-                          </p>
-                      </div>
-                  </article>
-                   
-                 <a href="news-post.html?slug=capra-summer-camp" class="group block"> 
-                  <article class="bg-box rounded-2xl border border-white/5 overflow-hidden">
-                      <img src="/assets/images/gallery-giovanili-cover.png" alt="News 3" class="w-full h-56 object-cover">
-                      <div class="p-6">
-                          <p class="text-gold text-xs font-bold uppercase tracking-[0.18em]">Giovanili</p>
-                          <h3 class="text-xl font-black mt-3 leading-tight"
-                              data-editable="source"
-                              data-path="/index.html"
-                              data-key="news-card-3-title">
-                              Dalle categorie giovanili nasce il futuro del club
-                          </h3>
-                          <p class="text-gray-400 mt-4 text-sm"
-                             data-editable="source"
-                             data-path="/index.html"
-                             data-key="news-card-3-text">
-                              Under 19, Under 17, minibasket: un progetto che guarda avanti senza perdere identità.
-                          </p>
-                      </div>
-                  </article>
-
-            </div>
+            <a href="news.html" class="font-bold uppercase text-sm border-b-2 border-gold pb-1 hover:text-gold transition">
+                Tutte le notizie →
+            </a>
         </div>
-    </section>
+
+        <div id="homepage-news-grid" class="grid md:grid-cols-3 gap-8"></div>
+    </div>
+</section>
 
     <!-- PHOTOGALLERY TEASER -->
     <section class="py-16 sm:py-20">
@@ -467,6 +406,61 @@
     </section>
 
     <div id="footer-container"></div>
+    <script>
+  function escapeHtml(str) {
+    if (!str) return "";
+    return str
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;")
+      .replaceAll("'", "&#039;");
+  }
+
+  async function loadHomepageNews() {
+    try {
+      const res = await fetch('/data/news.yml');
+      const text = await res.text();
+      const data = jsyaml.load(text);
+
+      const items = (data.news_items || []).slice();
+
+      const sorted = items.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+      const featured = sorted.filter(item => item.featured === true);
+      const notFeatured = sorted.filter(item => item.featured !== true);
+
+      const homepageItems = [...featured, ...notFeatured].slice(0, 3);
+
+      const grid = document.getElementById('homepage-news-grid');
+      if (!grid) return;
+
+      grid.innerHTML = homepageItems.map(item => `
+        <a href="news-post.html?slug=${encodeURIComponent(item.slug)}" class="group block">
+          <article class="bg-box rounded-2xl border border-white/5 overflow-hidden h-full hover:border-gold/30 transition">
+            <img src="${item.image || '/assets/images/hero-home.jpg'}" alt="${escapeHtml(item.title)}" class="w-full h-56 object-cover">
+            <div class="p-6">
+              <p class="text-gold text-xs font-bold uppercase tracking-[0.18em]">${escapeHtml(item.category || 'News')}</p>
+              <h3 class="text-xl font-black mt-3 leading-tight group-hover:text-gold transition">
+                ${escapeHtml(item.title || '')}
+              </h3>
+              <p class="text-gray-400 mt-4 text-sm">
+                ${escapeHtml(item.excerpt || '')}
+              </p>
+              <p class="text-gray-500 mt-4 text-xs uppercase tracking-[0.15em]">
+                ${escapeHtml(item.date || '')}
+              </p>
+            </div>
+          </article>
+        </a>
+      `).join('');
+    } catch (error) {
+      console.error('Errore caricamento news home:', error);
+    }
+  }
+
+  loadHomepageNews();
+</script>
     <script src="/js/main.js"></script>
 </body>
 </html>
