@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photogallery Under 17 | Capra Team Ravenna</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { gold:'#1E6B3F', dark:'#0A0A0A', box:'#1A1A1A' },
+          fontFamily: { heading:['Syncopate'], sans:['Inter'] }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-dark text-white font-sans">
+  <div id="navbar-container"></div>
+  <header class="relative min-h-[50vh] flex items-end overflow-hidden pt-24">
+    <img src="/assets/images/gallery-u17-cover.jpg" alt="Under 17" class="absolute inset-0 w-full h-full object-cover opacity-30">
+    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 w-full pb-12">
+      <p class="text-gold text-xs font-bold uppercase tracking-[0.2em] mb-4">Giovanili</p>
+      <h1 class="text-3xl sm:text-5xl font-black uppercase tracking-tighter">Under 17</h1>
+    </div>
+  </header>
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
+    <div id="albums-grid" class="grid md:grid-cols-2 xl:grid-cols-3 gap-8"></div>
+  </main>
+  <div id="footer-container"></div>
+  <script src="/js/main.js"></script>
+  <script src="/js/photogallery.js"></script>
+  <script>
+    Photogallery.renderAlbumCards({
+      containerId: 'albums-grid',
+      category: 'Giovanili',
+      section: 'Under 17',
+      emptyMessage: 'Nessun album Under 17 disponibile al momento.'
+    });
+  </script>
+</body>
+</html>
