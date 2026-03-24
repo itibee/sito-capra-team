@@ -1,0 +1,37 @@
+news_items:
+  - title: "Sta tornando il Capra Summer Camp"
+    slug: "capra-summer-camp"
+    category: "Eventi"
+    date: 2026-03-24
+    image: "/assets/images/summercamp.jpg"
+    excerpt: "Allenamenti, giochi, laboratori, risate e tanto basket."
+    featured: true
+    body_html: |
+      <p>Sta tornando il Capra Summer Camp… e quest’anno sarà ancora più grande.</p>
+      <p>Allenamenti, giochi, laboratori, risate e tanto basket: il camp estivo del Capra Team Ravenna è pensato per far vivere alle ragazze un’esperienza completa, fatta di sport, crescita e divertimento.</p>
+      <p>Non sarà soltanto un’occasione per migliorare sul campo, ma anche per costruire amicizie, condividere giornate speciali e portarsi a casa ricordi che resteranno nel tempo.</p>
+      <p>Presto arriveranno tutti i dettagli ufficiali su date, iscrizioni e programma completo.</p>
+
+  - title: "Insieme a Linea Rosa: il basket che lascia il segno"
+    slug: "linea-rosa"
+    category: "Società"
+    date: 2026-03-20
+    image: "/assets/images/linea-rosa.jpeg"
+    excerpt: "Il Capra Team scende in campo anche fuori dal parquet."
+    featured: true
+    body_html: |
+      <p>Il Capra Team Ravenna scende in campo non solo per competere, ma anche per trasmettere valori forti e concreti.</p>
+      <p>La collaborazione con Linea Rosa rappresenta una scelta chiara: usare lo sport come strumento di sensibilizzazione, partecipazione e vicinanza al territorio.</p>
+      <p>Il basket diventa così linguaggio, responsabilità e presenza. Un modo per dire che appartenere al Capra Team significa vivere una comunità e non solo una squadra.</p>
+
+  - title: "Dalle categorie giovanili nasce il futuro del club"
+    slug: "giovanili-futuro"
+    category: "Giovanili"
+    date: 2026-03-18
+    image: "/assets/images/gallery-giovanili-cover.png"
+    excerpt: "Under 19, Under 17, minibasket: il futuro si costruisce ogni giorno."
+    featured: false
+    body_html: |
+      <p>Il futuro del Capra Team Ravenna si costruisce ogni giorno, allenamento dopo allenamento, dentro il settore giovanile.</p>
+      <p>Dall’Under 19 al minibasket, ogni categoria rappresenta un tassello fondamentale del progetto: non solo formazione tecnica, ma anche crescita personale, appartenenza e cultura sportiva.</p>
+      <p>È da qui che nasce l’identità del Capra Team: una comunità che mette al centro il lavoro, il senso di squadra e la voglia di crescere insieme.</p>
