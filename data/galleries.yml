@@ -2,7 +2,7 @@ gallery_items:
   - title: "Capra Team vs Magic Rosa Parma"
     slug: "capra-team-magic-rosa-parma"
     category: "Prima Squadra"
-    team: "Serie B"
+    section: "Serie B"
     date: 2026-03-10
     cover_image: "/assets/images/gallery-prima-squadra-cover.png"
     cover_caption: "Una serata intensa al Pala Mattioli tra energia, pubblico e identità."
@@ -11,17 +11,32 @@ gallery_items:
     gallery_images:
       - image: "/assets/images/gallery-prima-squadra-cover.png"
         caption: "Ingresso in campo e atmosfera pre-partita."
-      - image: "/assets/images/summercamp.jpg"
-        caption: "Dettagli, ritmo e intensità nel corso della gara."
-      - image: "/assets/images/linea-rosa.jpeg"
-        caption: "Il club, il pubblico e il senso di appartenenza."
       - image: "/assets/images/hero-home.jpg"
-        caption: "Una serata che racconta l’identità del Capra Team."
+        caption: "Il ritmo della gara e l’energia del gruppo."
+      - image: "/assets/images/linea-rosa.jpeg"
+        caption: "Dettagli, pubblico e senso di appartenenza."
+
+  - title: "Capra Team vs Puianello"
+    slug: "capra-team-puianello"
+    category: "Prima Squadra"
+    section: "Serie B"
+    date: 2026-03-22
+    cover_image: "/assets/images/seriebcover.jpg"
+    cover_caption: "Una gara vera, intensa, vissuta fino all’ultimo possesso."
+    excerpt: "Le immagini della sfida contro Puianello."
+    featured: true
+    gallery_images:
+      - image: "/assets/images/seriebcover.jpg"
+        caption: "Concentrazione prima della palla a due."
+      - image: "/assets/images/hero-home.jpg"
+        caption: "Intensità e ritmo durante la partita."
+      - image: "/assets/images/gallery-prima-squadra-cover.png"
+        caption: "L’identità della prima squadra."
 
   - title: "Under 19 - Giornata di campionato"
     slug: "under-19-giornata-campionato"
     category: "Giovanili"
-    team: "Under 19"
+    section: "Under 19"
     date: 2026-03-18
     cover_image: "/assets/images/gallery-u19-cover.jpg"
     cover_caption: "Un gruppo che cresce, si conosce e costruisce il proprio futuro."
@@ -35,17 +50,138 @@ gallery_items:
       - image: "/assets/images/hero-home.jpg"
         caption: "Energia e identità dentro il percorso giovanile."
 
-  - title: "Settore Giovanile - Allenamento condiviso"
-    slug: "settore-giovanile-allenamento-condiviso"
+  - title: "Under 17 - Allenamento e crescita"
+    slug: "under-17-allenamento-crescita"
     category: "Giovanili"
-    team: "Settore Giovanile"
-    date: 2026-03-22
+    section: "Under 17"
+    date: 2026-03-16
+    cover_image: "/assets/images/gallery-u17-cover.jpg"
+    cover_caption: "Tecnica, ritmo e intensità: il lavoro quotidiano dell’Under 17."
+    excerpt: "Una photogallery dedicata al lavoro della Under 17."
+    featured: false
+    gallery_images:
+      - image: "/assets/images/gallery-u17-cover.jpg"
+        caption: "Allenamento e concentrazione."
+      - image: "/assets/images/gallery-giovanili-cover.png"
+        caption: "Il percorso cresce ogni giorno."
+      - image: "/assets/images/hero-home.jpg"
+        caption: "Intensità e spirito di squadra."
+
+  - title: "Under 15 - Una giornata insieme"
+    slug: "under-15-una-giornata-insieme"
+    category: "Giovanili"
+    section: "Under 15"
+    date: 2026-03-14
     cover_image: "/assets/images/gallery-giovanili-cover.png"
-    cover_caption: "Allenarsi insieme significa crescere insieme."
-    excerpt: "Una photogallery dedicata al lavoro quotidiano del settore giovanile."
+    cover_caption: "Un gruppo che si costruisce tra allenamento, gioco e fiducia."
+    excerpt: "Le immagini di una giornata vissuta dall’Under 15."
     featured: false
     gallery_images:
       - image: "/assets/images/gallery-giovanili-cover.png"
-        caption: "Tecnica, entusiasmo e crescita quotidiana."
+        caption: "Tecnica e gioco condiviso."
       - image: "/assets/images/hero-home.jpg"
-        caption: "Il futuro del club nasce qui."
+        caption: "Crescere insieme, un allenamento alla volta."
+      - image: "/assets/images/linea-rosa.jpeg"
+        caption: "Dettagli e momenti di gruppo."
+
+  - title: "Under 13 - Primi passi nel percorso agonistico"
+    slug: "under-13-primi-passi"
+    category: "Giovanili"
+    section: "Under 13"
+    date: 2026-03-12
+    cover_image: "/assets/images/gallery-giovanili-cover.png"
+    cover_caption: "Entusiasmo, scoperta e primi riferimenti di squadra."
+    excerpt: "Una gallery dedicata all’Under 13."
+    featured: false
+    gallery_images:
+      - image: "/assets/images/gallery-giovanili-cover.png"
+        caption: "Il gioco come scoperta."
+      - image: "/assets/images/hero-home.jpg"
+        caption: "Prime letture e primi automatismi."
+      - image: "/assets/images/linea-rosa.jpeg"
+        caption: "Entusiasmo e voglia di crescere."
+
+  - title: "Paperine - Gioco e movimento"
+    slug: "paperine-gioco-e-movimento"
+    category: "Minibasket"
+    section: "Paperine"
+    date: 2026-03-11
+    cover_image: "/assets/images/gallery-giovanili-cover.png"
+    cover_caption: "I primi passi nel minibasket tra gioco, energia e divertimento."
+    excerpt: "Le più piccole del Capra Team in movimento."
+    featured: false
+    gallery_images:
+      - image: "/assets/images/gallery-giovanili-cover.png"
+        caption: "Primi passi sul campo."
+      - image: "/assets/images/hero-home.jpg"
+        caption: "Gioco, entusiasmo e curiosità."
+      - image: "/assets/images/linea-rosa.jpeg"
+        caption: "Divertimento condiviso."
+
+  - title: "Libellule - Basket e fantasia"
+    slug: "libellule-basket-e-fantasia"
+    category: "Minibasket"
+    section: "Libellule"
+    date: 2026-03-13
+    cover_image: "/assets/images/gallery-giovanili-cover.png"
+    cover_caption: "Il basket come scoperta, movimento e immaginazione."
+    excerpt: "Le immagini del gruppo Libellule."
+    featured: false
+    gallery_images:
+      - image: "/assets/images/gallery-giovanili-cover.png"
+        caption: "Movimento e primi riferimenti."
+      - image: "/assets/images/hero-home.jpg"
+        caption: "Una categoria piena di energia."
+      - image: "/assets/images/linea-rosa.jpeg"
+        caption: "Basket e divertimento."
+
+  - title: "Gazzelle Small - Allenamento e squadra"
+    slug: "gazzelle-small-allenamento-e-squadra"
+    category: "Minibasket"
+    section: "Gazzelle Small"
+    date: 2026-03-15
+    cover_image: "/assets/images/gallery-giovanili-cover.png"
+    cover_caption: "Più sicurezza, più movimento, più gioco di gruppo."
+    excerpt: "Una photogallery dedicata alle Gazzelle Small."
+    featured: true
+    gallery_images:
+      - image: "/assets/images/gallery-giovanili-cover.png"
+        caption: "Più autonomia, più fiducia."
+      - image: "/assets/images/hero-home.jpg"
+        caption: "Il gruppo prende forma."
+      - image: "/assets/images/linea-rosa.jpeg"
+        caption: "Allenarsi insieme per crescere insieme."
+
+  - title: "Gazzelle Big - Crescita e continuità"
+    slug: "gazzelle-big-crescita-e-continuita"
+    category: "Minibasket"
+    section: "Gazzelle Big"
+    date: 2026-03-17
+    cover_image: "/assets/images/gallery-giovanili-cover.png"
+    cover_caption: "Il gioco si struttura, cresce il senso di squadra."
+    excerpt: "Le immagini del percorso delle Gazzelle Big."
+    featured: true
+    gallery_images:
+      - image: "/assets/images/gallery-giovanili-cover.png"
+        caption: "Più consapevolezza e più presenza in campo."
+      - image: "/assets/images/hero-home.jpg"
+        caption: "Crescita tecnica e divertimento."
+      - image: "/assets/images/linea-rosa.jpeg"
+        caption: "Una fase bellissima del minibasket."
+
+  - title: "Esordienti - Verso il settore giovanile"
+    slug: "esordienti-verso-il-settore-giovanile"
+    category: "Minibasket"
+    section: "Esordienti"
+    date: 2026-03-19
+    cover_image: "/assets/images/gallery-giovanili-cover.png"
+    cover_caption: "L’ultimo ponte del minibasket prima del settore giovanile."
+    excerpt: "Le immagini della categoria Esordienti."
+    featured: false
+    gallery_images:
+      - image: "/assets/images/gallery-giovanili-cover.png"
+        caption: "Una fase di passaggio importante."
+      - image: "/assets/images/hero-home.jpg"
+        caption: "Più struttura, stesso entusiasmo."
+      - image: "/assets/images/linea-rosa.jpeg"
+        caption: "Il gioco resta al centro."
