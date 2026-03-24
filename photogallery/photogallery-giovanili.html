@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Photogallery Giovanili | Capra Team Ravenna</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
   <script>
     tailwind.config = {
@@ -18,32 +19,93 @@
   </script>
 </head>
 <body class="bg-dark text-white font-sans">
+
   <div id="navbar-container"></div>
 
-  <header class="relative min-h-[45vh] flex items-center justify-center text-center overflow-hidden pt-24">
-    <img src="/assets/images/hero-home.jpg" alt="Hero Giovanili" class="absolute inset-0 w-full h-full object-cover opacity-40">
-    <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent"></div>
-    <div class="relative z-10 px-4">
-      <span class="text-gold font-heading text-xs sm:text-sm tracking-[0.35em] block">PHOTOGALLERY</span>
-      <h1 class="text-4xl sm:text-6xl font-black uppercase tracking-tighter mt-4">Giovanili</h1>
+  <header class="relative min-h-[55vh] flex items-end overflow-hidden pt-24">
+    <img src="/assets/images/gallery-giovanili-cover.png" alt="Photogallery Giovanili" class="absolute inset-0 w-full h-full object-cover opacity-30">
+    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 w-full pb-12">
+      <p class="text-gold text-xs font-bold uppercase tracking-[0.2em] mb-4">Photogallery</p>
+      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tighter">Giovanili</h1>
+      <p class="text-gray-300 mt-4 max-w-2xl">Album dedicati al vivaio, agli allenamenti e alle categorie giovanili.</p>
     </div>
   </header>
 
-  <main class="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
-    <div class="grid md:grid-cols-2 gap-8">
-      <a href="photogallery-u19.html" class="bg-box border border-white/5 rounded-2xl p-8 hover:border-gold/40 transition">
-        <span class="text-gold text-sm font-bold uppercase">Categoria</span>
-        <h2 class="font-heading text-3xl mt-3 uppercase">Under 19</h2>
-      </a>
-
-      <a href="photogallery-u17.html" class="bg-box border border-white/5 rounded-2xl p-8 hover:border-gold/40 transition">
-        <span class="text-gold text-sm font-bold uppercase">Categoria</span>
-        <h2 class="font-heading text-3xl mt-3 uppercase">Under 17</h2>
-      </a>
-    </div>
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
+    <div id="giovanili-grid" class="grid md:grid-cols-2 xl:grid-cols-3 gap-8"></div>
   </main>
 
   <div id="footer-container"></div>
   <script src="/js/main.js"></script>
+
+  <script>
+    function escapeHtml(value) {
+      const str = String(value ?? "");
+      return str
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+
+    function formatDateValue(value) {
+      if (!value) return "";
+      const date = value instanceof Date ? value : new Date(value);
+      if (isNaN(date.getTime())) return String(value);
+
+      const day = String(date.getDate()).padStart(2, "0");
+      const month = String(date.getMonth() + 1).padStart(2, "0");
+      const year = date.getFullYear();
+      return `${day}/${month}/${year}`;
+    }
+
+    async function loadCategoryGalleries() {
+      try {
+        const res = await fetch('data/galleries.yml', { cache: 'no-store' });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+
+        const text = await res.text();
+        const data = jsyaml.load(text) || {};
+        const items = Array.isArray(data.gallery_items) ? [...data.gallery_items] : [];
+
+        const filtered = items
+          .filter(item => item.category === 'Giovanili')
+          .sort((a, b) => new Date(b.date) - new Date(a.date));
+
+        const grid = document.getElementById('giovanili-grid');
+        if (!grid) return;
+
+        if (filtered.length === 0) {
+          grid.innerHTML = `
+            <div class="xl:col-span-3 bg-box rounded-2xl border border-white/5 p-8 text-center text-gray-400">
+              Nessun album disponibile al momento.
+            </div>
+          `;
+          return;
+        }
+
+        grid.innerHTML = filtered.map(item => `
+          <a href="gallery-post.html?slug=${encodeURIComponent(item.slug || '')}" class="group block">
+            <article class="bg-box rounded-2xl border border-white/5 overflow-hidden h-full hover:border-gold/30 transition">
+              <img src="${escapeHtml(item.cover_image || '/assets/images/hero-home.jpg')}" alt="${escapeHtml(item.title || '')}" class="w-full h-64 object-cover">
+              <div class="p-6">
+                <p class="text-gold text-xs font-bold uppercase tracking-[0.18em]">${escapeHtml(item.team || 'Giovanili')}</p>
+                <h3 class="text-xl font-black mt-3 leading-tight group-hover:text-gold transition">${escapeHtml(item.title || '')}</h3>
+                <p class="text-gray-400 mt-4 text-sm">${escapeHtml(item.cover_caption || item.excerpt || '')}</p>
+                <p class="text-gray-500 mt-4 text-xs uppercase tracking-[0.15em]">${escapeHtml(formatDateValue(item.date))}</p>
+              </div>
+            </article>
+          </a>
+        `).join('');
+      } catch (error) {
+        console.error('Errore caricamento gallery Giovanili:', error);
+      }
+    }
+
+    loadCategoryGalleries();
+  </script>
 </body>
 </html>
