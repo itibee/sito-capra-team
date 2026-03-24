@@ -195,7 +195,7 @@
     <!-- SEZIONI PRINCIPALI -->
     <section class="pb-16 sm:pb-20">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-3 gap-8">
-    
+
         <a href="serie-b.html" class="group bg-box rounded-2xl border border-white/5 overflow-hidden hover:border-gold/30 transition">
           <div class="relative h-[280px] sm:h-[340px]">
             <img src="/assets/images/seriebcover.jpg" alt="Serie B" class="absolute inset-0 w-full h-full object-cover opacity-25">
@@ -209,7 +209,7 @@
             </div>
           </div>
         </a>
-    
+
         <a href="giovanili.html" class="group bg-box rounded-2xl border border-white/5 overflow-hidden hover:border-gold/30 transition">
           <div class="relative h-[280px] sm:h-[340px]">
             <img src="/assets/images/gallery-giovanili-cover.png" alt="Giovanili" class="absolute inset-0 w-full h-full object-cover opacity-25">
@@ -223,7 +223,7 @@
             </div>
           </div>
         </a>
-    
+
         <a href="minibasket.html" class="group bg-box rounded-2xl border border-white/5 overflow-hidden hover:border-gold/30 transition">
           <div class="relative h-[280px] sm:h-[340px]">
             <img src="/assets/images/gallery-giovanili-cover.png" alt="Minibasket" class="absolute inset-0 w-full h-full object-cover opacity-25">
@@ -237,36 +237,36 @@
             </div>
           </div>
         </a>
-    
+
       </div>
     </section>
 
     <!-- NEWS -->
     <section class="py-16 sm:py-20 border-t border-white/10">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
         <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
-            <div>
-                <p class="text-gold text-xs font-bold uppercase tracking-[0.2em]"
-                   data-editable="source"
-                   data-path="/index.html"
-                   data-key="news-kicker">
-                    Aggiornamenti
-                </p>
-                <h2 class="font-heading text-3xl sm:text-4xl uppercase mt-2"
-                    data-editable="source"
-                    data-path="/index.html"
-                    data-key="news-title">
-                    Ultime News
-                </h2>
-            </div>
-            <a href="news.html" class="font-bold uppercase text-sm border-b-2 border-gold pb-1 hover:text-gold transition">
-                Tutte le notizie →
-            </a>
+          <div>
+            <p class="text-gold text-xs font-bold uppercase tracking-[0.2em]"
+               data-editable="source"
+               data-path="/index.html"
+               data-key="news-kicker">
+              Aggiornamenti
+            </p>
+            <h2 class="font-heading text-3xl sm:text-4xl uppercase mt-2"
+                data-editable="source"
+                data-path="/index.html"
+                data-key="news-title">
+              Ultime News
+            </h2>
+          </div>
+          <a href="news.html" class="font-bold uppercase text-sm border-b-2 border-gold pb-1 hover:text-gold transition">
+            Tutte le notizie →
+          </a>
         </div>
 
         <div id="homepage-news-grid" class="grid md:grid-cols-3 gap-8"></div>
-    </div>
-</section>
+      </div>
+    </section>
 
     <!-- PHOTOGALLERY TEASER -->
     <section class="py-16 sm:py-20">
@@ -406,61 +406,98 @@
     </section>
 
     <div id="footer-container"></div>
+
     <script>
-  function escapeHtml(str) {
-    if (!str) return "";
-    return str
-      .replaceAll("&", "&amp;")
-      .replaceAll("<", "&lt;")
-      .replaceAll(">", "&gt;")
-      .replaceAll('"', "&quot;")
-      .replaceAll("'", "&#039;");
-  }
+      function escapeHtml(value) {
+        const str = String(value ?? "");
+        return str
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;")
+          .replace(/'/g, "&#039;");
+      }
 
-  async function loadHomepageNews() {
-    try {
-      const res = await fetch('/data/news.yml');
-      const text = await res.text();
-      const data = jsyaml.load(text);
+      function formatDateValue(value) {
+        if (!value) return "";
+        const date = value instanceof Date ? value : new Date(value);
+        if (isNaN(date.getTime())) return String(value);
 
-      const items = (data.news_items || []).slice();
+        const day = String(date.getDate()).padStart(2, "0");
+        const month = String(date.getMonth() + 1).padStart(2, "0");
+        const year = date.getFullYear();
+        return `${day}/${month}/${year}`;
+      }
 
-      const sorted = items.sort((a, b) => new Date(b.date) - new Date(a.date));
+      async function loadHomepageNews() {
+        try {
+          const res = await fetch('data/news.yml', { cache: 'no-store' });
+          if (!res.ok) {
+            throw new Error(`HTTP ${res.status}`);
+          }
 
-      const featured = sorted.filter(item => item.featured === true);
-      const notFeatured = sorted.filter(item => item.featured !== true);
+          const text = await res.text();
+          const data = jsyaml.load(text) || {};
+          const items = Array.isArray(data.news_items) ? [...data.news_items] : [];
 
-      const homepageItems = [...featured, ...notFeatured].slice(0, 3);
+          const sorted = items.sort((a, b) => {
+            const da = new Date(a.date);
+            const db = new Date(b.date);
+            return db - da;
+          });
 
-      const grid = document.getElementById('homepage-news-grid');
-      if (!grid) return;
+          const featured = sorted.filter(item => item.featured === true);
+          const notFeatured = sorted.filter(item => item.featured !== true);
+          const homepageItems = [...featured, ...notFeatured].slice(0, 3);
 
-      grid.innerHTML = homepageItems.map(item => `
-        <a href="news-post.html?slug=${encodeURIComponent(item.slug)}" class="group block">
-          <article class="bg-box rounded-2xl border border-white/5 overflow-hidden h-full hover:border-gold/30 transition">
-            <img src="${item.image || '/assets/images/hero-home.jpg'}" alt="${escapeHtml(item.title)}" class="w-full h-56 object-cover">
-            <div class="p-6">
-              <p class="text-gold text-xs font-bold uppercase tracking-[0.18em]">${escapeHtml(item.category || 'News')}</p>
-              <h3 class="text-xl font-black mt-3 leading-tight group-hover:text-gold transition">
-                ${escapeHtml(item.title || '')}
-              </h3>
-              <p class="text-gray-400 mt-4 text-sm">
-                ${escapeHtml(item.excerpt || '')}
-              </p>
-              <p class="text-gray-500 mt-4 text-xs uppercase tracking-[0.15em]">
-                ${escapeHtml(item.date || '')}
-              </p>
-            </div>
-          </article>
-        </a>
-      `).join('');
-    } catch (error) {
-      console.error('Errore caricamento news home:', error);
-    }
-  }
+          const grid = document.getElementById('homepage-news-grid');
+          if (!grid) return;
 
-  loadHomepageNews();
-</script>
+          if (homepageItems.length === 0) {
+            grid.innerHTML = `
+              <div class="md:col-span-3 bg-box rounded-2xl border border-white/5 p-8 text-center text-gray-400">
+                Nessuna news disponibile al momento.
+              </div>
+            `;
+            return;
+          }
+
+          grid.innerHTML = homepageItems.map(item => `
+            <a href="news-post.html?slug=${encodeURIComponent(item.slug || '')}" class="group block">
+              <article class="bg-box rounded-2xl border border-white/5 overflow-hidden h-full hover:border-gold/30 transition">
+                <img src="${escapeHtml(item.image || '/assets/images/hero-home.jpg')}" alt="${escapeHtml(item.title || '')}" class="w-full h-56 object-cover">
+                <div class="p-6">
+                  <p class="text-gold text-xs font-bold uppercase tracking-[0.18em]">${escapeHtml(item.category || 'News')}</p>
+                  <h3 class="text-xl font-black mt-3 leading-tight group-hover:text-gold transition">
+                    ${escapeHtml(item.title || '')}
+                  </h3>
+                  <p class="text-gray-400 mt-4 text-sm">
+                    ${escapeHtml(item.excerpt || '')}
+                  </p>
+                  <p class="text-gray-500 mt-4 text-xs uppercase tracking-[0.15em]">
+                    ${escapeHtml(formatDateValue(item.date))}
+                  </p>
+                </div>
+              </article>
+            </a>
+          `).join('');
+
+        } catch (error) {
+          console.error('Errore caricamento news home:', error);
+          const grid = document.getElementById('homepage-news-grid');
+          if (grid) {
+            grid.innerHTML = `
+              <div class="md:col-span-3 bg-box rounded-2xl border border-red-500/20 p-8 text-center text-red-300">
+                Errore nel caricamento delle news.
+              </div>
+            `;
+          }
+        }
+      }
+
+      loadHomepageNews();
+    </script>
+
     <script src="/js/main.js"></script>
 </body>
 </html>
