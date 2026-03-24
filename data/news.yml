@@ -1,133 +1,43 @@
 news_items:
-  - title: Sta tornando il Capra Summer Camp
-    slug: capra-summer-camp
-    category: Eventi
-    date: 2026-03-24T00:00:00Z
-    image: /assets/images/summercamp.jpg
-    excerpt: Allenamenti, giochi, laboratori, risate e tanto basket.
+  - title: "Sta tornando il Capra Summer Camp"
+    slug: "capra-summer-camp"
+    category: "Eventi"
+    date: 2026-03-24
+    image: "/assets/images/summercamp.jpg"
+    content_image: "/assets/images/summercamp-interno.jpg"
+    content_image_caption: "Allenamenti, gioco e divertimento nel cuore dell’estate."
+    excerpt: "Allenamenti, giochi, laboratori, risate e tanto basket."
     featured: true
-    body_html: >-
-      <p>𝐂𝐀𝐏𝐑𝐀 𝐒𝐔𝐌𝐌𝐄𝐑 𝐂𝐀𝐌𝐏 𝟑.𝟎 <img height="16" width="16"
-      class="xz74otr x15mokao x1ga7v0g x16uus16 xbiv7yw" alt="🐐"
-      src="https://static.xx.fbcdn.net/images/emoji.php/v9/teb/1/16/1f410.png"
-      /><img height="16" width="16" class="xz74otr x15mokao x1ga7v0g x16uus16
-      xbiv7yw" alt="🏖️"
-      src="https://static.xx.fbcdn.net/images/emoji.php/v9/t5d/1/16/1f3d6.png"
-      /></p><p>Sta tornando il 𝐶𝑎𝑝𝑟𝑎 𝑆𝑢𝑚𝑚𝑒𝑟 𝐶𝑎𝑚𝑝…</p><p>e
-      quest’anno sarà ancora più grande! <img height="16" width="16"
-      class="xz74otr x15mokao x1ga7v0g x16uus16 xbiv7yw" alt="⛹🏻‍♀️"
-      src="https://static.xx.fbcdn.net/images/emoji.php/v9/t69/1/16/26f9_1f3fb_200d_2640.png"
-      /><img height="16" width="16" class="xz74otr x15mokao x1ga7v0g x16uus16
-      xbiv7yw" alt="🤩"
-      src="https://static.xx.fbcdn.net/images/emoji.php/v9/t58/1/16/1f929.png"
-      /></p><p><img height="16" width="16" class="xz74otr x15mokao x1ga7v0g
-      x16uus16 xbiv7yw" alt="💥"
-      src="https://static.xx.fbcdn.net/images/emoji.php/v9/t40/1/16/1f4a5.png"
-      /> 𝟑ª 𝐞𝐝𝐢𝐳𝐢𝐨𝐧𝐞</p><p><img height="16" width="16" class="xz74otr
-      x15mokao x1ga7v0g x16uus16 xbiv7yw" alt="💥"
-      src="https://static.xx.fbcdn.net/images/emoji.php/v9/t40/1/16/1f4a5.png"
-      /> 𝟏 𝐬𝐞𝐭𝐭𝐢𝐦𝐚𝐧𝐚 𝐢𝐧 𝐩𝐢𝐮’</p><p><img height="16" width="16"
-      class="xz74otr x15mokao x1ga7v0g x16uus16 xbiv7yw" alt="💥"
-      src="https://static.xx.fbcdn.net/images/emoji.php/v9/t40/1/16/1f4a5.png"
-      /> 𝟒 𝐬𝐞𝐭𝐭𝐢𝐦𝐚𝐧𝐞 𝐭𝐨𝐭𝐚𝐥𝐢 𝐝𝐢 𝐂𝐚𝐦𝐩</p><p>Allenamenti,
-      giochi, laboratori, risate e tanto basket!</p><p>Ma soprattutto amicizie,
-      esperienze e momenti che resteranno 𝑝𝑒𝑟 𝑠𝑒𝑚𝑝𝑟𝑒.</p><p><img
-      height="16" width="16" class="xz74otr x15mokao x1ga7v0g x16uus16 xbiv7yw"
-      alt="👉🏼"
-      src="https://static.xx.fbcdn.net/images/emoji.php/v9/t8d/1/16/1f449_1f3fc.png"
-      /> 𝐕𝐢𝐞𝐧𝐢 𝐚 𝐯𝐢𝐯𝐞𝐫𝐞 𝐥’𝐞𝐬𝐭𝐚𝐭𝐞 𝐜𝐨𝐧 𝐧𝐨𝐢</p><p>e porta
-      una nuova amica! <img height="16" width="16" class="xz74otr x15mokao
-      x1ga7v0g x16uus16 xbiv7yw" alt="☀️"
-      src="https://static.xx.fbcdn.net/images/emoji.php/v9/t6d/1/16/2600.png"
-      /><img height="16" width="16" class="xz74otr x15mokao x1ga7v0g x16uus16
-      xbiv7yw" alt="👯‍♀️"
-      src="https://static.xx.fbcdn.net/images/emoji.php/v9/t6a/1/16/1f46f_200d_2640.png"
-      /></p><p>Perché 𝐶𝑎𝑝𝑟𝑎 𝑆𝑢𝑚𝑚𝑒𝑟 𝐶𝑎𝑚𝑝 è:</p><p><img height="16"
-      width="16" class="xz74otr x15mokao x1ga7v0g x16uus16 xbiv7yw" alt="🏀"
-      src="https://static.xx.fbcdn.net/images/emoji.php/v9/tb8/1/16/1f3c0.png"
-      /> basket</p><p><img height="16" width="16" class="xz74otr x15mokao
-      x1ga7v0g x16uus16 xbiv7yw" alt="💚"
-      src="https://static.xx.fbcdn.net/images/emoji.php/v9/t94/1/16/1f49a.png"
-      /> amicizie</p><p><img height="16" width="16" class="xz74otr x15mokao
-      x1ga7v0g x16uus16 xbiv7yw" alt="🌟"
-      src="https://static.xx.fbcdn.net/images/emoji.php/v9/te0/1/16/1f31f.png"
-      /> esperienze indimenticabili</p><p><img height="16" width="16"
-      class="xz74otr x15mokao x1ga7v0g x16uus16 xbiv7yw" alt="😄"
-      src="https://static.xx.fbcdn.net/images/emoji.php/v9/td2/1/16/1f604.png"
-      /> divertimento garantito</p><p>… e molto altro!</p><p>𝐍𝐨𝐢 𝐬𝐢𝐚𝐦𝐨
-      𝐩𝐫𝐨𝐧𝐭𝐢. 𝐄 𝐭𝐮?</p>
-  - title: 'Insieme a Linea Rosa: il basket che lascia il segno'
-    slug: linea-rosa
-    category: Società
-    date: 2026-03-20T00:00:00Z
-    image: /assets/images/linea-rosa.jpeg
-    excerpt: Il Capra Team scende in campo anche fuori dal parquet.
+    body_html: |
+      <p>Sta tornando il Capra Summer Camp… e quest’anno sarà ancora più grande.</p>
+      <p>Allenamenti, giochi, laboratori, risate e tanto basket: il camp estivo del Capra Team Ravenna è pensato per far vivere alle ragazze un’esperienza completa, fatta di sport, crescita e divertimento.</p>
+      <p>Non sarà soltanto un’occasione per migliorare sul campo, ma anche per costruire amicizie, condividere giornate speciali e portarsi a casa ricordi che resteranno nel tempo.</p>
+      <p>Presto arriveranno tutti i dettagli ufficiali su date, iscrizioni e programma completo.</p>
+
+  - title: "Insieme a Linea Rosa: il basket che lascia il segno"
+    slug: "linea-rosa"
+    category: "Società"
+    date: 2026-03-20
+    image: "/assets/images/linea-rosa.jpeg"
+    content_image: "/assets/images/linea-rosa.jpeg"
+    content_image_caption: "Il basket come linguaggio di responsabilità, territorio e partecipazione."
+    excerpt: "Il Capra Team scende in campo anche fuori dal parquet."
     featured: true
-    body_html: >
-      <p>Il Capra Team Ravenna scende in campo non solo per competere, ma anche
-      per trasmettere valori forti e concreti.</p>
+    body_html: |
+      <p>Il Capra Team Ravenna scende in campo non solo per competere, ma anche per trasmettere valori forti e concreti.</p>
+      <p>La collaborazione con Linea Rosa rappresenta una scelta chiara: usare lo sport come strumento di sensibilizzazione, partecipazione e vicinanza al territorio.</p>
+      <p>Il basket diventa così linguaggio, responsabilità e presenza. Un modo per dire che appartenere al Capra Team significa vivere una comunità e non solo una squadra.</p>
 
-      <p>La collaborazione con Linea Rosa rappresenta una scelta chiara: usare
-      lo sport come strumento di sensibilizzazione, partecipazione e vicinanza
-      al territorio.</p>
-
-      <p>Il basket diventa così linguaggio, responsabilità e presenza. Un modo
-      per dire che appartenere al Capra Team significa vivere una comunità e non
-      solo una squadra.</p>
-  - title: 𝐆𝐎𝐀𝐓 𝐱 𝐂𝐀𝐏𝐑𝐀 𝐓𝐄𝐀𝐌 𝐑𝐀𝐕𝐄𝐍𝐍𝐀
-    slug: ''
-    category: ''
-    date: 2026-03-18T00:00:00Z
-    image: /uploads/goat-film.jpg
-    excerpt: ''
+  - title: "Dalle categorie giovanili nasce il futuro del club"
+    slug: "giovanili-futuro"
+    category: "Giovanili"
+    date: 2026-03-18
+    image: "/assets/images/gallery-giovanili-cover.png"
+    content_image: "/assets/images/gallery-giovanili-cover.png"
+    content_image_caption: "Dal minibasket alle Under: il futuro del club si costruisce ogni giorno."
+    excerpt: "Under 19, Under 17, minibasket: il futuro si costruisce ogni giorno."
     featured: true
-    body_html: >-
-      <p>𝐆𝐎𝐀𝐓 𝐱 𝐂𝐀𝐏𝐑𝐀 𝐓𝐄𝐀𝐌 𝐑𝐀𝐕𝐄𝐍𝐍𝐀<br /><br />Nel 2012
-      nasce il 𝘊𝘈𝘗𝘙𝘈 𝘛𝘌𝘈𝘔, la squadra di basket femminile di
-      𝘙𝘈𝘝𝘌𝘕𝘕𝘈.<br />Verde, bianco e nero i nostri colori.<br />Il basket
-      la nostra passione. La nostra scuola di vita.<br /><br />Impegno.
-      Rispetto. Amicizia. Unione. Spirito di gruppo.<br />È questo che ci ha
-      portato fin qui. Insieme.<br /><br />Oggi eravamo tutte al cinema, in una
-      sala riservata solo per noi.<br />Verde, bianca e nera. Come noi. Come
-      GOAT.<br /><br />𝘗𝘦𝘳𝘤𝘩𝘦’ “𝘊𝘢𝘱𝘳𝘢”, 𝘪𝘯 𝘪𝘯𝘨𝘭𝘦𝘴𝘦, 𝘴𝘪
-      𝘥𝘪𝘤𝘦 𝘎𝘖𝘈𝘛.𝘔𝘢 𝘱𝘳𝘪𝘮𝘢 𝘥𝘪 𝘦𝘴𝘴𝘦𝘳𝘦 𝘎𝘖𝘈𝘛,
-      𝘣𝘪𝘴𝘰𝘨𝘯𝘢 𝘦𝘴𝘴𝘦𝘳𝘦 𝘊𝘢𝘱𝘳𝘢.<br /><br />Come Will, anche noi
-      sogniamo in grande.<br />Ogni allenamento. Ogni partita. Ogni giorno.<br
-      /><br />𝙄𝙡 𝙫𝙞𝙖𝙜𝙜𝙞𝙤 𝙥𝙚𝙧 𝙙𝙞𝙫𝙚𝙣𝙩𝙖𝙧𝙚 𝙂𝙊𝘼𝙏
-      𝙞𝙣𝙞𝙯𝙞𝙖 𝙙𝙖𝙡𝙡’𝙚𝙨𝙨𝙚𝙧𝙚 𝙪𝙣𝙖 𝘾𝙖𝙥𝙧𝙖.<br /><br /><a
-      class="x1i10hfl xjbqb8w x1ejq31n x18oe1m7 x1sy0etr xstzfhl x972fbf
-      x10w94by x1qhh985 x14e42zd x9f619 x1ypdohk xt0psk2 x3ct3a4 xdj266r x14z9mp
-      xat24cr x1lziwak xexx8yu xyri2b x18d9i69 x1c1uobl x16tdsg8 x1hl2dhg
-      xggy1nq x1a2a7pz xkrqix3 x1sur9pj xzsf02u x1s688f"
-      href="https://www.facebook.com/hashtag/oncecapraforevercapra?__eep__=6&amp;__tn__=*NK*F"><strong>#oncecapraforevercapra</strong></a><img
-      height="16" width="16" class="xz74otr x15mokao x1ga7v0g x16uus16 xbiv7yw"
-      alt="🖤"
-      src="https://static.xx.fbcdn.net/images/emoji.php/v9/t0/1/16/1f5a4.png"
-      /><img height="16" width="16" class="xz74otr x15mokao x1ga7v0g x16uus16
-      xbiv7yw" alt="🤍"
-      src="https://static.xx.fbcdn.net/images/emoji.php/v9/tc5/1/16/1f90d.png"
-      /><img height="16" width="16" class="xz74otr x15mokao x1ga7v0g x16uus16
-      xbiv7yw" alt="💚"
-      src="https://static.xx.fbcdn.net/images/emoji.php/v9/t94/1/16/1f49a.png"
-      /> <a class="x1i10hfl xjbqb8w x1ejq31n x18oe1m7 x1sy0etr xstzfhl x972fbf
-      x10w94by x1qhh985 x14e42zd x9f619 x1ypdohk xt0psk2 x3ct3a4 xdj266r x14z9mp
-      xat24cr x1lziwak xexx8yu xyri2b x18d9i69 x1c1uobl x16tdsg8 x1hl2dhg
-      xggy1nq x1a2a7pz xkrqix3 x1sur9pj xzsf02u x1s688f"
-      href="https://www.facebook.com/hashtag/thatsmygoat?__eep__=6&amp;__tn__=*NK*F"><strong>#thatsmygoat</strong></a></p>
-  - title: Dalle categorie giovanili nasce il futuro del club
-    slug: giovanili-futuro
-    category: Giovanili
-    date: 2026-03-18T00:00:00Z
-    image: /assets/images/gallery-giovanili-cover.png
-    excerpt: 'Under 19, Under 17, minibasket: il futuro si costruisce ogni giorno.'
-    featured: false
-    body_html: >
-      <p>Il futuro del Capra Team Ravenna si costruisce ogni giorno, allenamento
-      dopo allenamento, dentro il settore giovanile.</p>
-
-      <p>Dall’Under 19 al minibasket, ogni categoria rappresenta un tassello
-      fondamentale del progetto: non solo formazione tecnica, ma anche crescita
-      personale, appartenenza e cultura sportiva.</p>
-
-      <p>È da qui che nasce l’identità del Capra Team: una comunità che mette al
-      centro il lavoro, il senso di squadra e la voglia di crescere insieme.</p>
+    body_html: |
+      <p>Il futuro del Capra Team Ravenna si costruisce ogni giorno, allenamento dopo allenamento, dentro il settore giovanile.</p>
+      <p>Dall’Under 19 al minibasket, ogni categoria rappresenta un tassello fondamentale del progetto: non solo formazione tecnica, ma anche crescita personale, appartenenza e cultura sportiva.</p>
+      <p>È da qui che nasce l’identità del Capra Team: una comunità che mette al centro il lavoro, il senso di squadra e la voglia di crescere insieme.</p>
