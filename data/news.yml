@@ -3,7 +3,7 @@ news_items:
     slug: capra-summer-camp
     category: Eventi
     date: 2026-03-24T00:00:00Z
-    image: /uploads/summercamp-articolo.jpg
+    image: /assets/images/summercamp.jpg
     excerpt: Allenamenti, giochi, laboratori, risate e tanto basket.
     featured: true
     body_html: >-
