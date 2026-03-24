@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photogallery Minibasket | Capra Team Ravenna</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { gold:'#1E6B3F', dark:'#0A0A0A', box:'#1A1A1A' },
+          fontFamily: { heading:['Syncopate'], sans:['Inter'] }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-dark text-white font-sans">
+  <div id="navbar-container"></div>
+
+  <header class="relative min-h-[55vh] flex items-end overflow-hidden pt-24">
+    <img src="/assets/images/gallery-giovanili-cover.png" alt="Photogallery Minibasket" class="absolute inset-0 w-full h-full object-cover opacity-30">
+    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 w-full pb-12">
+      <p class="text-gold text-xs font-bold uppercase tracking-[0.2em] mb-4">Photogallery</p>
+      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tighter">Minibasket</h1>
+      <p class="text-gray-300 mt-4 max-w-2xl">Paperine, Libellule, Gazzelle Small, Gazzelle Big ed Esordienti.</p>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
+    <section class="grid md:grid-cols-2 xl:grid-cols-5 gap-8 mb-16">
+      <a href="/photogallery/minibasket-paperine.html" class="bg-box border border-white/5 rounded-2xl p-8 hover:border-gold/30 transition block">
+        <p class="text-gold text-xs font-bold uppercase tracking-[0.18em]">Minibasket</p>
+        <h3 class="font-heading text-2xl uppercase mt-3">Paperine</h3>
+        <p class="text-gray-400 mt-4 text-sm leading-relaxed">Album delle Paperine.</p>
+      </a>
+
+      <a href="/photogallery/minibasket-libellule.html" class="bg-box border border-white/5 rounded-2xl p-8 hover:border-gold/30 transition block">
+        <p class="text-gold text-xs font-bold uppercase tracking-[0.18em]">Minibasket</p>
+        <h3 class="font-heading text-2xl uppercase mt-3">Libellule</h3>
+        <p class="text-gray-400 mt-4 text-sm leading-relaxed">Album delle Libellule.</p>
+      </a>
+
+      <a href="/photogallery/minibasket-gazzelle-small.html" class="bg-box border border-white/5 rounded-2xl p-8 hover:border-gold/30 transition block">
+        <p class="text-gold text-xs font-bold uppercase tracking-[0.18em]">Minibasket</p>
+        <h3 class="font-heading text-2xl uppercase mt-3">Gazzelle Small</h3>
+        <p class="text-gray-400 mt-4 text-sm leading-relaxed">Album delle Gazzelle Small.</p>
+      </a>
+
+      <a href="/photogallery/minibasket-gazzelle-big.html" class="bg-box border border-white/5 rounded-2xl p-8 hover:border-gold/30 transition block">
+        <p class="text-gold text-xs font-bold uppercase tracking-[0.18em]">Minibasket</p>
+        <h3 class="font-heading text-2xl uppercase mt-3">Gazzelle Big</h3>
+        <p class="text-gray-400 mt-4 text-sm leading-relaxed">Album delle Gazzelle Big.</p>
+      </a>
+
+      <a href="/photogallery/minibasket-esordienti.html" class="bg-box border border-white/5 rounded-2xl p-8 hover:border-gold/30 transition block">
+        <p class="text-gold text-xs font-bold uppercase tracking-[0.18em]">Minibasket</p>
+        <h3 class="font-heading text-2xl uppercase mt-3">Esordienti</h3>
+        <p class="text-gray-400 mt-4 text-sm leading-relaxed">Album degli Esordienti.</p>
+      </a>
+    </section>
+
+    <section>
+      <div class="mb-10">
+        <p class="text-gold text-xs font-bold uppercase tracking-[0.2em]">In evidenza</p>
+        <h2 class="font-heading text-3xl sm:text-4xl uppercase mt-2">Album Minibasket</h2>
+      </div>
+      <div id="minibasket-featured-grid" class="grid md:grid-cols-2 xl:grid-cols-3 gap-8"></div>
+    </section>
+  </main>
+
+  <div id="footer-container"></div>
+  <script src="/js/main.js"></script>
+  <script src="/js/photogallery.js"></script>
+  <script>
+    Photogallery.renderAlbumCards({
+      containerId: 'minibasket-featured-grid',
+      category: 'Minibasket',
+      limit: 6,
+      emptyMessage: 'Nessun album Minibasket disponibile al momento.'
+    });
+  </script>
+</body>
+</html>
