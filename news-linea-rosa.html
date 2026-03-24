@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insieme a Linea Rosa | Capra Team Ravenna</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { gold:'#FBBF24', dark:'#0A0A0A', box:'#1A1A1A' },
+          fontFamily: { heading:['Syncopate'], sans:['Inter'] }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-dark text-white font-sans">
+
+  <div id="navbar-container"></div>
+
+  <header class="relative min-h-[55vh] flex items-end overflow-hidden pt-24">
+    <img
+      src="/assets/images/linea-rosa.jpeg"
+      alt="Linea Rosa"
+      class="absolute inset-0 w-full h-full object-cover opacity-35"
+    >
+    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent"></div>
+
+    <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 w-full pb-12">
+      <p class="text-gold text-xs font-bold uppercase tracking-[0.2em] mb-4">Società</p>
+      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tighter leading-tight">
+        Insieme a Linea Rosa: il basket che lascia il segno
+      </h1>
+      <p class="text-gray-300 mt-4 text-sm sm:text-base">News · Capra Team Ravenna</p>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
+    <a href="news.html" class="inline-block mb-8 border-b-2 border-gold pb-1 font-bold uppercase text-sm hover:text-gold transition">
+      ← Torna alle news
+    </a>
+
+    <article class="bg-box border border-white/5 rounded-2xl p-6 sm:p-10">
+      <p class="text-lg text-gray-300 leading-relaxed mb-6">
+        Il Capra Team Ravenna scende in campo non solo per competere, ma anche per trasmettere valori forti e concreti.
+      </p>
+
+      <p class="text-gray-300 leading-relaxed mb-5">
+        La collaborazione con Linea Rosa rappresenta una scelta chiara: usare lo sport come strumento di sensibilizzazione, partecipazione e vicinanza al territorio.
+      </p>
+
+      <p class="text-gray-300 leading-relaxed mb-5">
+        Iniziative come questa raccontano il volto più profondo del club, che vuole essere una realtà sportiva capace di lasciare un segno anche fuori dal parquet.
+      </p>
+
+      <p class="text-gray-300 leading-relaxed">
+        Il basket diventa così linguaggio, responsabilità e presenza. Un modo per dire che appartenere al Capra Team significa vivere una comunità e non solo una squadra.
+      </p>
+    </article>
+  </main>
+
+  <div id="footer-container"></div>
+  <script src="/js/main.js"></script>
+</body>
+</html>
