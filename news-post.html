@@ -39,7 +39,12 @@
     </a>
 
     <article class="bg-box border border-white/5 rounded-2xl p-6 sm:p-10">
-      <div id="article-body" class="prose prose-invert max-w-none prose-p:text-gray-300 prose-headings:text-white"></div>
+      <div id="article-content-image-wrapper" class="hidden mb-8">
+        <img id="article-content-image" src="" alt="" class="w-full rounded-2xl">
+        <p id="article-content-image-caption" class="text-gray-400 text-sm mt-3"></p>
+      </div>
+
+      <div id="article-body" class="prose prose-invert max-w-none prose-p:text-gray-300 prose-headings:text-white prose-strong:text-white"></div>
     </article>
   </main>
 
@@ -47,28 +52,80 @@
   <script src="/js/main.js"></script>
 
   <script>
+    function formatDateValue(value) {
+      if (!value) return "";
+      const date = value instanceof Date ? value : new Date(value);
+      if (isNaN(date.getTime())) return String(value);
+
+      const day = String(date.getDate()).padStart(2, "0");
+      const month = String(date.getMonth() + 1).padStart(2, "0");
+      const year = date.getFullYear();
+      return `${day}/${month}/${year}`;
+    }
+
     async function loadArticle() {
       const params = new URLSearchParams(window.location.search);
       const slug = params.get('slug');
 
-      const res = await fetch('/data/news.yml');
-      const text = await res.text();
-      const data = jsyaml.load(text);
-      const items = data.news_items || [];
-      const item = items.find(n => n.slug === slug);
+      try {
+        const res = await fetch('data/news.yml', { cache: 'no-store' });
+        if (!res.ok) {
+          throw new Error(`HTTP ${res.status}`);
+        }
 
-      if (!item) {
-        document.body.innerHTML = '<div style="padding:40px;color:white;background:#0A0A0A;font-family:sans-serif">Articolo non trovato.</div>';
-        return;
+        const text = await res.text();
+        const data = jsyaml.load(text) || {};
+        const items = Array.isArray(data.news_items) ? data.news_items : [];
+        const item = items.find(n => n.slug === slug);
+
+        if (!item) {
+          document.body.innerHTML = `
+            <div style="padding:40px;color:white;background:#0A0A0A;font-family:sans-serif;min-height:100vh;">
+              Articolo non trovato.
+            </div>
+          `;
+          return;
+        }
+
+        document.title = `${item.title} | Capra Team Ravenna`;
+
+        const heroImage = document.getElementById('hero-image');
+        const articleCategory = document.getElementById('article-category');
+        const articleTitle = document.getElementById('article-title');
+        const articleDate = document.getElementById('article-date');
+        const articleBody = document.getElementById('article-body');
+
+        heroImage.src = item.image || '/assets/images/hero-home.jpg';
+        heroImage.alt = item.title || '';
+
+        articleCategory.textContent = item.category || 'News';
+        articleTitle.textContent = item.title || '';
+        articleDate.textContent = formatDateValue(item.date);
+        articleBody.innerHTML = item.body_html || '';
+
+        const contentImageWrapper = document.getElementById('article-content-image-wrapper');
+        const contentImage = document.getElementById('article-content-image');
+        const contentImageCaption = document.getElementById('article-content-image-caption');
+
+        if (item.content_image) {
+          contentImage.src = item.content_image;
+          contentImage.alt = item.title || '';
+          contentImageWrapper.classList.remove('hidden');
+
+          if (item.content_image_caption) {
+            contentImageCaption.textContent = item.content_image_caption;
+          } else {
+            contentImageCaption.textContent = '';
+          }
+        }
+      } catch (error) {
+        console.error('Errore caricamento articolo:', error);
+        document.body.innerHTML = `
+          <div style="padding:40px;color:white;background:#0A0A0A;font-family:sans-serif;min-height:100vh;">
+            Errore nel caricamento dell’articolo.
+          </div>
+        `;
       }
-
-      document.title = `${item.title} | Capra Team Ravenna`;
-      document.getElementById('hero-image').src = item.image;
-      document.getElementById('hero-image').alt = item.title;
-      document.getElementById('article-category').textContent = item.category;
-      document.getElementById('article-title').textContent = item.title;
-      document.getElementById('article-date').textContent = item.date;
-      document.getElementById('article-body').innerHTML = item.body_html || '';
     }
 
     loadArticle();
